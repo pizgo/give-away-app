@@ -1,0 +1,45 @@
+@import "./settings/colors";
+@import "./settings/fonts";
+
+.header {
+
+  &__container {
+    display: flex;
+    margin-right: 142px;
+
+  }
+
+  &__mainImg {
+    width: 885px;
+    height: auto;
+
+  }
+
+  &__content {
+    margin-top: 342px;
+    margin-right: 133px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__hello {
+    font-family: $font-base;
+    font-size: 2.1rem;
+    color: $black;
+    text-align: center;
+  }
+
+  &__decorationImg {
+    margin-top: 25px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 65px;
+
+  }
+
+
+
+}

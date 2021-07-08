@@ -1,0 +1,31 @@
+
+@import "reset";
+@import "normalize";
+@import "settings/colors";
+@import "settings/fonts";
+@import "homeHeader";
+
+
+html {
+  font-size: 18px;
+}
+
+#button {
+  width: 310px;
+  height: 120px;
+  font-family: $font-base;
+  font-size: 2rem;
+  color: $black;
+  text-transform: uppercase;
+  border: 0.75px solid $black;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+//#decoration {
+//  width: 20px;
+//  height: auto;
+//}
