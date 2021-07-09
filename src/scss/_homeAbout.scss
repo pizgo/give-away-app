@@ -1,0 +1,61 @@
+@import "./settings/colors";
+@import "./settings/fonts";
+
+.about {
+  display: flex;
+  margin-top: 80px;
+  height: 935px;
+
+
+  &__text {
+    width: 958px;
+    background-color: #F0F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__header {
+    font-family: $font-base;
+    font-size: 2.1rem;
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  &__decorationImg {
+
+  }
+
+  &__desc {
+    font-family: $font-base;
+    font-size: 1.6rem;
+    color: $black;
+    text-align: center;
+    margin-top: 55px;
+    width: 657px;
+    margin-top: 40px;
+
+  }
+
+  &__signature {
+    position: absolute;
+    left: 590px;
+    top: 700px;
+  }
+
+  &__img {
+    width: 942px;
+    height: 935px;
+
+    &-pic {
+      width: 942px;
+      height: 935px;
+      object-fit: cover;
+      object-position: 15% 50%;
+
+
+    }
+  }
+}
