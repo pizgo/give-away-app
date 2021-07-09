@@ -1,0 +1,54 @@
+@import "./settings/colors";
+@import "./settings/fonts";
+
+.columns {
+  margin-top: 291px;
+  background-color: gold;
+  height: 384px;
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  &__column {
+    margin: 46px 163px 86px;
+    width: 334px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &-number {
+      font-size: 5rem;
+      font-family: $font-base;
+      font-weight: lighter;
+      margin-bottom: 10px;
+      color: $gold
+    }
+
+    &-what {
+      font-size: 1rem;
+      font-family: $font-base;
+      font-weight: lighter;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      color: $black;
+      text-align: center;
+
+    }
+
+    &-description {
+      font-size: 0.9rem;
+      font-family: $font-alt;
+      font-weight: lighter;
+      text-align: justify;
+      color: $black;
+    }
+  }
+}

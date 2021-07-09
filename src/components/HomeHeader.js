@@ -18,11 +18,12 @@ const HomeHeader = () => {
                                     <img src={Decoration} id="decoration" className="header__decorationImg"/>
                                     <div className="header__buttons">
                                             <a href="/GiveAway">
-                                                <p id="button" className="home__btn1">
-                                                    Oddaj rzeczy</p>
+                                                <p id="button" className="header__buttons-1">
+                                                    Oddaj <br/>
+                                                    rzeczy</p>
                                             </a>
                                             <a href="/OrganizeCollection">
-                                                <p id="button" className="home__btn2">
+                                                <p id="button" className="header__buttons-2">
                                                     Zorganizuj zbiórkę</p>
                                             </a>
                                     </div>

@@ -4,26 +4,33 @@
 .header {
 
   &__container {
+    width: 1758px;
     display: flex;
     margin-right: 142px;
 
   }
 
   &__mainImg {
-    width: 885px;
-    height: auto;
+    width: 1368px;
+    height: 963px;
+    position: absolute;
+    left: -483px;
 
   }
 
   &__content {
     margin-top: 342px;
-    margin-right: 133px;
+    //margin-right: 133px;
+    margin-left: 951px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
   }
 
   &__hello {
+    width: 700px;
     font-family: $font-base;
     font-size: 2.1rem;
     color: $black;
@@ -37,6 +44,11 @@
   &__buttons {
     display: flex;
     margin-top: 65px;
+
+    &-1 {
+      margin-right: 40px;
+
+    }
 
   }
 
