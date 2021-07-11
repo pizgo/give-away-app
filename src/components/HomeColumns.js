@@ -8,7 +8,7 @@ const HomeColumns = () => {
             <section className="columns">
                 <div className="columns__container">
                     <div className="columns__column">
-                        <p className="columns__column-number">
+                        <p  className="columns__column-number">
                             10
                         </p>
                         <p className="columns__column-what">

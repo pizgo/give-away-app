@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import NavbarMain from "./NavbarMain";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import Login from "./Login";
 import Registration from "./Registration";
@@ -11,7 +11,7 @@ const App = () => {
   return (
       <>
         <BrowserRouter>
-            <NavbarMain/>
+            <Navbar/>
                 <Switch>
                     <Route exact path="/logowanie">
                         <Login/>

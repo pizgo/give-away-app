@@ -4,9 +4,9 @@
 .header {
 
   &__container {
-    width: 1758px;
+    width: 90%;
     display: flex;
-    margin-right: 142px;
+
   }
 
   &__mainImg {
@@ -25,7 +25,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   &__hello {

@@ -9,7 +9,7 @@ const HomeHowItWorks = () => {
 
     return (
         <div className="container">
-            <section className="steps">
+            <section id="section1" className="steps">
                 <div className="steps__section1">
                     <p className="steps__section1-text">
                         Wystarczą 4 proste kroki

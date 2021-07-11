@@ -10,7 +10,7 @@ const HomeAbout = () => {
         <div className="container">
             <section className="about">
                 <div className="about__text">
-                    <p className="about__header">
+                    <p id="section2" className="about__header">
                         O nas
                     </p>
                     <img src={Decoration} id="decoration" className="about__decorationImg"/>
