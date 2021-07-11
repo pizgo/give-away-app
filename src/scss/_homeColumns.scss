@@ -2,27 +2,18 @@
 @import "./settings/fonts";
 
 .columns {
-  margin-top: 291px;
+  margin-top: 249px;
   background-color: gold;
-  height: 384px;
-
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-
-
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 46px 80px 86px;
 
   &__column {
-    margin: 46px 163px 86px;
-    width: 334px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    width: 25%;
 
     &-number {
       font-size: 5rem;

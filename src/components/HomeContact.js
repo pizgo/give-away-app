@@ -4,7 +4,14 @@ const HomeContact = () => {
 
     return (
 
-        <div>To jest o kontakt</div>
+        <div className="container">
+            <div className="contact">
+                <div className="contact__container">
+
+                </div>
+            </div>
+
+        </div>
     )
 }
 

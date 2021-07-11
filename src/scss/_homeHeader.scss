@@ -2,25 +2,20 @@
 @import "./settings/fonts";
 
 .header {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
 
-  &__container {
-    width: 90%;
-    display: flex;
 
-  }
-
-  &__mainImg {
-    width: 1368px;
-    height: 963px;
+  &__img {
+    width: 70%;
+    height: auto;
     position: absolute;
-    left: -483px;
-
+    left: -430px;
   }
 
   &__content {
-    margin-top: 342px;
-    //margin-right: 133px;
-    margin-left: 951px;
+    margin-top: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -9,8 +9,8 @@ const Navbar = () => {
             <div className="container">
             <div className="nav__container">
                 <div className="nav__main ">
-                    <NavLink id="link" classnName="nav__main-element" to="/Login">Zaloguj</NavLink>
-                    <NavLink id="link" classnName="nav__main-element" to="/Registration">Zarejestruj się</NavLink>
+                    <NavLink id="link" classnName="nav__main-element" to="/logowanie">Zaloguj</NavLink>
+                    <NavLink id="link" classnName="nav__main-element" to="/rejestracja">Zarejestruj się</NavLink>
                 </div>
                 <div className="nav__scroll">
                     <NavLink className="nav__scroll-element" to="/">Start</NavLink>
@@ -31,6 +31,11 @@ const Navbar = () => {
                           smooth={true}
                           duration={600}>
                         Fundacje i organizacje</Link>
+                    <Link className="nav__scroll-element"to="section4"
+                          spy={true}
+                          smooth={true}
+                          duration={600}>
+                        Kontakt</Link>
                 </div>
             </div>
             </div>

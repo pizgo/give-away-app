@@ -6,7 +6,6 @@ const HomeColumns = () => {
 
         <div className="container">
             <section className="columns">
-                <div className="columns__container">
                     <div className="columns__column">
                         <p  className="columns__column-number">
                             10
@@ -40,9 +39,7 @@ const HomeColumns = () => {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur corporis iste nobis perspiciatis quaerat sapiente voluptas.
                         </p>
                     </div>
-                </div>
             </section>
-
         </div>
     )
 }

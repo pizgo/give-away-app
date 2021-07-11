@@ -8,8 +8,7 @@ const HomeHeader = () => {
 
         <div className="container">
                 <section className="header">
-                        <div className="header__container">
-                            <img src={HomeHeroImage} className="header__mainImg"/>
+                            <img src={HomeHeroImage} className="header__img"/>
 
                             <div className="header__content">
                                     <p className="header__hello">
@@ -28,7 +27,6 @@ const HomeHeader = () => {
                                             </a>
                                     </div>
                              </div>
-                        </div>
                 </section>
         </div>
     )
