@@ -21,8 +21,6 @@ const Login = () => {
                     </a>
                     <button className="login__button">Wyslij</button>
                 </div>
-
-
             </div>
         </div>
     )

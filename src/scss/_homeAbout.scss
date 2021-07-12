@@ -4,15 +4,32 @@
 .about {
   display: flex;
   margin-top: 80px;
+  height: 885px;
 
   &__text {
     width: 50%;
-    background-color: #F0F1F1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    align-items: flex-end;
+    background-color: #F0F1F1;
+
+
+    &-text {
+      width: 100%;
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      line-height: 50px;
+    }
+
+    &-img {
+      margin-right: 140px;
+      margin-top: 30px;
+
+    }
   }
 
   &__header {
@@ -32,26 +49,14 @@
     color: $black;
     text-align: center;
     margin-top: 55px;
-    width: 70%;
+    width: 60%;
   }
 
-  &__signature {
-    position: absolute;
-    left: 590px;
-    top: 700px;
-  }
 
   &__img {
     width: 50%;
     height: auto;
-
-    &-pic {
-      width: 942px;
-      height: 935px;
-      object-fit: cover;
-      object-position: 0% 50%;
-
-
-    }
+    //position: absolute;
+    //right: -330px;
   }
 }
