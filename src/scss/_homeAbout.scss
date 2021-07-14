@@ -55,8 +55,12 @@
 
   &__img {
     width: 50%;
-    height: auto;
-    //position: absolute;
-    //right: -330px;
+
+    &-pic {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
   }
 }
+

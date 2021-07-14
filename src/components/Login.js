@@ -1,14 +1,18 @@
-import React from "react";
+import React , {useState} from "react";
 import Decoration from "../assets/Decoration.svg";
+import validator from 'validator'
+
 
 const Login = () => {
+
+
 
     return (
 
         <div className="login">
             <div className="login__container">
                 <p className="login__text">Zaloguj się</p>
-                <img src={Decoration} id="decoration" className="login__img"/>
+                <img src={Decoration} alt="" id="decoration" className="login__img"/>
                 <form className="login__form>">
                     <label className="login__form-label">Email</label>
                     <input type="email" name="login" className="login__form-input" />

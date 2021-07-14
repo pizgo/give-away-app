@@ -14,13 +14,13 @@ const HomeHowItWorks = () => {
                     <p className="steps__section1-text">
                         Wystarczą 4 proste kroki
                     </p>
-                    <img src={Decoration} id="decoration" className="steps__section1-img"/>
+                    <img src={Decoration} alt="" id="decoration" className="steps__section1-img"/>
                 </div>
 
                 <div className="steps__section2">
                     <div className="steps__section2-container">
                             <div className="steps__section2-step">
-                                <img src={Icon1} className="steps__section2-step-img"/>
+                                <img src={Icon1} alt="" className="steps__section2-step-img"/>
                                 <p className="steps__section2-step-action">
                                     Wybierz rzeczy
                                 </p>
@@ -29,7 +29,7 @@ const HomeHowItWorks = () => {
                                 </p>
                             </div>
                             <div className="steps__section2-step">
-                                <img src={Icon2} className="steps__section2-step-img"/>
+                                <img src={Icon2} alt="" className="steps__section2-step-img"/>
                                 <p className="steps__section2-step-action">
                                     Spakuj je
                                 </p>
@@ -38,7 +38,7 @@ const HomeHowItWorks = () => {
                                 </p>
                             </div>
                             <div className="steps__section2-step">
-                                <img src={Icon3} className="steps__section2-step-img"/>
+                                <img src={Icon3} alt="" className="steps__section2-step-img"/>
                                 <p className="steps__section2-step-action">
                                     Zdecyduj komu <br/>chcesz pomóc
                                 </p>
@@ -47,7 +47,7 @@ const HomeHowItWorks = () => {
                                 </p>
                             </div>
                             <div className="steps__section2-step">
-                                <img src={Icon4} className="steps__section2-step-img"/>
+                                <img src={Icon4} alt="" className="steps__section2-step-img"/>
                                 <p className="steps__section2-step-action">
                                     Zamów kuriera
                                 </p>

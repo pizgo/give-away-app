@@ -21,7 +21,8 @@
     &-element {
       font-family: $font-base;
       font-size: 0.8rem;
-      //text-decoration: none;
+      color: $black;
+      padding: 9px 10px;
 
       &:hover {
         border: 1px solid #FAD648;
@@ -30,7 +31,6 @@
   }
 
   &__scroll {
-    width: 40%;
     display: flex;
     justify-content: space-between;
 
@@ -40,10 +40,6 @@
       color: $black;
       cursor: pointer;
       padding: 9px 20px;
-
-      &:last-child {
-        padding-right: 0;
-      }
 
       &:hover {
         border: 1px solid $black;

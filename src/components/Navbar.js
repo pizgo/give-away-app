@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
@@ -9,8 +9,8 @@ const Navbar = () => {
             <div className="container">
             <div className="nav__container">
                 <div className="nav__main ">
-                    <NavLink id="link" classnName="nav__main-element" to="/logowanie">Zaloguj</NavLink>
-                    <NavLink id="link" classnName="nav__main-element" to="/rejestracja">Zarejestruj się</NavLink>
+                    <NavLink className="nav__main-element" to="/logowanie">Zaloguj</NavLink>
+                    <NavLink className="nav__main-element" to="/rejestracja">Zarejestruj się</NavLink>
                 </div>
                 <div className="nav__scroll">
                     <NavLink className="nav__scroll-element" to="/">Start</NavLink>
