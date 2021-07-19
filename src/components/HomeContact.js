@@ -11,7 +11,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
         const [ nameError, setNameError ] = useState("");
         const [ emailError, setEmailError ] = useState("");
         const [ messageError, setMessageError ] = useState("");
-        // const [success, setSuccess] = useState();
+        const [success, setSuccess] = useState();
 
         const handleChange = (e) => {
             const { name, value } = e.target;
@@ -51,26 +51,24 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
 
             //jezeli brak bledu to wysylamy do serwera
             if (!isAnyError){
-                //wysylanie do serwera?
-                //postData()
-                console.log("Wysylamy do serwera")
 
-                async function postData(url = '', data = {}) {
-                    const response = await fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                    });
-                    return response.json();
-                }
+                console.log("Wysylamy do serwera");
 
-                postData('https://fer-api.coderslab.pl/v1/portfolio/contact', { inputs })
+                fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(inputs)
+                })
                     .then(data => {
-                        console.log("serwer zwrocil:" + data);
+                        console.log("serwer ok" + data);
                         console.log(data);
-                    });
+                        setSuccess("Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy");
+                    })
+                    .catch(error => {
+                        console.log("serwer błąd" + error);
+                    })
             }
         }
 
@@ -87,6 +85,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                     Skontaktuj się z nami
                 </p>
                 <img src={Decoration} alt="" id="decoration" className="contact__deco-img"/>
+                <p>{success}</p>
                 <form onSubmit={handleSubmit} className="contact__form">
                     <div className="contact__form-row1">
                         <div className="contact__form-row1-field">

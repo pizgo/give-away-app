@@ -1,0 +1,114 @@
+ {
+  "foundations": {
+    "id": 1,
+    "title": "Foundations Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur corporis iste nobis perspiciatis quaerat sapiente voluptas.",
+    "list": [
+      {
+        "name": "Foundation 1",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 1",
+        "items": "Egestas, sed, tempus 1"
+      },
+      {
+        "name": "Foundation 2",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 2",
+        "items": "Egestas, sed, tempus 2"
+      },
+      {
+        "name": "Foundation 3",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 3",
+        "items": "Egestas, sed, tempus 3"
+      },
+      {
+        "name": "Foundation 4",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 4",
+        "items": "Egestas, sed, tempus 4"
+      },
+      {
+        "name": "Foundation 5",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 5",
+        "items": "Egestas, sed, tempus 5"
+      },
+      {
+        "name": "Foundation 6",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 6",
+        "items": "Egestas, sed, tempus 6"
+      },
+      {
+        "name": "Foundation 7",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 7",
+        "items": "Egestas, sed, tempus 7"
+      },
+      {
+        "name": "Foundation 8",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 8",
+        "items": "Egestas, sed, tempus 8"
+      },
+      {
+        "name": "Foundation 9",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 9",
+        "items": "Egestas, sed, tempus 9"
+      }
+    ]
+  },
+
+  "organizations": {
+    "id": 2,
+    "title": "Organizations Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur corporis iste nobis perspiciatis quaerat sapiente voluptas.",
+    "list": [
+      {
+        "name": "Organization 1",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 1",
+        "items": "Egestas, sed, tempus 1"
+      },
+      {
+        "name": "Organization 2",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 2",
+        "items": "Egestas, sed, tempus 2"
+      },
+      {
+        "name": "Organization 3",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 3",
+        "items": "Egestas, sed, tempus 3"
+      },
+      {
+        "name": "Organization 4",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 4",
+        "items": "Egestas, sed, tempus 4"
+      },
+      {
+        "name": "Organization 5",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 5",
+        "items": "Egestas, sed, tempus 5"
+      },
+      {
+        "name": "Organization 6",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 6",
+        "items": "Egestas, sed, tempus 6"
+      }
+    ]
+  },
+
+  "locals": {
+    "id": 3,
+    "title": "Local collections Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur corporis iste nobis perspiciatis quaerat sapiente voluptas.",
+    "list": [
+      {
+        "name": "Local collection 1",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 1",
+        "items": "Egestas, sed, tempus 1"
+      },
+      {
+        "name": "Local collection 2",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 2",
+        "items": "Egestas, sed, tempus 2"
+      },
+      {
+        "name": "Local collection 3",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit 3",
+        "items": "Egestas, sed, tempus 3"
+      }
+    ]
+  }
+}
+
+

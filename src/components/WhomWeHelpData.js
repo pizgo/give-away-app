@@ -1,5 +1,5 @@
 
-let whomWeHelpData = {
+let data = {
   "foundations": {
     "id": 1,
     "title": "Foundations Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur corporis iste nobis perspiciatis quaerat sapiente voluptas.",
@@ -44,7 +44,7 @@ let whomWeHelpData = {
     ]
   },
 
-  "local_collections": {
+  "locals": {
     "id": 3,
     "title": "Local collections Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur corporis iste nobis perspiciatis quaerat sapiente voluptas.",
     "list": [
@@ -67,4 +67,4 @@ let whomWeHelpData = {
   }
 }
 
-export default whomWeHelpData;
+export default data;
