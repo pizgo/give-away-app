@@ -8,18 +8,24 @@ const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
     }
 
     return (
-        <nav>
-            <ul className='pagination'>
-                {pageNumbers.map(number => (
-                    <li key={number}
-                        onClick={() => paginate(number)}>
-                            {number}
-
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <div className='container'>
+            <section className='pagination'>
+                <nav className='pagination__container'>
+                    <ul className='pagination__list'>
+                        {pageNumbers.map(number => (
+                            <li className='pagination__number'  key={number} style={{display: (pageNumbers.length==1) ? 'none' : 'block'}}
+                                onClick={() => paginate(number)}>
+                                    {number}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </section>
+        </div>
     );
 };
 
 export default Pagination;
+
+//style={{display: (selectedResult || !searchTerm || (!filteredResults.length && searchTerm)) ? 'none' : 'block'}}
+//

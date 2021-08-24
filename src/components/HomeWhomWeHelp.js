@@ -16,12 +16,16 @@ const HomeWhomWeHelp = () => {
     const [ currentPage, setCurrentPage] = useState(1);
     const [ itemsPerPage, setItemsPerPage] = useState(3);
 
-
     //pobieranie danych
     const API = "http://localhost:3000";
 
     useEffect(()=> {
         fetch(`${API}/db`)
+            .then(response => {
+                console.log("response")
+                console.log(response)
+                return response
+            })
             .then(response => response.json())
             .then(db => {
                 console.log("Received Data from server:")
@@ -33,6 +37,7 @@ const HomeWhomWeHelp = () => {
             } )
 
             .catch(error => {
+                console.log("error")
                 console.log(error);
             });
     },[]);
@@ -57,7 +62,7 @@ const HomeWhomWeHelp = () => {
     return (
 
         <div className="container">
-            <section className="help">
+            <section className="help" id="section3">
                 <div className="help__container">
                     <h1 className="help__header">
                         Komu pomagamy?

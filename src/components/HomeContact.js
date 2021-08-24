@@ -79,7 +79,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
 
     <div className="container">
         <section className="contact">
-            {/*<img src={BackgroundContactForm} id="decoration" className="contact__backgroundImg"/>*/}
+            <img src={BackgroundContactForm} id="decoration" className="contact__backgroundImg"/>
             <div className="contact__container">
                 <p id="section4" className="contact__text">
                     Skontaktuj się z nami
@@ -105,8 +105,8 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                         <div className="contact__form-row2-field">
                             <label className="contact__form-row2-label">Wpisz swoją wiadomość</label>
                             <textarea onChange={handleChange} name="message" value={inputs.message} placeholder="Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Aspernatur consectetur cum expedita id impedit inventore laud"
-                                   className="contact__form-row2-input" />
+                            adipisicing elit. Aspernatur consectetur cum expedita id impedit inventore laud consectetur cum expedita id impedit inventore laud"
+                                   className="contact__form-row2-input" rows='4'/>
                             <p>{messageError}</p>
                         </div>
                     </div>
@@ -115,13 +115,15 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
             </div>
 
             <div className="contact__footer">
-                <div className="contact__footer-copy">
-                    Copyright by Coders Lab
-                </div>
-                <div className="contact__footer-sm">
-                    <img src={Facebook}  alt="" className="contact__footer-sm-icon"/>
-                    <img src={Instagram} alt="" className="contact__footer-sm-icon"/>
-                </div>
+                {/*<div className='contact__footer-container'>*/}
+                    <div className="contact__footer-copy">
+                        Copyright by Coders Lab
+                    </div>
+                    <div className="contact__footer-sm">
+                        <img src={Facebook}  alt="" className="contact__footer-sm-icon"/>
+                        <img src={Instagram} alt="" className="contact__footer-sm-icon"/>
+                    </div>
+                {/*</div>*/}
 
             </div>
         </section>

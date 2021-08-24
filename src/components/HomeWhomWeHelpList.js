@@ -11,7 +11,7 @@ const HomeWhomWeHelpList = (props) => {
     return (
 
 <div className="container">
-    <section className= "helpInfo" id="section3">
+    <section className= "helpInfo">
         <div className="helpInfo__container">
             <div className="helpInfo__title">{props.collectionTitle}</div>
             <ul className="helpInfo__list">

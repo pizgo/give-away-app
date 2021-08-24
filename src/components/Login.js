@@ -1,6 +1,6 @@
 import React , {useState} from "react";
 import Decoration from "../assets/Decoration.svg";
-import validator from 'validator'
+import validator from 'validator';
 
 
 const Login = () => {
