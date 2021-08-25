@@ -73,8 +73,6 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
         }
 
 
-
-
     return (
 
     <div className="container">
