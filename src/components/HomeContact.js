@@ -27,7 +27,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
 
             let isAnyError = false;
 
-            if(inputs.name.indexOf(' ') >= 0) {
+            if(inputs.name.length >= 0) {
                 setNameError("Podane imię jest nieprawidłowe!");
                 isAnyError = true
             } else {
@@ -64,7 +64,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                     .then(data => {
                         console.log("serwer ok" + data);
                         console.log(data);
-                        setSuccess("Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy");
+                        setSuccess("Wiadomość została wysłana! Wkrótce się skontaktujemy");
                     })
                     .catch(error => {
                         console.log("serwer błąd" + error);
@@ -85,20 +85,24 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                     Skontaktuj się z nami
                 </p>
                 <img src={Decoration} alt="" id="decoration" className="contact__deco-img"/>
-                <p>{success}</p>
+                <div className="contact__boxSuccess">
+                     <p className="contact__success">{success}</p>
+                </div>
                 <form onSubmit={handleSubmit} className="contact__form">
                     <div className="contact__form-row1">
                         <div className="contact__form-row1-field">
                             <label className="contact__form-row1-label">Wpisz swoje imię</label>
                             <input onChange={handleChange}  type="text" name="name" value={inputs.name}
-                                       placeholder="Krzysztof" className="contact__form-row1-input" />
-                                <p>{nameError}</p>
+                                        placeholder="Krzysztof"
+                                        className="contact__form-row1-input" />
+                                <p className="contact__error">{nameError}</p>
+
                         </div>
                         <div className="contact__form-row1-field">
                             <label className="contact__form-row1-label">Wpisz swój email</label>
                             <input onChange={handleChange} type="email" name="email" value={inputs.email}
                                        placeholder="abc@xyz.pl" className="contact__form-row1-input" />
-                                <p>{emailError}</p>
+                                <p className="contact__error">{emailError}</p>
                         </div>
                     </div>
                     <div className="contact__form-row2">
@@ -107,7 +111,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                             <textarea onChange={handleChange} name="message" value={inputs.message} placeholder="Lorem ipsum dolor sit amet, consectetur
                             adipisicing elit. Aspernatur consectetur cum expedita id impedit inventore laud consectetur cum expedita id impedit inventore laud"
                                    className="contact__form-row2-input" rows='4'/>
-                            <p>{messageError}</p>
+                            <p className="contact__error">{messageError}</p>
                         </div>
                     </div>
                     <button type="submit"  className="contact__form-btn">Wyślij</button>
