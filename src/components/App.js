@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Login from "./Login";
 import Registration from "./Registration";
+import Logout from "./Logout";
+import GiveAway from "./GiveAway";
 
 
 const App = () => {
@@ -17,6 +19,12 @@ const App = () => {
                     </Route>
                     <Route exact path="/rejestracja">
                         <Registration/>
+                    </Route>
+                    <Route exact path="/wylogowano">
+                        <Logout/>
+                    </Route>
+                    <Route exact path="/oddaj-rzeczy">
+                        <GiveAway/>
                     </Route>
 
                     <Route exact path="/">

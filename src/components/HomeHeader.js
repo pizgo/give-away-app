@@ -16,7 +16,7 @@ const HomeHeader = () => {
                                         Oddaj niechciane rzeczy w zaufane ręce</p>
                                     <img src={Decoration} alt="" id="decoration" className="header__decorationImg"/>
                                     <div className="header__buttons">
-                                            <a href="/GiveAway">
+                                            <a href="/logowanie">
                                                 <p id="button" className="header__buttons-1">
                                                     Oddaj <br/>
                                                     rzeczy</p>

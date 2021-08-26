@@ -4,7 +4,7 @@ import HomeColumns from "./HomeColumns";
 import HomeHowItWorks from "./HomeHowItWorks";
 import HomeAbout from "./HomeAbout";
 import HomeWhomWeHelp from "./HomeWhomWeHelp";
-import HomeContact from "./HomeContact";
+import Contact from "./Contact";
 
 
 
@@ -18,7 +18,7 @@ const Home = () => {
                 <HomeHowItWorks/>
                 <HomeAbout/>
                 <HomeWhomWeHelp/>
-                <HomeContact/>
+                <Contact/>
 
         </>
     )

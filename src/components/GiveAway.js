@@ -1,10 +1,17 @@
-import React from "react";
+import React from 'react';
+import GiveAwayHeader from "./GiveAwayHeader";
+import GiveAwayForm from "./GiveAwayForm";
+import Contact from "./Contact";
 
 const GiveAway = () => {
-
     return (
+        <>
 
-        <div>To jest formularz oddawania rzeczy</div>
+            <GiveAwayHeader/>
+            <GiveAwayForm/>
+            <Contact/>
+
+        </>
     )
 }
 

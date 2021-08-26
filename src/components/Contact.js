@@ -6,7 +6,7 @@ import Instagram from "../assets/Instagram.svg";
 import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
 
 
-    const HomeContact = () => {
+    const Contact = () => {
         const [ inputs, setInputs] = useState ( {name: "", email: "", message: ""});
         const [ nameError, setNameError ] = useState("");
         const [ emailError, setEmailError ] = useState("");
@@ -133,4 +133,4 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
     )
 }
 
-export default HomeContact;
+export default Contact;
