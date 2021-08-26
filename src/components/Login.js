@@ -21,14 +21,13 @@ const Login = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("czy wchodzi w handleSubmit");
 
         if (!validator.isEmail(inputs.email)) {
             setEmailError("Podany email jest nieprawidłowy!");
             console.log(emailError);
         } else {
             setEmailError();
-           
+
         }
 
 
@@ -36,7 +35,6 @@ const Login = () => {
             setPasswordError("Podane hasło jest za krótkie!");
         } else {
             setPasswordError();
-            console.log("działa");
         }
     }
 
@@ -54,12 +52,12 @@ const Login = () => {
                            <div className="login__form-field">
                                 <label className="login__form-label">Email</label>
                                 <input onChange={handleChange} value={inputs.email} type="email" name="email" className="login__form-input" />
-                               <p className="login_error">{emailError}</p>
+                               <p className="login__error">{emailError}</p>
                            </div>
                             <div className="login__form-field">
                                 <label className="login__form-label">Hasło</label>
                                 <input onChange={handleChange} value={inputs.password} type="password"  name="password" className="login__form-input" />
-                                <p className="login_error">{passwordError}</p>
+                                <p className="login__error">{passwordError}</p>
                             </div>
                        </div>
                         <div className="login__buttons">
