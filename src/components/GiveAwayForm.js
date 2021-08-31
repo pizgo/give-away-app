@@ -10,8 +10,7 @@ import FormEnd from "./FormEnd";
 
 const GiveAwayForm = () => {
 
-    const [userData, setUserData] = useState ( {
-
+    const [ userData, setUserData] = useState ({
         step1checkbox1: false,
         step1checkbox2: false,
         step1checkbox3: false,
@@ -31,34 +30,33 @@ const GiveAwayForm = () => {
         step4phone: "",
         step4data: "",
         step4time: "",
-        step4note: "",
-        
+        step4note: ""
     })
+    const [ currentStep, setCurrentStep] = useState (1);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        setUserData((prevInputsState) => ({
-            ...prevInputsState,
+        setUserData((prevUserDataState) => ({
+            ...prevUserDataState,
             [name]: value
         }));
     }
 
 
+
     return (
         <>
-            <form>
-                <label>Ubrania</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.checkbox1}/>
-                <label>Zabawki</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.checkbox2}/>
+            <form onSubmit={handleSubmit}>
+                <Step1
+                    currentStep={currentStep}
+                    userData={userData}
+                    handleChange={handleChange}/>
+                <Step2/>
+                <Step3/>
+                <Step4/>
+                <FormSummary/>
             </form>
-
-            <Step1/>
-            <Step2/>
-            <Step3/>
-            <Step4/>
-            <FormSummary/>
             <FormEnd/>
         </>
     )
