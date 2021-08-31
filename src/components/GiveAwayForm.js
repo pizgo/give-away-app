@@ -47,7 +47,7 @@ const GiveAwayForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <Step1
                     currentStep={currentStep}
                     userData={userData}
