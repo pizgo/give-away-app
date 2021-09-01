@@ -56,29 +56,28 @@ const GiveAwayForm = () => {
         if ((currentStep >= 2) && ( currentStep <=5)) {
             setCurrentStep (prevCurrentStep => prevCurrentStep - 1)
         }
-
     }
 
-    //const incrementCounter = () => { setCounter( prevCounter => prevCounter + 1 ) }
-    //     const decrementCounter = () => {  setCounter( prevCounter => prevCounter - 1 )  }
+    const previousButton = () => {
+        if (currentStep !==1) {
+            return (
+                <button type="button" onClick={previousStep}>Wróć</button>
+            )
+        }
+    }
 
-    // _next() {
-    //     let currentStep = this.state.currentStep
-    //     // If the current step is 1 or 2, then add one on "next" button click
-    //     currentStep = currentStep >= 2? 3: currentStep + 1
-    //     this.setState({
-    //       currentStep: currentStep
-    //     })
-    //   }
-
-
+    const nextButton = () => {
+        if (currentStep !==5) {
+            return (
+                <button type="button" onClick={nextStep}>Dalej</button>
+            )
+        }
+    }
 
     return (
         <>
 
             <form>
-                
-
                 <Step1
                     currentStep={currentStep}
                     userData={userData}
@@ -89,6 +88,9 @@ const GiveAwayForm = () => {
                 <FormSummary/>
             </form>
             <FormEnd/>
+            {/*<div>{previousButton}</div>*/}
+            {/*<div>{nextButton}</div>*/}
+
         </>
     )
 }
