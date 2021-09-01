@@ -75,7 +75,10 @@ const GiveAwayForm = () => {
 
     return (
         <>
-            <form >
+
+            <form>
+                
+
                 <Step1
                     currentStep={currentStep}
                     userData={userData}
