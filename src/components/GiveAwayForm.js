@@ -43,11 +43,39 @@ const GiveAwayForm = () => {
         }));
     }
 
+    //const handleSubmit = przejście do ostatniego ekranu, czyli zwiększenie stanu o jeden
+    //lub ustawienie stanu currentStep na 6
+
+    const nextStep = () => {
+        if (currentStep <= 4) {
+            setCurrentStep (prevCurrentStep => prevCurrentStep + 1)
+        }
+    }
+
+    const previousStep = () => {
+        if ((currentStep >= 2) && ( currentStep <=5)) {
+            setCurrentStep (prevCurrentStep => prevCurrentStep - 1)
+        }
+
+    }
+
+    //const incrementCounter = () => { setCounter( prevCounter => prevCounter + 1 ) }
+    //     const decrementCounter = () => {  setCounter( prevCounter => prevCounter - 1 )  }
+
+    // _next() {
+    //     let currentStep = this.state.currentStep
+    //     // If the current step is 1 or 2, then add one on "next" button click
+    //     currentStep = currentStep >= 2? 3: currentStep + 1
+    //     this.setState({
+    //       currentStep: currentStep
+    //     })
+    //   }
+
 
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form >
                 <Step1
                     currentStep={currentStep}
                     userData={userData}
