@@ -2,28 +2,55 @@ import React from 'react';
 
 
 
-const Step1 = ( {currentStep, userData, handleChange}) => {
-    return (
+const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
+
+    if (currentStep !==1) {
+        return null
+    }
+
+    else
+        return (
         <>
             <div>
                 <p>Ważne! Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu
                     będziemy wiedzieli, komu najlepiej je przekazać</p>
             </div>
-            <form>
+                <input onChange={handleChangeStep1}  type="radio" name="name" value={dataStep1.radio1}/>
                 <label>ubrania, które nadają się do ponownego użycia</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.step1checkbox1}/>
+
+                <input onChange={handleChangeStep1}  type="radio" name="name" value={dataStep1.radio2}/>
                 <label>ubrania do wyrzucenia</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.step1checkbox2}/>
+
+                 <input onChange={handleChangeStep1}  type="radio" name="name" value={dataStep1.radio3}/>
                 <label>zabawki</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.step1checkbox3}/>
+
+                <input onChange={handleChangeStep1}  type="radio" name="name" value={dataStep1.radio4}/>
                 <label>książki</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.step1checkbox4}/>
+
+                <input onChange={handleChangeStep1}  type="radio" name="name" value={dataStep1.radio5}/>
                 <label>inne</label>
-                <input onChange={handleChange}  type="checkbox" name="name" value={userData.step1checkbox5}/>
-            </form>
+
+                <button type="button" onClick={nextStep}>Dalej</button>
+
         </>
     )
 }
+
+// const previousButton = () => {
+//     if (currentStep !==1) {
+//         return (
+//             <button type="button" onClick={previousStep}>Wróć</button>
+//         )
+//     }
+// }
+//
+// const nextButton = () => {
+//     if (currentStep !==5) {
+//         return (
+//             <button type="button" onClick={nextStep}>Dalej</button>
+//         )
+//     }
+// }
 
 export default Step1;
 

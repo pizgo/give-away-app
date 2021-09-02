@@ -10,87 +10,105 @@ import FormEnd from "./FormEnd";
 
 const GiveAwayForm = () => {
 
-    const [ userData, setUserData] = useState ({
-        step1checkbox1: false,
-        step1checkbox2: false,
-        step1checkbox3: false,
-        step1checkbox4: false,
-        step1checkbox5: false,
-        step2bag_sel: "-wybierz-",
-        step3localization_sel: "-wybierz-",
-        step3chbKids: false,
-        step3checkbox2: false,
-        step3checkbox3: false,
-        step3checkbox4: false,
-        step3checkbox5: false,
-        step3textarea: "",
-        step4street: "",
-        step4city: "",
-        step4zipcode: "",
-        step4phone: "",
-        step4data: "",
-        step4time: "",
-        step4note: ""
-    })
     const [ currentStep, setCurrentStep] = useState (1);
 
-    const handleChange = (e) => {
+    const [ dataStep1, setDataStep1 ] = useState ({
+        radio1: false,
+        radio2: false,
+        radio3: false,
+        radio4: false,
+        radio5: false
+    })
+
+    const [ dataStep2, setDataStep2 ] = useState ({
+        select: "-wybierz-",
+
+    })
+
+    // const [ userData, setUserData] = useState ({
+    //     step1radio1: false,
+    //     step1radio2: false,
+    //     step1radio3: false,
+    //     step1radio4: false,
+    //     step1radio5: false,
+    //     step2bag_sel: "-wybierz-",
+    //     step3localization_sel: "-wybierz-",
+    //     step3chbKids: false,
+    //     step3checkbox2: false,
+    //     step3checkbox3: false,
+    //     step3checkbox4: false,
+    //     step3checkbox5: false,
+    //     step3textarea: "",
+    //     step4street: "",
+    //     step4city: "",
+    //     step4zipcode: "",
+    //     step4phone: "",
+    //     step4data: "",
+    //     step4time: "",
+    //     step4note: ""
+    // })
+
+    const handleChangeStep1 = (e) => {
         const { name, value } = e.target;
 
-        setUserData((prevUserDataState) => ({
-            ...prevUserDataState,
+        setDataStep1((prevDataStep1State) => ({
+            ...prevDataStep1State,
             [name]: value
         }));
     }
+
+    const handleChangeStep2 = (e) => {
+        const { name, value } = e.target;
+
+        setDataStep2((prevDataStep2State) => ({
+            ...prevDataStep2State,
+            [name]: value
+        }));
+    }
+
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //
+    //     setUserData((prevUserDataState) => ({
+    //         ...prevUserDataState,
+    //         [name]: value
+    //     }));
+    // }
 
     //const handleSubmit = przejście do ostatniego ekranu, czyli zwiększenie stanu o jeden
     //lub ustawienie stanu currentStep na 6
 
     const nextStep = () => {
-        if (currentStep <= 4) {
-            setCurrentStep (prevCurrentStep => prevCurrentStep + 1)
-        }
+        setCurrentStep (prevCurrentStep => prevCurrentStep + 1)
+        console.log(currentStep)
     }
 
-    const previousStep = () => {
-        if ((currentStep >= 2) && ( currentStep <=5)) {
-            setCurrentStep (prevCurrentStep => prevCurrentStep - 1)
-        }
+    const prevStep = () => {
+        setCurrentStep (prevCurrentStep => prevCurrentStep - 1)
     }
 
-    const previousButton = () => {
-        if (currentStep !==1) {
-            return (
-                <button type="button" onClick={previousStep}>Wróć</button>
-            )
-        }
-    }
 
-    const nextButton = () => {
-        if (currentStep !==5) {
-            return (
-                <button type="button" onClick={nextStep}>Dalej</button>
-            )
-        }
-    }
+
 
     return (
         <>
-
             <form>
                 <Step1
                     currentStep={currentStep}
-                    userData={userData}
-                    handleChange={handleChange}/>
-                <Step2/>
+                    dataStep1={dataStep1}
+                    nextStep={nextStep}
+                    handleChange={handleChangeStep1}/>
+                <Step2
+                    currentStep={currentStep}
+                    dataStep2={dataStep2}
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    handleChange={handleChangeStep2}/>
                 <Step3/>
                 <Step4/>
                 <FormSummary/>
             </form>
             <FormEnd/>
-            {/*<div>{previousButton}</div>*/}
-            {/*<div>{nextButton}</div>*/}
-
         </>
     )
 }
