@@ -16,11 +16,15 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
                     spakować rzeczy znajdzies TUTAJ</p>
                 </div>
                 <p>Podaj liczbę 60l worków, w które spakowałaś rzeczy</p>
-                <input onChange={handleChangeStep2}  type="select" name="name" value={dataStep2.select}/>
+                <label>Liczba 60l worków</label>
+                <select onChange={handleChangeStep2} placeholder="--wybierz--" name="name" defaultValue={dataStep2}>
+                    <option value="" disabled>-wybierz-</option>
                     <option value="1">1</option>
-                    <option value="2">3</option>
+                    <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
 
 
 

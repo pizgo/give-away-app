@@ -20,9 +20,16 @@ const GiveAwayForm = () => {
         radio5: false
     })
 
-    const [ dataStep2, setDataStep2 ] = useState ({
-        select: "-wybierz-",
+    const [ dataStep2, setDataStep2 ] = useState ('')
 
+    const [ dataStep3, setDataStep3 ] = useState ({
+        select: "",
+        checkbox1: false,
+        checkbox2: false,
+        checkbox3: false,
+        checkbox4: false,
+        checkbox5: false,
+        textarea: ""
     })
 
     // const [ userData, setUserData] = useState ({
@@ -57,13 +64,18 @@ const GiveAwayForm = () => {
         }));
     }
 
-    const handleChangeStep2 = (e) => {
-        const { name, value } = e.target;
+    // const handleChangeStep2 = (e) => {
+    //     const { name, value } = e.target;
+    //
+    //     setDataStep2((prevDataStep2State) => ({
+    //         ...prevDataStep2State,
+    //         [name]: value
+    //     }));
+    // }
 
-        setDataStep2((prevDataStep2State) => ({
-            ...prevDataStep2State,
-            [name]: value
-        }));
+    function handleChangeStep2 (event) {
+        setDataStep2(event.target.value);
+        console.log("ble");
     }
 
     // const handleChange = (e) => {
@@ -97,13 +109,13 @@ const GiveAwayForm = () => {
                     currentStep={currentStep}
                     dataStep1={dataStep1}
                     nextStep={nextStep}
-                    handleChange={handleChangeStep1}/>
+                    handleChangeStep1={handleChangeStep1}/>
                 <Step2
                     currentStep={currentStep}
                     dataStep2={dataStep2}
                     nextStep={nextStep}
                     prevStep={prevStep}
-                    handleChange={handleChangeStep2}/>
+                    handleChangeStep2={handleChangeStep2}/>
                 <Step3/>
                 <Step4/>
                 <FormSummary/>
