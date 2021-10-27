@@ -3,19 +3,19 @@
 @import "normalize";
 @import "settings/colors";
 @import "settings/fonts";
-@import "homeHeader";
-@import "homeColumns";
-@import "homeHowItWorks";
-@import "homeAbout";
-@import "homeWhomWeHelp";
-@import "homeWhomWeHelpList";
-@import "homeContact";
+@import "Home/homeHeader";
+@import "Home/homeColumns";
+@import "Home/homeHowItWorks";
+@import "Home/homeAbout";
+@import "Home/homeWhomWeHelp";
+@import "Home/homeWhomWeHelpList";
+@import "Home/homeContact";
 @import "navbar";
-@import "login";
-@import "pagination";
-@import "registration";
-@import "logout";
-@import "giveAwayHeader";
+@import "Login/login";
+@import "Home/Homepagination";
+@import "Login/registration";
+@import "Login/logout";
+@import "GiveAway/giveAwayHeader";
 
 
 

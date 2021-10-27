@@ -1,0 +1,51 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.header {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+
+
+  &__img {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    left: -430px;
+    top: 19px;
+  }
+
+  &__content {
+    margin-top: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__hello {
+    width: 700px;
+    font-family: $font-base;
+    font-size: 2.1rem;
+    color: $black;
+    text-align: center;
+  }
+
+  &__decorationImg {
+    margin-top: 25px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 65px;
+
+    &-1 {
+      margin-right: 40px;
+
+    }
+
+  }
+
+
+
+}
