@@ -16,11 +16,15 @@
 @import "Login/registration";
 @import "Login/logout";
 @import "GiveAway/giveAwayHeader";
+@import "GiveAway/Form/form";
+@import "GiveAway/Form/step1";
 
 
 
 html {
   font-size: 18px;
+  font-family: $font-base;
+  color: $black
 }
 
 .container {

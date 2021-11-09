@@ -26,39 +26,38 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                     <option value="Katowice">Katowice</option>
                 </select>
                 <p>Komu chcesz pomóc?</p>
-                <p>Checkbox value is {dataStep3.isChecked ? "true" : "false" }</p>
+                {/*<p>Checkbox value is {dataStep3Check ? "true" : "false" }</p>*/}
 
                 <label>dzieciom</label>
                 <input onChange={handleChangeStep3Check}
                        type="checkbox"
-                       name="isChecked"
-                       checked={dataStep3.isChecked}/>
+                       name="kids"
+                       checked={dataStep3Check.contains("kids")}/>
 
                 <label>samotnym matkom</label>
                 <input onChange={handleChangeStep3Check}
                        type="checkbox"
-                       name="isChecked"
-                       checked={dataStep3.isChecked}/>
+                       name="singleMoms"
+                       checked={dataStep3Check.contains("singleMoms")}/>
 
                 <label>bezdomnym</label>
                 <input onChange={handleChangeStep3Check}
                        type="checkbox"
-                       name="isChecked"
-                       checked={dataStep3.isChecked}/>
+                       name="homeless"
+                       checked={dataStep3Check.contains("homeless")}/>
 
                 <label>niepełnosprawnym</label>
                 <input onChange={handleChangeStep3Check}
                        type="checkbox"
-                       name="isChecked"
-                       checked={dataStep3.isChecked}/>
+                       name="disabled"
+                       checked={dataStep3Check.contains("disabled")}/>
 
-                <label>
-                    <input onChange={handleChangeStep3Check}
-                           type="checkbox"
-                           name="isChecked"
-                           checked={dataStep3.isChecked}/>
-                    osobom starszym
-                </label>
+                <label>osobom starszym</label>
+                <input onChange={handleChangeStep3Check}
+                       type="checkbox"
+                       name="elderly"
+                       checked={dataStep3Check.contains("elderly")}/>
+
 
                 <p>wpisz nazwę konkretnej organizacji (opcjonalnie)</p>
                 <input onChange={handleChangeStep3}
