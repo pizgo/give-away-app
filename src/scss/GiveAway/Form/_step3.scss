@@ -1,0 +1,48 @@
+@import "../../settings/colors";
+@import "../../settings/fonts";
+
+.select2 {
+
+  &__container {
+
+  }
+
+  &__label {
+    margin-bottom: 100px;
+
+
+  }
+}
+
+.checkbox {
+
+  &__container {
+    margin-top: 45px;
+
+  }
+
+  &__header {
+
+  }
+}
+
+.textarea {
+
+  &__container {
+    margin-top: 45px;
+
+  }
+
+  &__header {
+    margin-bottom: 20px;
+
+  }
+
+  &__field {
+    width: 570px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid $black;
+
+  }
+}

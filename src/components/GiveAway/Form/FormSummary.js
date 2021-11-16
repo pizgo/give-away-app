@@ -9,6 +9,7 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
     }
 
     let dataStep3CheckPresentation = FormSummaryStep3CheckPresentation(dataStep3Check);
+    console.log(dataStep3CheckPresentation)
 
     return (
         <>
@@ -16,10 +17,8 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
             <p>oddajesz</p>
             <p>{dataStep2} worki</p>
             <p>{dataStep1}</p>
-            <p>{dataStep3CheckPresentation}</p>
+            <p>{dataStep3CheckPresentation.join(",")}</p>
             <p>dla lokalizacji {dataStep3.select}</p>
-
-
         </>
     )
 }

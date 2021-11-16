@@ -1,0 +1,111 @@
+@import "../../settings/colors";
+@import "../../settings/fonts";
+
+
+
+
+.select1 {
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__label {
+    margin-right: 15px;
+
+  }
+
+  &__box {
+    position: relative;
+
+  }
+
+  &__select {
+    font-size: 1.2em;
+    color: $black;
+    font-family: $font-base;
+    padding: 8px 80px 8px 18px;
+    background-color: #eeedeb;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: block;
+    background-color: #eeedeb;
+    height: 47px;
+    width: 50px;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      background: url("../../../assets/Icon-Arrow-Down.svg");
+      width: 50px;
+      height: 23px;
+
+    }
+
+
+  }
+}
+
+  //&__box {
+  //  width: 280px;
+  //  border: 0.75px solid $black ;
+  //  //padding: 0.25em 0.5em;
+  //  font-size: 1.2rem;
+  //  cursor: pointer;
+  //  background-color: transparent;
+  //  //display: grid;
+  //  //grid-template-areas: "select";
+  //  //align-items: center;
+  //  position: relative;
+  //
+  //
+  //  &::after {
+  //    content: "";
+  //    background: url("../../../assets/Icon-Arrow-Down.svg");
+  //    width: 50px;
+  //    height: 23px;
+  //    grid-area: select;
+  //    position: absolute;
+  //    right: 0px;
+  //    pointer-events: none;
+  //    //justify-self: end;
+  //  }
+  //
+  //  &:focus-within {
+  //    border: 0.75px solid $black;
+  //    width: 280px;
+  //    border-radius: inherit;
+  //
+  //
+  //  }
+  //
+  //}
+  //
+  //&__select {
+  //  appearance: none;
+  //  background-color: transparent;
+  //  border: none;
+  //  //padding: 0 1em 0 0;
+  //  margin: 0;
+  //  width: 100%;
+  //  font-family: inherit;
+  //  font-size: inherit;
+  //  cursor: inherit;
+  //  line-height: inherit;
+  //  outline: none;
+  //
+  //
+  //}
+
+
+

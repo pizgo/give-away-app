@@ -21,7 +21,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
             </section>
 
             <div className="form__container">
-                <p className="form__stepNumber">Krok 1/4</p>
+                <p className="form__stepNumber">Krok {currentStep}/4</p>
                 <h3 className="form__text-header">Zaznacz co chcesz oddać:</h3>
                 <div className="form__box">
                     <div className="form__radioContainer">
@@ -76,48 +76,31 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                     </div>
                 </div>
                 <div className="form__buttons">
-                    <button type="button" className="form__buttons-btn" onClick={nextStep}>Dalej</button>
+                    <button type="button" className="form__buttons-btn btn__next" onClick={nextStep}>Dalej</button>
                 </div>
             </div>
         </div>
     )
 }
 
-// const previousButton = () => {
-//     if (currentStep !==1) {
-//         return (
-//             <button type="button" onClick={previousStep}>Wróć</button>
-//         )
-//     }
-// }
+
+//     <p>wartość to {dataStep2}</p>
+//     <select onChange={handleChangeStep2} defaultValue={dataStep2}>
+//         {/*<option value="" disabled>wybierz</option>*/}
+//         <option value="1">1</option>
+//         <option value="2">2</option>
+//         <option value="3">3</option>
+//         <option value="4">4</option>
+//         <option value="5">5</option>
+//     </select>
 //
-// const nextButton = () => {
-//     if (currentStep !==5) {
-//         return (
-//             <button type="button" onClick={nextStep}>Dalej</button>
-//         )
-//     }
-// }
+//
+//
+//
+//
+
+//
+// </>
 
 export default Step1;
 
-//class Step1 extends React.Component {render() {
-//   if (this.props.currentStep !== 1) { // Prop: The current step
-//     return null
-//   }
-//   // The markup for the Step 1 UI
-//   return(
-//     <div className="form-group">
-//       <label htmlFor="email">Email address</label>
-//       <input
-//         className="form-control"
-//         id="email"
-//         name="email"
-//         type="text"
-//         placeholder="Enter email"
-//         value={this.props.email} // Prop: The email input data
-//         onChange={this.props.handleChange} // Prop: Puts data into state
-//       />
-//     </div>
-//   )}
-// }

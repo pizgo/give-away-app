@@ -6,57 +6,43 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import FormSummary from "./FormSummary";
 import FormEnd from "./FormEnd";
-
-// const FormSummaryStep3CheckPresentation = (dataStep3Check) => {
-//     let result = [];
-//     if (dataStep3Check.kids) {
-//         result += ["dzieciom "]
-//     }
-//     if (dataStep3Check.singleMoms) {
-//         result += ["samotnym matkom "]
-//     }
-//     if (dataStep3Check.homeless) {
-//         result += ["bezdomnym "]
-//     }
-//     if (dataStep3Check.disabled) {
-//         result += ["niepełnosprawnym "]
-//     }
-//     if (dataStep3Check.elderly) {
-//         result += ["osobom starszym "]
-//     }
-//     return result;
-// };
-
-const Step3CheckLabel = (value) => {
-  switch (value) {
-      case "kids": return "dzieciom "
-      case "singleMoms": return "samotnym matkom "
-      case "homeless": return "bezdomnym "
-      case "disabled": return "niepełnosprawnym "
-      case "elderly": return "osobom starszym "
-  }
-};
-
+//
 const FormSummaryStep3CheckPresentation = (dataStep3Check) => {
-    dataStep3Check.map(Step3CheckLabel)
+    let result = [];
+    if (dataStep3Check.kids) {
+        result.push("dzieciom")
+    }
+    if (dataStep3Check.singleMoms) {
+        result.push("samotnym matkom")
+    }
+    if (dataStep3Check.homeless) {
+        result.push("bezdomnym")
+    }
+    if (dataStep3Check.disabled) {
+        result.push("niepełnosprawnym")
+    }
+    if (dataStep3Check.elderly) {
+        result.push("osobom starszym")
+    }
+    return result;
 };
 
 const GiveAwayForm = () => {
 
     const [ dataStep1, setDataStep1 ] = useState ('ubrania, które nadają się do ponownego użycia');
-    const [ dataStep2, setDataStep2 ] = useState ('1')
+    const [ dataStep2, setDataStep2 ] = useState ('—wybierz—')
     const [ dataStep3, setDataStep3 ] = useState({
         select: "Poznań",
         text: ""
     })
-    // const [dataStep3Check, setDataStep3Check] = useState({
-    //     kids: false,
-    //     singleMoms: false,
-    //     homeless: false,
-    //     disabled: false,
-    //     elderly: false
-    // });
-    const [dataStep3Check, setDataStep3Check] = useState([]);
+    const [dataStep3Check, setDataStep3Check] = useState({
+        kids: false,
+        singleMoms: false,
+        homeless: false,
+        disabled: false,
+        elderly: false
+    });
+    // const [dataStep3Check, setDataStep3Check] = useState([]);
     const [ dataStep4, setDataStep4 ] = useState ({
         street: "",
         city: "",
@@ -93,16 +79,11 @@ const GiveAwayForm = () => {
 
         const { name, checked } = e.target;
 
+        setDataStep3Check((prevDataStep3CheckState) => ({
 
-
-        // setDataStep3Check((prevDataStep3CheckState) => ({
-        //
-        //     ...prevDataStep3CheckState,
-        //     [name]: checked
-        // }));
-
-        // setDataStep3Check(e.target.checked);
-        // console.log(dataStep3Check)
+            ...prevDataStep3CheckState,
+            [name]: checked
+        }));
     }
 
     const handleChangeStep4 = (e) => {
