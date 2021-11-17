@@ -28,7 +28,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                         <p className="form__stepNumber">Krok {currentStep}/4</p>
                         <div className="form__box">
                             <div className="select2__container">
-                                <label className="form__text-basicBold select2__label">Lokalizacja:</label>
+                                <h3 className="form__text-header">Lokalizacja:</h3>
                                 <div className="select1__box">
                                     <select className="select1__select" onChange={handleChangeStep3} name="select" value={dataStep3.select}>
                                         <option value="Poznań">Poznań</option>
@@ -40,43 +40,48 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                     <span className="select1__arrow"/>
                                 </div>
                             </div>
+                            <p className="form__text-basicBold checkbox__header">Komu chcesz pomóc?</p>
                         <div className="checkbox__container">
-                            <p className="form__text-basic checkbox__header">Komu chcesz pomóc?</p>
-                        {/*<p>Checkbox value is {dataStep3Check ? "true" : "false" }</p>*/}
+                            <label className="checkbox__label">dzieciom
+                            <input onChange={handleChangeStep3Check}
+                                   type="checkbox"
+                                   name="kids"
+                                   checked={dataStep3Check.kids}/>
+                            </label>
 
-                        <label>dzieciom</label>
-                        <input onChange={handleChangeStep3Check}
-                               type="checkbox"
-                               name="kids"
-                               checked={dataStep3Check.kids}/>
+                            <label className="checkbox__label">samotnym matkom
+                            <input onChange={handleChangeStep3Check}
+                                   type="checkbox"
+                                   name="singleMoms"
+                                   checked={dataStep3Check.singleMoms}/>
+                            </label>
 
-                        <label>samotnym matkom</label>
-                        <input onChange={handleChangeStep3Check}
-                               type="checkbox"
-                               name="singleMoms"
-                               checked={dataStep3Check.singleMoms}/>
+                            <label className="checkbox__label">bezdomnym
+                            <input onChange={handleChangeStep3Check}
+                                   type="checkbox"
+                                   name="homeless"
+                                   checked={dataStep3Check.homeless}/>
+                            </label>
+                        </div>
 
-                        <label>bezdomnym</label>
-                        <input onChange={handleChangeStep3Check}
-                               type="checkbox"
-                               name="homeless"
-                               checked={dataStep3Check.homeless}/>
+                        <div className="checkbox__container">
+                            <label className="checkbox__label">niepełnosprawnym
+                            <input onChange={handleChangeStep3Check}
+                                   type="checkbox"
+                                   name="disabled"
+                                   checked={dataStep3Check.disabled}/>
+                            </label>
 
-                        <label>niepełnosprawnym</label>
-                        <input onChange={handleChangeStep3Check}
-                               type="checkbox"
-                               name="disabled"
-                               checked={dataStep3Check.disabled}/>
-
-                        <label>osobom starszym</label>
-                        <input onChange={handleChangeStep3Check}
-                               type="checkbox"
-                               name="elderly"
-                               checked={dataStep3Check.elderly}/>
+                            <label className="checkbox__label">osobom starszym
+                            <input onChange={handleChangeStep3Check}
+                                   type="checkbox"
+                                   name="elderly"
+                                   checked={dataStep3Check.elderly}/>
+                            </label>
                         </div>
 
                         <div className="textarea__container">
-                            <p className="form__text-basic textarea__header">Wpisz nazwę konkretnej organizacji (opcjonalnie):</p>
+                            <p className="form__text-basicBold textarea__header">Wpisz nazwę konkretnej organizacji (opcjonalnie):</p>
                             <input className="textarea__field" onChange={handleChangeStep3}
                                    type="textarea" name="text"
                                    value={dataStep3.text}/>

@@ -16,14 +16,26 @@
 
 .checkbox {
 
-  &__container {
-    margin-top: 45px;
-
-  }
-
   &__header {
+    margin-top: 45px;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    padding: 20px 0px;
 
   }
+
+  &__label {
+    font-size: 1.2em;
+    border: 1px solid $black;
+
+  }
+
+}
+
+input {
+  appearance: none;
 }
 
 .textarea {
