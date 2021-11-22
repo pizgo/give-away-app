@@ -9,17 +9,14 @@
   &__container {
     display: flex;
     align-items: center;
-
   }
 
   &__label {
     margin-right: 15px;
-
   }
 
   &__box {
     position: relative;
-
   }
 
   &__select {
@@ -49,63 +46,10 @@
       background: url("../../../assets/Icon-Arrow-Down.svg");
       width: 50px;
       height: 23px;
-
     }
-
-
   }
 }
 
-  //&__box {
-  //  width: 280px;
-  //  border: 0.75px solid $black ;
-  //  //padding: 0.25em 0.5em;
-  //  font-size: 1.2rem;
-  //  cursor: pointer;
-  //  background-color: transparent;
-  //  //display: grid;
-  //  //grid-template-areas: "select";
-  //  //align-items: center;
-  //  position: relative;
-  //
-  //
-  //  &::after {
-  //    content: "";
-  //    background: url("../../../assets/Icon-Arrow-Down.svg");
-  //    width: 50px;
-  //    height: 23px;
-  //    grid-area: select;
-  //    position: absolute;
-  //    right: 0px;
-  //    pointer-events: none;
-  //    //justify-self: end;
-  //  }
-  //
-  //  &:focus-within {
-  //    border: 0.75px solid $black;
-  //    width: 280px;
-  //    border-radius: inherit;
-  //
-  //
-  //  }
-  //
-  //}
-  //
-  //&__select {
-  //  appearance: none;
-  //  background-color: transparent;
-  //  border: none;
-  //  //padding: 0 1em 0 0;
-  //  margin: 0;
-  //  width: 100%;
-  //  font-family: inherit;
-  //  font-size: inherit;
-  //  cursor: inherit;
-  //  line-height: inherit;
-  //  outline: none;
-  //
-  //
-  //}
 
 
 

@@ -2,52 +2,61 @@
 @import "../../settings/fonts";
 
 .select2 {
-
   &__container {
-
-  }
-
-  &__label {
-    margin-bottom: 100px;
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 .checkbox {
 
   &__header {
-    margin-top: 45px;
+    margin-top: 40px;
     margin-bottom: 20px;
   }
 
   &__container {
-    padding: 20px 0px;
-
+    padding: 10px 0;
+    display: flex;
   }
 
   &__label {
-    font-size: 1.2em;
-    border: 1px solid $black;
 
+    margin-right: 25px;
+    cursor: pointer;
   }
 
+  &__name {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    padding: 10px 15px;
+    user-select: none;
+    overflow: hidden;
+    font-size: 1.2em;
+    border: 1px solid $black;
+    }
+  }
+
+
+
+input[type="checkbox"] {
+  display: none;
 }
 
-input {
-  appearance: none;
+input[type="checkbox"]:checked ~ span {
+  background: $yellow;
 }
 
 .textarea {
 
   &__container {
-    margin-top: 45px;
-
+    margin-top: 20px;
   }
 
   &__header {
     margin-bottom: 20px;
-
   }
 
   &__field {

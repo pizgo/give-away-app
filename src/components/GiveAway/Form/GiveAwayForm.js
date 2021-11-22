@@ -32,7 +32,7 @@ const GiveAwayForm = () => {
     const [ dataStep1, setDataStep1 ] = useState ('ubrania, które nadają się do ponownego użycia');
     const [ dataStep2, setDataStep2 ] = useState ('—wybierz—')
     const [ dataStep3, setDataStep3 ] = useState({
-        select: "Poznań",
+        select: "—wybierz—",
         text: ""
     })
     const [dataStep3Check, setDataStep3Check] = useState({
