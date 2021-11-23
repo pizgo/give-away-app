@@ -75,8 +75,6 @@ const GiveAwayForm = () => {
     }
 
     const handleChangeStep3Check = (e) => {
-
-
         const { name, checked } = e.target;
 
         setDataStep3Check((prevDataStep3CheckState) => ({
@@ -145,8 +143,11 @@ const GiveAwayForm = () => {
                     dataStep3Check={dataStep3Check}
                     dataStep4={dataStep4}
                     FormSummaryStep3CheckPresentation={FormSummaryStep3CheckPresentation}
+                    prevStep={prevStep}
                     nextStep={nextStep}
                 />
+                <FormEnd
+                    currentStep={currentStep}/>
             </form>
             <FormEnd/>
         </>

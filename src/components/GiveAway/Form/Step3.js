@@ -6,7 +6,7 @@ import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handleChangeStep3Check, nextStep, prevStep}) => {
 
-    console.log(dataStep3Check)
+
 
     if (currentStep !== 3) {
         return null
