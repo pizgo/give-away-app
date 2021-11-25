@@ -4,11 +4,14 @@ import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 
 
-const FormEnd = ({currentStep}) => {
+const FormEnd = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Check,
+                     dataStep4, FormSummaryStep3CheckPresentation, nextStep, prevStep}) => {
 
     if (currentStep !== 6) {
         return null
     }
+
+    console.log({dataStep1})
 
     return (
         <>
