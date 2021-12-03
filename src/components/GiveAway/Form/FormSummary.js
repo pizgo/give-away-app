@@ -6,7 +6,7 @@ import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 
 const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Check,
-                         dataStep4, FormSummaryStep3CheckPresentation, nextStep, prevStep}) => {
+                         dataStep4, FormSummaryStep3CheckPresentation, nextStep, prevStep, handleSubmit}) => {
 
     if (currentStep !==5) {
         return null
@@ -73,7 +73,7 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
 
                 <div className="form__buttons">
                     <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>
-                    <button type="button" className="form__buttons-btn btn__next" onClick={nextStep}>Potwierdzam</button>
+                    <button type="button" className="form__buttons-btn btn__next" onClick={handleSubmit}>Potwierdzam</button>
                 </div>
             </div>
         </div>

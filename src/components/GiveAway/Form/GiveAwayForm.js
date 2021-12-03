@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import {db} from "./../../../Firebase.js";
-
+import db from "./../../../firebase.js";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
@@ -95,23 +94,27 @@ const GiveAwayForm = () => {
         setCurrentStep (prevCurrentStep => prevCurrentStep + 1);
 
         e.preventDefault()
-
-        db.collection("garbage").add({
-            title: garbageTitle,
-            binID: binID,
+        db.collection("forms").add({
+            step1: dataStep1,
+            step2: dataStep2,
+            step3city: dataStep3.select,
+            step3receiver: dataStep3Check,
+            step3userReceiver: dataStep3.text,
+            step4street: dataStep4.street,
+            step4city: dataStep4.city,
+            step4zipcode: dataStep4.zipcode,
+            step4phone: dataStep4.phone,
+            step4date: dataStep4.date,
+            step4hour: dataStep4.hour,
+            step4misc: dataStep4.misc
         })
             .then((docRef) => {
                 console.log("Document written with ID: ", docRef.id);
-                setSuccess("Udało się! Twoja propozycja została do nas przesłana!")
             })
 
             .catch((error) => {
                 console.error("Error adding document: ",error);
             })
-
-        setError();
-
-
     }
 
     //changing steps in the form
@@ -162,6 +165,7 @@ const GiveAwayForm = () => {
                     FormSummaryStep3CheckPresentation={FormSummaryStep3CheckPresentation}
                     prevStep={prevStep}
                     nextStep={nextStep}
+                    handleSubmit={handleSubmit}
                 />
                 <FormEnd
                     currentStep={currentStep}
