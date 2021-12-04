@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { collection, addDoc } from "firebase/firestore";
 import db from "./../../../firebase.js";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -94,7 +95,8 @@ const GiveAwayForm = () => {
         setCurrentStep (prevCurrentStep => prevCurrentStep + 1);
 
         e.preventDefault()
-        db.collection("forms").add({
+
+        addDoc(collection(db, "forms"), {
             step1: dataStep1,
             step2: dataStep2,
             step3city: dataStep3.select,
@@ -107,14 +109,12 @@ const GiveAwayForm = () => {
             step4date: dataStep4.date,
             step4hour: dataStep4.hour,
             step4misc: dataStep4.misc
-        })
-            .then((docRef) => {
-                console.log("Document written with ID: ", docRef.id);
-            })
 
-            .catch((error) => {
-                console.error("Error adding document: ",error);
-            })
+        }).then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+        }).catch((error) => {
+            console.error("Error adding document: ",error);
+        })
     }
 
     //changing steps in the form
@@ -125,7 +125,6 @@ const GiveAwayForm = () => {
     const prevStep = () => {
         setCurrentStep (prevCurrentStep => prevCurrentStep - 1)
     }
-
 
     return (
         <>
