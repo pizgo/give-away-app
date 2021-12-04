@@ -115,6 +115,8 @@ const GiveAwayForm = () => {
         }).catch((error) => {
             console.error("Error adding document: ",error);
         })
+
+        //To są tylko zmiany na nowym branchu
     }
 
     //changing steps in the form
