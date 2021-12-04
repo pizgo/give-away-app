@@ -13,6 +13,8 @@ const firebaseApp = initializeApp( {
 });
 
 
+//zmiany na developie
+
 const db = getFirestore();
 
 export default db;
