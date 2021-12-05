@@ -189,15 +189,7 @@ const GiveAwayForm = () => {
                     handleSubmit={handleSubmit}
                 />
                 <FormEnd
-                    currentStep={currentStep}
-                    dataStep1={dataStep1}
-                    dataStep2={dataStep2}
-                    dataStep3={dataStep3}
-                    dataStep3Check={dataStep3Check}
-                    dataStep4={dataStep4}
-                    FormSummaryStep3CheckPresentation={FormSummaryStep3CheckPresentation}
-                    prevStep={prevStep}
-                    nextStep={nextStep}/>
+                    currentStep={currentStep}/>
             </form>
         </>
     )
