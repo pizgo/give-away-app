@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import BackgroundForm from "../../../assets/BackgroundForm.jpg";
-import validator from "validator";
+
 
 
 
@@ -8,11 +8,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
 
     const [ selectionError, setSelectionError] = useState('');
 
-    if (currentStep !==1) {
-        return null
-    }
-
-    const validateAndNextStep = e => {
+    const validateAndNextStep1 = e => {
 
         e.preventDefault();
         if (dataStep1 === '') {
@@ -27,6 +23,10 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
         setSelectionError()
         handleChangeStep1(e)
     }
+
+    if (currentStep !==1) {
+        return null
+    } else
 
         return (
         <div className="container">
@@ -95,7 +95,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                 </div>
                 <p>{selectionError}</p>
                 <div className="form__buttons">
-                    <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>
+                    <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep1}>Dalej</button>
                 </div>
             </div>
         </div>

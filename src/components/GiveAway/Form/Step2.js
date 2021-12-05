@@ -1,9 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 
 
 const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) => {
+
+    const [selectionError, setSelectionError] = useState('');
+
+    const validateAndNextStep = e => {
+        e.preventDefault();
+        if (dataStep2 === '—wybierz—') {
+            setSelectionError('Nie dokonałeś poprawnego wyboru');
+        } else {
+            setSelectionError();
+            nextStep();
+        }
+    }
+
+    const validateAndHandleChangeStep = (e) => {
+        setSelectionError();
+        handleChangeStep2(e)
+    }
 
     if (currentStep !==2) {
         return null
@@ -28,7 +45,7 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
                             <label className="form__text-basic select1__label">
                                 Liczba 60l worków:</label>
                                 <div className="select1__box">
-                                    <select className="select1__select" onChange={handleChangeStep2} defaultValue={dataStep2}>
+                                    <select className="select1__select" onChange={validateAndHandleChangeStep} defaultValue={dataStep2}>
                                                  <option value="0">—wybierz—</option>
                                                  <option value="1">1</option>
                                                  <option value="2">2</option>
@@ -38,12 +55,13 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
                                              </select>
                                         <span className="select1__arrow"/>
                                 </div>
-                            {/*<p>wartość to {dataStep2}</p>*/}
+
                         </div>
                     </div>
+                    <p className='error'>{selectionError}</p>
                     <div className="form__buttons">
                         <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>
-                        <button type="button" className="form__buttons-btn btn__next" onClick={nextStep}>Dalej</button>
+                        <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>
                     </div>
                 </div>
             </div>

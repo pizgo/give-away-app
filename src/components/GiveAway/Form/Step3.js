@@ -1,10 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
-//sprawdzić, czy da się wrzucić wszystkie trzy inputy w jeden state
-//i zrobić dwie funkcje do handlowania zmian (osobno target.valu, osobno target.checked)
 
 const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handleChangeStep3Check, nextStep, prevStep}) => {
+
+    const [selectionError, setSelectionError] = useState('');
+
+    const validateAndNextStep = e => {
+        e.preventDefault();
+        if ((dataStep3.select === '—wybierz—') || (
+            (dataStep3Check.kids === false) &&
+            (dataStep3Check.singleMoms === false) &&
+            (dataStep3Check.homeless === false) &&
+            (dataStep3Check.disabled === false) &&
+            (dataStep3Check.elderly === false)
+        )) {
+            setSelectionError('Nie dokonałeś poprawnego wyboru');
+        } else {
+            setSelectionError();
+            nextStep();
+        }
+    }
+
+    const validateAndHandleChangeStep = (e) => {
+        setSelectionError();
+        handleChangeStep3(e)
+    }
+
+    const validateAndHandleChangeStepCheck = (e) => {
+        setSelectionError();
+        handleChangeStep3Check(e)
+    }
 
 
 
@@ -30,7 +56,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                             <div className="select2__container">
                                 <h3 className="form__text-header">Lokalizacja:</h3>
                                 <div className="select1__box">
-                                    <select className="select1__select" onChange={handleChangeStep3} name="select" value={dataStep3.select}>
+                                    <select className="select1__select" onChange={validateAndHandleChangeStep} name="select" value={dataStep3.select}>
                                         <option value="0">—wybierz—</option>
                                         <option value="Poznań">Poznań</option>
                                         <option value="Warszawa">Warszawa</option>
@@ -44,7 +70,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                             <p className="form__text-basicBold checkbox__header">Komu chcesz pomóc?</p>
                         <div className="checkbox__container">
                             <label className="checkbox__label">
-                            <input onChange={handleChangeStep3Check}
+                            <input onChange={validateAndHandleChangeStepCheck}
                                    type="checkbox"
                                    name="kids"
                                    checked={dataStep3Check.kids}/>
@@ -52,7 +78,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                             </label>
 
                             <label className="checkbox__label">
-                            <input onChange={handleChangeStep3Check}
+                            <input onChange={validateAndHandleChangeStepCheck}
                                    type="checkbox"
                                    name="singleMoms"
                                    checked={dataStep3Check.singleMoms}/>
@@ -60,7 +86,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                             </label>
 
                             <label className="checkbox__label">
-                            <input onChange={handleChangeStep3Check}
+                            <input onChange={validateAndHandleChangeStepCheck}
                                    type="checkbox"
                                    name="homeless"
                                    checked={dataStep3Check.homeless}/>
@@ -70,7 +96,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
 
                         <div className="checkbox__container">
                             <label className="checkbox__label">
-                            <input onChange={handleChangeStep3Check}
+                            <input onChange={validateAndHandleChangeStepCheck}
                                    type="checkbox"
                                    name="disabled"
                                    checked={dataStep3Check.disabled}/>
@@ -78,7 +104,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                             </label>
 
                             <label className="checkbox__label">
-                            <input onChange={handleChangeStep3Check}
+                            <input onChange={validateAndHandleChangeStepCheck}
                                    type="checkbox"
                                    name="elderly"
                                    checked={dataStep3Check.elderly}/>
@@ -87,15 +113,16 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                         </div>
                         <div className="textarea__container">
                             <p className="form__text-basicBold textarea__header">Wpisz nazwę konkretnej organizacji (opcjonalnie):</p>
-                            <input className="textarea__field" onChange={handleChangeStep3}
+                            <input className="textarea__field" onChange={validateAndHandleChangeStep}
                                    type="textarea" name="text"
                                    value={dataStep3.text}/>
                         </div>
                         </div>
+                        <p>{selectionError}</p>
 
                         <div className="form__buttons">
                             <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>
-                            <button type="button" className="form__buttons-btn btn__next" onClick={nextStep}>Dalej</button>
+                            <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>
                         </div>
                 </div>
                 </div>
