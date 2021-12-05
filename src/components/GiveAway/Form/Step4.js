@@ -1,9 +1,33 @@
 import React, {useState} from 'react';
 import BackgroundForm from "../../../assets/BackgroundForm.jpg";
+import validator from "validator";
 
 
 
 const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) => {
+
+    const [fieldError, setFieldError] = useState('');
+
+
+    const validateAndNextStep = e => {
+        e.preventDefault();
+        let isError = false;
+        if (dataStep4.street === '') {
+            setFieldError("Pole nie może być puste");
+            isError = true;
+        }
+
+        if (dataStep4.city === '') {
+            setFieldError("Pole nie może być puste");
+            isError = true;
+        }
+
+        if (!isError) {
+            nextStep()
+        }
+    }
+
+
 
     if (currentStep !==4) {
         return null
@@ -29,12 +53,14 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                             <input className='box1__field' onChange={handleChangeStep4}
                                    type="textarea" name="street"
                                    value={dataStep4.street}/>
+                            <p>{fieldError}</p>
                         </div>
                         <div className='box1__element'>
                             <p className='box1__name'>Miasto</p>
                             <input className='box1__field' onChange={handleChangeStep4}
                                    type="textarea" name="city"
                                    value={dataStep4.city}/>
+                            <p>{fieldError}</p>
                         </div>
                         <div className='box1__element'>
                             <p className='box1__name'>Kod <br/>pocztowy</p>
@@ -80,7 +106,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                 </div>
                 <div className="form__buttons">
                     <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>
-                    <button type="button" className="form__buttons-btn btn__next" onClick={nextStep}>Dalej</button>
+                    <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>
                 </div>
             </div>
         </div>

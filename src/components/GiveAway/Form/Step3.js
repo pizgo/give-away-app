@@ -8,7 +8,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
 
     const validateAndNextStep = e => {
         e.preventDefault();
-        if ((dataStep3.select === '—wybierz—') || !isAnyDictElementsTrue(dataStep3Check)) {
+        if ((dataStep3.select === '—wybierz—') || areDictElementsAllFalse(dataStep3Check)) {
             setSelectionError('Nie dokonałeś poprawnego wyboru');
         } else {
             setSelectionError();
@@ -16,13 +16,13 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
         }
     }
 
-    function isAnyDictElementsTrue(dict){
+    function areDictElementsAllFalse(dict){
         for (const [key,value] of Object.entries(dict)){
             if (value) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     const validateAndHandleChangeStep = (e) => {
