@@ -8,18 +8,21 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
 
     const validateAndNextStep = e => {
         e.preventDefault();
-        if ((dataStep3.select === '—wybierz—') || (
-            (dataStep3Check.kids === false) &&
-            (dataStep3Check.singleMoms === false) &&
-            (dataStep3Check.homeless === false) &&
-            (dataStep3Check.disabled === false) &&
-            (dataStep3Check.elderly === false)
-        )) {
+        if ((dataStep3.select === '—wybierz—') || !isAnyDictElementsTrue(dataStep3Check)) {
             setSelectionError('Nie dokonałeś poprawnego wyboru');
         } else {
             setSelectionError();
             nextStep();
         }
+    }
+
+    function isAnyDictElementsTrue(dict){
+        for (const [key,value] of Object.entries(dict)){
+            if (value) {
+                return true;
+            }
+        }
+        return false;
     }
 
     const validateAndHandleChangeStep = (e) => {
