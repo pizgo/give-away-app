@@ -1,15 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import BackgroundForm from "../../../assets/BackgroundForm.jpg";
+import validator from "validator";
 
 
 
 const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
 
+    const [ selectionError, setSelectionError] = useState('');
+
     if (currentStep !==1) {
         return null
     }
 
-    else
+    const validateAndNextStep = e => {
+
+        e.preventDefault();
+        if (dataStep1 === '') {
+            setSelectionError("Nie dokonałeś poprawnego wyboru");
+        } else {
+            setSelectionError();
+            nextStep();
+        }
+    }
+
+    const validateAndHandleChangeStep1 = (e) => {
+        setSelectionError()
+        handleChangeStep1(e)
+    }
+
         return (
         <div className="container">
 
@@ -27,7 +45,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                     <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
-                                onChange={handleChangeStep1}
+                                onChange={validateAndHandleChangeStep1}
                                 type="radio"
                                 checked={dataStep1 === "ubrania, które nadają się do ponownego użycia" }
                                 value="ubrania, które nadają się do ponownego użycia"/>
@@ -37,7 +55,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                     <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
-                                onChange={handleChangeStep1}
+                                onChange={validateAndHandleChangeStep1}
                                 type="radio"
                                 checked={dataStep1 === "ubrania do wyrzucenia"}
                                 value="ubrania do wyrzucenia"/>
@@ -47,7 +65,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                     <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
-                                onChange={handleChangeStep1}
+                                onChange={validateAndHandleChangeStep1}
                                 type="radio"
                                 checked={dataStep1 === "zabawki"}
                                 value="zabawki"/>
@@ -57,7 +75,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                     <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
-                                onChange={handleChangeStep1}
+                                onChange={validateAndHandleChangeStep1}
                                 type="radio"
                                 checked={dataStep1 === "książki"}
                                 value="książki"/>
@@ -67,7 +85,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                     <div className="form__radioContainer">
                         <label className="form__text-basic radio__label" >
                             <input
-                                onChange={handleChangeStep1}
+                                onChange={validateAndHandleChangeStep1}
                                 type="radio"
                                 checked={dataStep1 === "inne"}
                                 value="inne"/>
@@ -75,32 +93,15 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                         </label>
                     </div>
                 </div>
+                <p>{selectionError}</p>
                 <div className="form__buttons">
-                    <button type="button" className="form__buttons-btn btn__next" onClick={nextStep}>Dalej</button>
+                    <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>
                 </div>
             </div>
         </div>
     )
 }
 
-
-//     <p>wartość to {dataStep2}</p>
-//     <select onChange={handleChangeStep2} defaultValue={dataStep2}>
-//         {/*<option value="" disabled>wybierz</option>*/}
-//         <option value="1">1</option>
-//         <option value="2">2</option>
-//         <option value="3">3</option>
-//         <option value="4">4</option>
-//         <option value="5">5</option>
-//     </select>
-//
-//
-//
-//
-//
-
-//
-// </>
 
 export default Step1;
 

@@ -53,12 +53,12 @@ const GiveAwayForm = () => {
         hour: "",
         misc: ""
     })
+    const [ currentStep, setCurrentStep] = useState (1);
 
 
-//methods for updating state
+//updating states in form
     const handleChangeStep1 = (e) => {
         setDataStep1(e.target.value);
-        console.log(dataStep1)
     }
 
     const handleChangeStep2 = (e) => {
@@ -95,7 +95,6 @@ const GiveAwayForm = () => {
         setCurrentStep (prevCurrentStep => prevCurrentStep + 1);
 
         e.preventDefault()
-
         addDoc(collection(db, "forms"), {
             step1: dataStep1,
             step2: dataStep2,
@@ -114,11 +113,34 @@ const GiveAwayForm = () => {
             console.log("Document written with ID: ", docRef.id);
         }).catch((error) => {
             console.error("Error adding document: ",error);
-        })
+        });
+
+        setDataStep1('');
+        setDataStep2('—wybierz—');
+        setDataStep3({
+            select: "-wybierz-",
+            text: ""
+        });
+        setDataStep3Check({
+            kids: false,
+            singleMoms: false,
+            homeless: false,
+            disabled: false,
+            elderly: false
+        });
+        setDataStep4({
+            street: "",
+            city: "",
+            zipcode: "",
+            phone: "",
+            date: "",
+            hour: "",
+            misc: ""
+        });
     }
 
-    //changing steps in the form
-    const [ currentStep, setCurrentStep] = useState (1);
+    //changing steps
+
     const nextStep = () => {
         setCurrentStep (prevCurrentStep => prevCurrentStep + 1)
     }
@@ -177,7 +199,6 @@ const GiveAwayForm = () => {
                     prevStep={prevStep}
                     nextStep={nextStep}/>
             </form>
-            <FormEnd/>
         </>
     )
 }
