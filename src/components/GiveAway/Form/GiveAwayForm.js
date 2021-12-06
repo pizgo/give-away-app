@@ -50,7 +50,7 @@ const GiveAwayForm = () => {
         zipcode: "",
         phone: "",
         date: "",
-        hour: "",
+        time: "",
         misc: ""
     })
     const [ currentStep, setCurrentStep] = useState (1);
@@ -106,7 +106,7 @@ const GiveAwayForm = () => {
             step4zipcode: dataStep4.zipcode,
             step4phone: dataStep4.phone,
             step4date: dataStep4.date,
-            step4hour: dataStep4.hour,
+            step4time: dataStep4.time,
             step4misc: dataStep4.misc
 
         }).then((docRef) => {

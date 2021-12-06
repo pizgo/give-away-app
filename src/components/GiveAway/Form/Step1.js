@@ -42,7 +42,6 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                 <p className="form__stepNumber">Krok {currentStep}/4</p>
                 <h3 className="form__text-header">Zaznacz co chcesz oddać:</h3>
                 <div className="form__box">
-                    <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
                                 onChange={validateAndHandleChangeStep1}
@@ -51,8 +50,6 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 value="ubrania, które nadają się do ponownego użycia"/>
                             ubrania, które nadają się do ponownego użycia
                         </label>
-                    </div>
-                    <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
                                 onChange={validateAndHandleChangeStep1}
@@ -61,8 +58,6 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 value="ubrania do wyrzucenia"/>
                             ubrania do wyrzucenia
                         </label>
-                    </div>
-                    <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
                                 onChange={validateAndHandleChangeStep1}
@@ -71,8 +66,6 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 value="zabawki"/>
                             zabawki
                         </label>
-                    </div>
-                    <div className="form__radioContainer">
                         <label className="form__text-basic radio__label">
                             <input
                                 onChange={validateAndHandleChangeStep1}
@@ -81,8 +74,6 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 value="książki"/>
                             książki
                         </label>
-                    </div>
-                    <div className="form__radioContainer">
                         <label className="form__text-basic radio__label" >
                             <input
                                 onChange={validateAndHandleChangeStep1}
@@ -91,7 +82,6 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 value="inne"/>
                             inne
                         </label>
-                    </div>
                 </div>
                 <p>{selectionError}</p>
                 <div className="form__buttons">

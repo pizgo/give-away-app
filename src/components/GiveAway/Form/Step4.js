@@ -1,30 +1,77 @@
 import React, {useState} from 'react';
 import BackgroundForm from "../../../assets/BackgroundForm.jpg";
-import validator from "validator";
-
 
 
 const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) => {
 
-    const [fieldError, setFieldError] = useState('');
+    const [streetError, setStreetError] = useState('');
+    const [cityError, setCityError] = useState('');
+    const [zipError, setZipError] = useState('');
+    const [phoneError, setPhoneError] = useState('');
+    const [dateError, setDateError] = useState('');
+    const [timeError, setTimeError] = useState('');
 
 
     const validateAndNextStep = e => {
         e.preventDefault();
-        let isError = false;
+
+        let isAnyError = false;
         if (dataStep4.street === '') {
-            setFieldError("Pole nie może być puste");
-            isError = true;
+            setStreetError("Pole nie może być puste");
+            isAnyError = true;
         }
-
         if (dataStep4.city === '') {
-            setFieldError("Pole nie może być puste");
-            isError = true;
+            setCityError("Pole nie może być puste");
+            isAnyError = true;
         }
-
-        if (!isError) {
+        if (dataStep4.zipcode === '') {
+            setZipError("Pole nie może być puste");
+            isAnyError = true;
+        }
+        if (dataStep4.phone === '') {
+            setPhoneError("Pole nie może być puste");
+            isAnyError = true;
+        } if ((dataStep4.phone.length !== 9) || (!/^\d+$/.test(dataStep4.phone))) {
+            setPhoneError("Podaj poprawny numer telefonu");
+            isAnyError = true;
+        }
+        if (dataStep4.date === '') {
+            setDateError("Pole nie może być puste");
+            isAnyError = true;
+        }
+        if (dataStep4.time === '') {
+            setTimeError("Pole nie może być puste");
+            isAnyError = true;
+        }
+        if (!isAnyError) {
             nextStep()
         }
+    }
+
+
+    const HandleChangeStepAndClearErrorStreet = (e) => {
+        setStreetError();
+        handleChangeStep4(e)
+    }
+    const HandleChangeStepAndClearErrorCity = (e) => {
+        setCityError();
+        handleChangeStep4(e)
+    }
+    const HandleChangeStepAndClearErrorZip = (e) => {
+        setZipError();
+        handleChangeStep4(e)
+    }
+    const HandleChangeStepAndClearErrorPhone = (e) => {
+        setPhoneError();
+        handleChangeStep4(e)
+    }
+    const HandleChangeStepAndClearErrorDate = (e) => {
+        setDateError();
+        handleChangeStep4(e)
+    }
+    const HandleChangeStepAndClearErrorTime = (e) => {
+        setTimeError();
+        handleChangeStep4(e)
     }
 
 
@@ -48,51 +95,68 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                 <div className='form__boxes'>
                     <div className='box1'>
                         <div className='box1__title'>Adres odbioru:</div>
-                        <div className='box1__element'>
-                            <p className='box1__name'>Ulica</p>
-                            <input className='box1__field' onChange={handleChangeStep4}
-                                   type="textarea" name="street"
-                                   value={dataStep4.street}/>
-                            <p>{fieldError}</p>
+                        <div className='box1__box'>
+                            <div className='box1__element'>
+                                <p className='box1__name'>Ulica</p>
+                                <input className='box1__field' onChange={HandleChangeStepAndClearErrorStreet}
+                                       type="textarea" name="street"
+                                       value={dataStep4.street}/>
+                            </div>
+                            <p className='contact__error'>{streetError}</p>
                         </div>
-                        <div className='box1__element'>
-                            <p className='box1__name'>Miasto</p>
-                            <input className='box1__field' onChange={handleChangeStep4}
-                                   type="textarea" name="city"
-                                   value={dataStep4.city}/>
-                            <p>{fieldError}</p>
+                        <div className='box1__box'>
+                            <div className='box1__element'>
+                                <p className='box1__name'>Miasto</p>
+                                <input className='box1__field' onChange={HandleChangeStepAndClearErrorCity}
+                                       type="textarea" name="city"
+                                       value={dataStep4.city}/>
+                            </div>
+                            <p className='contact__error'>{cityError}</p>
                         </div>
-                        <div className='box1__element'>
-                            <p className='box1__name'>Kod <br/>pocztowy</p>
-                            <input className='box1__field' onChange={handleChangeStep4}
-                                   type="textarea" name="zipcode"
-                                   value={dataStep4.zipcode}/>
+                        <div className='box1__box'>
+                            <div className='box1__element'>
+                                <p className='box1__name'>Kod <br/>pocztowy</p>
+                                <input className='box1__field' onChange={HandleChangeStepAndClearErrorZip}
+                                       type="textarea" name="zipcode"
+                                       value={dataStep4.zipcode}/>
+                            </div>
+                            <p className='contact__error'>{zipError}</p>
                         </div>
-                        <div className='box1__element'>
-                            <p className='box1__name'>Numer <br/>telefonu</p>
-                            <input className='box1__field' onChange={handleChangeStep4}
-                                   type="textarea" name="phone"
-                                   value={dataStep4.phone}/>
+                        <div className='box1__box'>
+                            <div className='box1__element'>
+                                <p className='box1__name'>Numer <br/>telefonu</p>
+                                <input className='box1__field' onChange={HandleChangeStepAndClearErrorPhone}
+                                       type="textarea" name="phone"
+                                       value={dataStep4.phone}/>
+
+                            </div>
+                            <p className='contact__error'>{phoneError}</p>
                         </div>
                     </div>
 
                     <div className='box1'>
                         <div className='box1__title'>Termin odbioru:</div>
-                        <div className='box1__element'>
-                            <p className='box1__name'>Data</p>
-                            <input className='box1__field' type='date'
-                                                     name='date'
-                                                     min='2019-01-01'
-                                                     max='2022-12-31'
-                                                     value={dataStep4.date}
-                                                     onChange={handleChangeStep4}/>
+                        <div className='box1__box'>
+                            <div className='box1__element'>
+                                <p className='box1__name'>Data</p>
+                                <input className='box1__field' type='date'
+                                                         name='date'
+                                                         min='2019-01-01'
+                                                         max='2022-12-31'
+                                                         value={dataStep4.date}
+                                                         onChange={HandleChangeStepAndClearErrorDate}/>
+                            </div>
+                            <p className='contact__error'>{dateError}</p>
                         </div>
-                        <div className='box1__element'>
-                            <p className='box1__name'>Godzina</p>
-                            <input className='box1__field' onChange={handleChangeStep4}
-                                   type='time'
-                                   name='time'
-                                   value={dataStep4.time}/>
+                        <div className='box1__box'>
+                            <div className='box1__element'>
+                                <p className='box1__name'>Godzina</p>
+                                <input className='box1__field' onChange={HandleChangeStepAndClearErrorTime}
+                                       type='time'
+                                       name='time'
+                                       value={dataStep4.time}/>
+                            </div>
+                            <p className='contact__error'>{timeError}</p>
                         </div>
                         <div className='box1__element'>
                             <p className='box1__name'>Uwagi <br/> dla kuriera</p>
