@@ -6,21 +6,21 @@ import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
 
-    const [ selectionError, setSelectionError] = useState('');
+    const [ radioError, setRadioError] = useState('');
 
     const validateAndNextStep1 = e => {
 
         e.preventDefault();
         if (dataStep1 === '') {
-            setSelectionError("Nie dokonałeś poprawnego wyboru");
+            setRadioError("Pamiętaj, żeby zaznaczyć swój wybór");
         } else {
-            setSelectionError();
+            setRadioError();
             nextStep();
         }
     }
 
     const validateAndHandleChangeStep1 = (e) => {
-        setSelectionError()
+        setRadioError()
         handleChangeStep1(e)
     }
 
@@ -83,7 +83,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                             inne
                         </label>
                 </div>
-                <p>{selectionError}</p>
+                <p className='radio__error'>{radioError}</p>
                 <div className="form__buttons">
                     <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep1}>Dalej</button>
                 </div>

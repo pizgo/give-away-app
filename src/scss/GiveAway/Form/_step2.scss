@@ -48,6 +48,15 @@
       height: 23px;
     }
   }
+
+  &__error {
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: $font-base;
+    margin-top: 10px;
+    text-align: left;
+  }
 }
 
 

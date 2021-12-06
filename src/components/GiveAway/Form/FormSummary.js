@@ -38,35 +38,35 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
                             <div className='form__text-basicBold summary__box2-elementTitle'>Adres odbioru:</div>
                             <div className='summary__box2-element'>
                                 <p className='form__text-basic summary__box2-elementName'>Ulica</p>
-                                <p className='form__text-basic'>{dataStep4.street}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.street}</p>
                             </div>
                             <div className='summary__box2-element'>
                                 <p className='form__text-basic summary__box2-elementName'>Miasto</p>
-                                <p className='form__text-basic'>{dataStep4.city}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.city}</p>
                             </div>
                             <div className='summary__box2-element'>
                                 <p className='form__text-basic summary__box2-elementName'>Kod<br/>pocztowy</p>
-                                <p className='form__text-basic'>{dataStep4.zipcode}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.zipcode}</p>
                             </div>
                             <div className='summary__box2-element'>
                                 <p className='form__text-basic summary__box2-elementName'>Numer<br/>telefonu</p>
-                                <p className='form__text-basic'>{dataStep4.phone}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.phone}</p>
                             </div>
                         </div>
 
                         <div className='summary__box2-box'>
-                            <div className='form__text-basicBold'>Termin odbioru:</div>
+                            <div className='form__text-basicBold summary__box2-elementTitle'>Termin odbioru:</div>
                             <div className='summary__box2-element summary__box2-elementTitle'>
                                 <p className='form__text-basic summary__box2-elementName'>Data</p>
-                                <p className='form__text-basic'>{dataStep4.date}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.date}</p>
                             </div>
                             <div className='summary__box2-element'>
                                 <p className='form__text-basic summary__box2-elementName'>Godzina</p>
-                                <p className='form__text-basic'>{dataStep4.time}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.time}</p>
                             </div>
                             <div className='summary__box2-element'>
                                 <p className='form__text-basic summary__box2-elementName'>Uwagi<br/>dla kuriera</p>
-                                <p className='form__text-basic'>{dataStep4.misc}</p>
+                                <p className='form__text-basic summary__text'>{dataStep4.misc}</p>
                             </div>
                         </div>
                 </div>

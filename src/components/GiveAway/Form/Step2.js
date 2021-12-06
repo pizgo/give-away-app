@@ -5,20 +5,20 @@ import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) => {
 
-    const [selectionError, setSelectionError] = useState('');
+    const [select1Error, setSelect1Error] = useState('');
 
     const validateAndNextStep = e => {
         e.preventDefault();
         if (dataStep2 === '—wybierz—') {
-            setSelectionError('Nie dokonałeś poprawnego wyboru');
+            setSelect1Error('Pamiętaj, żeby zaznaczyć swój wybór');
         } else {
-            setSelectionError();
+            setSelect1Error();
             nextStep();
         }
     }
 
     const validateAndHandleChangeStep = (e) => {
-        setSelectionError();
+        setSelect1Error();
         handleChangeStep2(e)
     }
 
@@ -58,7 +58,7 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
 
                         </div>
                     </div>
-                    <p className='error'>{selectionError}</p>
+                    <p className='select1__error'>{select1Error}</p>
                     <div className="form__buttons">
                         <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>
                         <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>

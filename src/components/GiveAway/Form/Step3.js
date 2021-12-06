@@ -4,17 +4,8 @@ import BackgroundForm from "../../../assets/BackgroundForm.jpg";
 
 const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handleChangeStep3Check, nextStep, prevStep}) => {
 
-    const [selectionError, setSelectionError] = useState('');
-
-    const validateAndNextStep = e => {
-        e.preventDefault();
-        if ((dataStep3.select === '—wybierz—') || areDictElementsAllFalse(dataStep3Check)) {
-            setSelectionError('Nie dokonałeś poprawnego wyboru');
-        } else {
-            setSelectionError();
-            nextStep();
-        }
-    }
+    const [select2Error, setSelect2Error] = useState('');
+    const [checkError, setCheckError] = useState('');
 
     function areDictElementsAllFalse(dict){
         for (const [key,value] of Object.entries(dict)){
@@ -25,16 +16,32 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
         return true;
     }
 
+    const validateAndNextStep = e => {
+        e.preventDefault();
+
+        let isAnyError = false;
+        if (dataStep3.select === '—wybierz—') {
+            setSelect2Error('Pamiętaj, żeby zaznaczyć swój wybór');
+            isAnyError = true;
+        }
+        if (areDictElementsAllFalse(dataStep3Check)) {
+            setCheckError('Pamiętaj, żeby zaznaczyć swój wybór')
+            isAnyError = true;
+        }
+        if (!isAnyError) {
+            nextStep()
+        }
+    }
+
     const validateAndHandleChangeStep = (e) => {
-        setSelectionError();
+        setSelect2Error();
         handleChangeStep3(e)
     }
 
     const validateAndHandleChangeStepCheck = (e) => {
-        setSelectionError();
+        setCheckError();
         handleChangeStep3Check(e)
     }
-
 
 
     if (currentStep !== 3) {
@@ -58,43 +65,47 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                         <div className="form__box">
                             <div className="select2__container">
                                 <h3 className="form__text-header">Lokalizacja:</h3>
-                                <div className="select1__box">
-                                    <select className="select1__select" onChange={validateAndHandleChangeStep} name="select" value={dataStep3.select}>
-                                        <option value="0">—wybierz—</option>
-                                        <option value="Poznań">Poznań</option>
-                                        <option value="Warszawa">Warszawa</option>
-                                        <option value="Kraków">Kraków</option>
-                                        <option value="Wrocław">Wrocław</option>
-                                        <option value="Katowice">Katowice</option>
-                                    </select>
-                                    <span className="select1__arrow"/>
+                                <div className='select2__container-error'>
+                                    <div className="select2__box">
+                                        <select className="select1__select" onChange={validateAndHandleChangeStep} name="select" value={dataStep3.select}>
+                                            <option value="0">—wybierz—</option>
+                                            <option value="Poznań">Poznań</option>
+                                            <option value="Warszawa">Warszawa</option>
+                                            <option value="Kraków">Kraków</option>
+                                            <option value="Wrocław">Wrocław</option>
+                                            <option value="Katowice">Katowice</option>
+                                        </select>
+                                        <span className="select1__arrow"/>
+                                    </div>
+                                    <p className='select2__error'>{select2Error}</p>
                                 </div>
+
                             </div>
                             <p className="form__text-basicBold checkbox__header">Komu chcesz pomóc?</p>
                         <div className="checkbox__container">
-                            <label className="checkbox__label">
-                            <input onChange={validateAndHandleChangeStepCheck}
-                                   type="checkbox"
-                                   name="kids"
-                                   checked={dataStep3Check.kids}/>
-                                   <span className="checkbox__name">dzieciom</span>
-                            </label>
+                                <label className="checkbox__label">
+                                <input onChange={validateAndHandleChangeStepCheck}
+                                       type="checkbox"
+                                       name="kids"
+                                       checked={dataStep3Check.kids}/>
+                                       <span className="checkbox__name">dzieciom</span>
+                                </label>
 
-                            <label className="checkbox__label">
-                            <input onChange={validateAndHandleChangeStepCheck}
-                                   type="checkbox"
-                                   name="singleMoms"
-                                   checked={dataStep3Check.singleMoms}/>
-                                   <span className="checkbox__name">samotnym matkom</span>
-                            </label>
+                                <label className="checkbox__label">
+                                <input onChange={validateAndHandleChangeStepCheck}
+                                       type="checkbox"
+                                       name="singleMoms"
+                                       checked={dataStep3Check.singleMoms}/>
+                                       <span className="checkbox__name">samotnym matkom</span>
+                                </label>
 
-                            <label className="checkbox__label">
-                            <input onChange={validateAndHandleChangeStepCheck}
-                                   type="checkbox"
-                                   name="homeless"
-                                   checked={dataStep3Check.homeless}/>
-                                   <span className="checkbox__name">bezdomnym</span>
-                            </label>
+                                <label className="checkbox__label">
+                                <input onChange={validateAndHandleChangeStepCheck}
+                                       type="checkbox"
+                                       name="homeless"
+                                       checked={dataStep3Check.homeless}/>
+                                       <span className="checkbox__name">bezdomnym</span>
+                                </label>
                         </div>
 
                         <div className="checkbox__container">
@@ -114,14 +125,15 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                    <span className="checkbox__name">osobom starszym</span>
                             </label>
                         </div>
+                        <p className='select2__error'>{checkError}</p>
                         <div className="textarea__container">
                             <p className="form__text-basicBold textarea__header">Wpisz nazwę konkretnej organizacji (opcjonalnie):</p>
                             <input className="textarea__field" onChange={validateAndHandleChangeStep}
                                    type="textarea" name="text"
                                    value={dataStep3.text}/>
                         </div>
+
                         </div>
-                        <p>{selectionError}</p>
 
                         <div className="form__buttons">
                             <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>

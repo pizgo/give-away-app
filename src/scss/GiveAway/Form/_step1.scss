@@ -10,10 +10,19 @@
     grid-template-columns: 1.2rem auto;
     gap: 2rem;
     margin-bottom: 50px;
+    cursor: pointer;
 
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+  &__error {
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: $font-base;
+    margin-top: 10px;
+    text-align: left;
   }
 }
 
@@ -28,6 +37,7 @@ input[type="radio"] {
   transform: translateY(-0.2em);
   display: grid;
   place-content: center;
+  cursor: pointer;
 
   &::before {
     content: "";

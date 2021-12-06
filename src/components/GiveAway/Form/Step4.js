@@ -102,7 +102,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                                        type="textarea" name="street"
                                        value={dataStep4.street}/>
                             </div>
-                            <p className='contact__error'>{streetError}</p>
+                            <p className='step4__error'>{streetError}</p>
                         </div>
                         <div className='box1__box'>
                             <div className='box1__element'>
@@ -111,7 +111,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                                        type="textarea" name="city"
                                        value={dataStep4.city}/>
                             </div>
-                            <p className='contact__error'>{cityError}</p>
+                            <p className='step4__error'>{cityError}</p>
                         </div>
                         <div className='box1__box'>
                             <div className='box1__element'>
@@ -120,7 +120,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                                        type="textarea" name="zipcode"
                                        value={dataStep4.zipcode}/>
                             </div>
-                            <p className='contact__error'>{zipError}</p>
+                            <p className='step4__error'>{zipError}</p>
                         </div>
                         <div className='box1__box'>
                             <div className='box1__element'>
@@ -130,7 +130,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                                        value={dataStep4.phone}/>
 
                             </div>
-                            <p className='contact__error'>{phoneError}</p>
+                            <p className='step4__error'>{phoneError}</p>
                         </div>
                     </div>
 
@@ -146,7 +146,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                                                          value={dataStep4.date}
                                                          onChange={HandleChangeStepAndClearErrorDate}/>
                             </div>
-                            <p className='contact__error'>{dateError}</p>
+                            <p className='step4__error'>{dateError}</p>
                         </div>
                         <div className='box1__box'>
                             <div className='box1__element'>
@@ -156,7 +156,7 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
                                        name='time'
                                        value={dataStep4.time}/>
                             </div>
-                            <p className='contact__error'>{timeError}</p>
+                            <p className='step4__error'>{timeError}</p>
                         </div>
                         <div className='box1__element'>
                             <p className='box1__name'>Uwagi <br/> dla kuriera</p>
