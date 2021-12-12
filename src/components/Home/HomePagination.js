@@ -27,5 +27,3 @@ const HomePagination = ({ itemsPerPage, totalItems, paginate }) => {
 
 export default HomePagination;
 
-//style={{display: (selectedResult || !searchTerm || (!filteredResults.length && searchTerm)) ? 'none' : 'block'}}
-//

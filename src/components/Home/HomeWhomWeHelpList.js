@@ -13,7 +13,7 @@ const HomeWhomWeHelpList = (props) => {
 <div className="container">
     <section className= "helpInfo">
         <div className="helpInfo__container">
-            <div className="helpInfo__title">{props.collectionTitle}</div>
+            <div className="helpInfo__title">{props.chosenReceiverTitle}</div>
             <ul className="helpInfo__list">
 
                 {
