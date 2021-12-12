@@ -36,7 +36,8 @@
     height: 40px;
     background-color: transparent;
     border: 1px solid $black;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    padding-left: 10px;
 
   }
 }
@@ -46,6 +47,6 @@
   font-size: 0.8rem;
   font-weight: bold;
   font-family: $font-base;
-  padding: 5px 5px;
+  margin: 5px 0px 5px 102px;
   text-align: left;
 }

@@ -5,14 +5,14 @@
   width: 90%;
   display: flex;
   justify-content: flex-end;
-
+  position: relative;
 
   &__img {
     width: 70%;
     height: auto;
     position: absolute;
-    left: -430px;
-    top: 19px;
+    left: -355px;
+    top: -145px;
   }
 
   &__content {

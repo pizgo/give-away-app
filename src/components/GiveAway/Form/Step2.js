@@ -58,7 +58,7 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
 
                         </div>
                     </div>
-                    <p className='select1__error'>{select1Error}</p>
+                    <p className='select1__error' style={{visibility: (select1Error === '') ? 'hidden' : 'visible'}}>Pamiętaj, żeby zaznaczyć swój wybór</p>
                     <div className="form__buttons">
                         <button type="button" className="form__buttons-btn btn__prev" onClick={prevStep}>Wstecz</button>
                         <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep}>Dalej</button>

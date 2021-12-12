@@ -1,6 +1,9 @@
 @import "../../settings/colors";
 @import "../../settings/fonts";
 
+.background {
+  background-image: url("../../../assets/BackgroundForm.jpg");
+}
 .form {
 
   &__img {
@@ -38,6 +41,7 @@
     margin-left: 140px;
     margin-top: 36px;
     height: 750px;
+
 
   }
 
@@ -93,3 +97,4 @@
 .btn__prev {
   margin-right: 50px;
 }
+
