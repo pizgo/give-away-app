@@ -26,7 +26,7 @@ const HomeWhomWeHelpList = (props) => {
                             </div>
 
                             <div className="helpInfo__list-col2">
-                                <div className = "helpInfo__list-items">{el.items}</div>
+                                <div className = "helpInfo__list-items">{el.item}</div>
                             </div>
                         </li>
                 )
