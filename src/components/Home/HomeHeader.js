@@ -8,7 +8,7 @@ const HomeHeader = () => {
 
         <div className="container">
                 <section className="header">
-                            <img src={HomeHeroImage} alt="" className="header__img"/>
+                            {/*<img src={HomeHeroImage} alt="" className="header__img"/>*/}
 
                             <div className="header__content">
                                     <p className="header__hello">
@@ -17,13 +17,13 @@ const HomeHeader = () => {
                                     <img src={Decoration} alt="" id="decoration" className="header__decorationImg"/>
                                     <div className="header__buttons">
                                             <a href="/logowanie">
-                                                <p id="button" className="header__buttons-1">
+                                                <p id="button" className="header__buttons-btn">
                                                     Oddaj <br/>
                                                     rzeczy</p>
                                             </a>
                                             <a href="/OrganizeCollection">
-                                                <p id="button" className="header__buttons-2">
-                                                    Zorganizuj zbiórkę</p>
+                                                <p id="button" className="header__buttons-btn">
+                                                    Zorganizuj <br/>zbiórkę</p>
                                             </a>
                                     </div>
                              </div>

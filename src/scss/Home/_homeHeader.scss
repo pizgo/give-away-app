@@ -4,46 +4,47 @@
 
 
 .header {
-  width: 90%;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-
-  &__img {
-    width: 70%;
-    height: auto;
-    position: absolute;
-    left: -355px;
-    top: -145px;
-  }
 
   &__content {
-    margin-top: 135px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: $yellow 2px solid;
+    padding-top: 25px;
   }
 
   &__hello {
-    width: 700px;
     font-family: $font-base;
-    font-size: 2.1rem;
+    font-size: 1.2rem;
     color: $black;
     text-align: center;
+    line-height: 1.9rem;
   }
 
   &__decorationImg {
     margin-top: 25px;
+    width: 50vw;
   }
 
   &__buttons {
-    display: flex;
-    margin-top: 65px;
 
-    &-1 {
-      margin-right: 40px;
+    &-btn {
+      width: 50vw;
+      height: 90px;
+      font-family: $font-base;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: $black;
+      text-transform: uppercase;
+      border: 0.75px solid $black;
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 25px;
     }
+
+
   }
 }
 
