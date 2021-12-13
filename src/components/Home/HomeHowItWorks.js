@@ -59,7 +59,7 @@ const HomeHowItWorks = () => {
                 </div>
 
                 <div className="steps__section3">
-                    <a href="/GiveAway">
+                    <a href="/oddaj-rzeczy">
                         <p id="button" className="steps__section3-btn">
                                 Oddaj <br/>
                                 rzeczy</p>

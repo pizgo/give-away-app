@@ -18,75 +18,38 @@ const HomeWhomWeHelp = () => {
     const [ itemsPerPage, setItemsPerPage] = useState(3);
 
     // pobieranie danych
-
-
     async function readData (){
         const querySnapshot =  await getDocs(collection(db, "receivers"));
         let receivers = {};
         querySnapshot.forEach((doc) => {
-
             console.log(doc.id, " => ", doc.data());
             receivers [doc.id] = doc.data()
         });
         console.log(receivers)
         setAllData(receivers);
         setChosenReceiver(receivers ['foundations'])
-
     }
     useEffect(()=> {
         readData();
 
     },[]);
 
-    // pobieranie danych
-    // const API = "http://localhost:3000";
-    //
-    // useEffect(()=> {
-    //     fetch(`${API}/db`)
-    //         .then(response => {
-    //             console.log("response")
-    //             console.log(response)
-    //             return response
-    //         })
-    //         .then(response => response.json())
-    //         .then(db => {
-    //             console.log("Received Data from server:")
-    //             console.log(db)
-    //             setAllData(db);
-    //
-    //             setChosenReceiver(db['foundations'])
-    //
-    //         } )
-    //
-    //         .catch(error => {
-    //             console.log("error")
-    //             console.log(error);
-    //         });
-    // },[]);
 
-
-
-
-    // ustawienie zdarzenia na kliknięcie na buttony
     const handleClick = e => {
         console.log(e.target.id)
         console.log(allData)
         setChosenReceiver(allData[e.target.id])
         setCurrentPage(1)
-
     }
 
-    // logika paginacji
-    //
+    // pagination's logic
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = chosenReceiver.list.slice(indexOfFirstItem, indexOfLastItem);
 
-
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return (
-
         <div className="container">
             <section className="help" id="section3">
                 <div className="help__container">
@@ -110,7 +73,5 @@ const HomeWhomWeHelp = () => {
 
     )
 }
-
-
 
 export default HomeWhomWeHelp;

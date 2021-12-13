@@ -9,9 +9,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
     const [ radioError, setRadioError] = useState('');
 
     const validateAndNextStep1 = e => {
-
         e.preventDefault();
-
         if (dataStep1 === '') {
             setRadioError("Pamiętaj, żeby zaznaczyć swój wybór");
         } else {
@@ -86,7 +84,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                             </label>
                     </div>
 
-                    <p className='radio__error' style={{visibility: (radioError === '') ? 'hidden' : 'visible'}}>Pamiętaj, żeby zaznaczyć swój wybór</p>
+                    <p className='radio__error'>{radioError}</p>
                     <div className="form__buttons">
                         <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep1}>Dalej</button>
                     </div>

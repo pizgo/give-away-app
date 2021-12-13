@@ -1,0 +1,18 @@
+@mixin dekstop {
+  @media (min-width: 1151px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1150px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
