@@ -3,64 +3,115 @@
 
 .about {
   display: flex;
-  margin-top: 80px;
-  height: 885px;
+  margin-top: 20px;
 
-  &__text {
-    width: 50%;
+  &__box1 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     background-color: #F0F1F1;
+    padding: 40px;
 
 
     &-text {
-      width: 100%;
-      margin-top: 150px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       position: relative;
-      line-height: 50px;
     }
 
     &-img {
-      margin-right: 140px;
-      margin-top: 30px;
-
+      margin-top: 25px;
+      width: 40%
     }
   }
 
-  &__header {
+  &__title {
     font-family: $font-base;
-    font-size: 2.1rem;
+    font-size: 1.2rem;
     color: $black;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
-  &__decorationImg {
-
-  }
 
   &__desc {
     font-family: $font-base;
-    font-size: 1.6rem;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
     color: $black;
-    text-align: center;
-    margin-top: 55px;
-    width: 60%;
+    text-align: justify;
+    margin-top: 25px;
   }
 
 
-  &__img {
-    width: 50%;
-
-    &-pic {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
+  &__box2 {
+    display: none;
   }
 }
 
+
+//rwd
+
+//.about {
+//  display: flex;
+//  margin-top: 25px;
+//  height: 885px;
+//
+//  &__box1 {
+//    width: 50%;
+//    display: flex;
+//    flex-direction: column;
+//    align-items: flex-end;
+//    background-color: #F0F1F1;
+//
+//
+//    &-text {
+//      width: 100%;
+//      margin-top: 150px;
+//      display: flex;
+//      flex-direction: column;
+//      justify-content: center;
+//      align-items: center;
+//      position: relative;
+//      line-height: 50px;
+//    }
+//
+//    &-img {
+//      margin-right: 140px;
+//      margin-top: 30px;
+//
+//    }
+//  }
+//
+//  &__title {
+//    font-family: $font-base;
+//    font-size: 2.1rem;
+//    color: $black;
+//    margin-bottom: 40px;
+//  }
+//
+//  &__decorationImg {
+//
+//  }
+//
+//  &__desc {
+//    font-family: $font-base;
+//    font-size: 1.6rem;
+//    color: $black;
+//    text-align: center;
+//    margin-top: 55px;
+//    width: 60%;
+//  }
+//
+//
+//  &__box2 {
+//    width: 50%;
+//
+//    &-pic {
+//      height: 100%;
+//      object-fit: cover;
+//      width: 100%;
+//    }
+//  }
+//}

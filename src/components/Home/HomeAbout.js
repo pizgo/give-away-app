@@ -9,9 +9,9 @@ const HomeAbout = () => {
 
         <div className="container">
             <section className="about">
-                <div className="about__text">
-                    <div className="about__text-text">
-                        <p id="section2" className="about__header">
+                <div className="about__box1">
+                    <div className="about__box1-text">
+                        <p id="section2" className="about__title">
                            O nas
                         </p>
                         <img src={Decoration} alt="" id="decoration" className="about__decorationImg"/>
@@ -19,10 +19,10 @@ const HomeAbout = () => {
                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cum expedita id impedit inventore laudantium pariatur quia quos sapiente?
                          </p>
                     </div>
-                    <img src={Signature} alt="" className="about__text-img"/>
+                    <img src={Signature} alt="" className="about__box1-img"/>
 
                 </div>
-                <div className="about__img">
+                <div className="about__box2">
                     <img src={People} alt="" className="about__img-pic"/>
                 </div>
 

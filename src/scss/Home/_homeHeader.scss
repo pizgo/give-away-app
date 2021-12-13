@@ -30,7 +30,7 @@
   &__buttons {
 
     &-btn {
-      width: 50vw;
+      width: 250px;
       height: 90px;
       font-family: $font-base;
       font-size: 1.2rem;
@@ -41,9 +41,11 @@
       text-align: center;
       padding-top: 20px;
       margin-top: 25px;
+
+      &:hover {
+        box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
+      }
     }
-
-
   }
 }
 

@@ -74,10 +74,10 @@
   }
 
   &__section3 {
-    margin-top: 15px;
+    margin-top: 25px;
 
     &-btn {
-      width: 50vw;
+      width: 250px;
       height: 90px;
       font-family: $font-base;
       font-size: 1.2rem;
@@ -87,9 +87,14 @@
       border: 0.75px solid $black;
       text-align: center;
       padding-top: 20px;
-      margin-top: 25px;
+
+      &:hover {
+        box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
+      }
     }
   }
+
+
 }
 
 
