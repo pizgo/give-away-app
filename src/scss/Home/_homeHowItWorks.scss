@@ -2,83 +2,175 @@
 @import "../settings/fonts";
 @import "../settings/mixins";
 
+
 .steps {
-  margin-top: 55px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 
   &__section1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     &-text {
-      font-size: 2.1rem;
+      font-size: 1.2rem;
       font-family: $font-base;
       color: $black;
-      margin-bottom: 31px;
     }
 
     &-img {
-      margin-bottom: 41px;
+      margin: 25px 0px;
     }
   }
 
   &__section2 {
-    width: 100%;
     background-color: #F0F1F1;
+    width: 100vw;
 
     &-container {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      padding: 71px 350px 80px;
+      //padding: 71px 350px 80px;
     }
 
     &-step {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      padding: 10px 40px;
+
+      &:first-of-type {
+        padding-top: 40px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 40px;
+      }
 
 
       &-img {
-        width: 83px;
-        height: 83px;
+        width: 50px;
+        height: 50px;
       }
 
       &-action {
         font-family: $font-base;
-        font-size: 1rem;
-        margin-top: 8px;
-        text-align: center;
-
-        &::after {
-          content: "";
-          width: 70px;
-          height: 1px;
-          background-color: $black;
-          display: block;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          justify-content: center;
-          align-items: center;
-        }
+        font-size: 0.8rem;
+        text-align: left;
       }
 
       &-desc {
         font-family: $font-base;
         color: $black;
-        font-size: 0.88rem;
-        text-align: center;
+        font-size: 0.8rem;
+        text-align: right;
       }
     }
   }
 
   &__section3 {
-    margin-top: 35px;
+    margin-top: 15px;
+
+    &-btn {
+      width: 50vw;
+      height: 90px;
+      font-family: $font-base;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: $black;
+      text-transform: uppercase;
+      border: 0.75px solid $black;
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 25px;
+    }
   }
 }
+
+
+////DO RWD DALEJ
+//.steps {
+//  margin-top: 55px;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//
+//
+//  &__section1 {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//
+//    &-text {
+//      font-size: 2.1rem;
+//      font-family: $font-base;
+//      color: $black;
+//      margin-bottom: 31px;
+//    }
+//
+//    &-img {
+//      margin-bottom: 41px;
+//    }
+//  }
+//
+//  &__section2 {
+//    width: 100%;
+//    background-color: #F0F1F1;
+//
+//    &-container {
+//      display: flex;
+//      justify-content: space-between;
+//      padding: 71px 350px 80px;
+//    }
+//
+//    &-step {
+//      display: flex;
+//      flex-direction: column;
+//      justify-content: center;
+//      align-items: center;
+//
+//
+//      &-img {
+//        width: 83px;
+//        height: 83px;
+//      }
+//
+//      &-action {
+//        font-family: $font-base;
+//        font-size: 1rem;
+//        margin-top: 8px;
+//        text-align: center;
+//
+//        &::after {
+//          content: "";
+//          width: 70px;
+//          height: 1px;
+//          background-color: $black;
+//          display: block;
+//          margin-top: 10px;
+//          margin-bottom: 10px;
+//          justify-content: center;
+//          align-items: center;
+//        }
+//      }
+//
+//      &-desc {
+//        font-family: $font-base;
+//        color: $black;
+//        font-size: 0.88rem;
+//        text-align: center;
+//      }
+//    }
+//  }
+//
+//  &__section3 {
+//    margin-top: 35px;
+//  }
+//}
