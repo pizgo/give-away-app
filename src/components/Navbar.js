@@ -13,29 +13,35 @@ const Navbar = () => {
                     <NavLink className="nav__main-element" to="/rejestracja">Zarejestruj się</NavLink>
                 </div>
                 <div className="nav__scroll">
-                    <NavLink className="nav__scroll-element" to="/">Start</NavLink>
+                    <NavLink className="nav__scroll-element" to="/">
+                        Start
+                    </NavLink>
                     <Link className="nav__scroll-element"to="section1"
                     spy={true}
                     smooth={true}
                           offset={-70}
                     duration={600}>
-                        O co chodzi?</Link>
+                       O co chodzi?
+                    </Link>
                     <Link className="nav__scroll-element"to="section2"
                           spy={true}
                           smooth={true}
                           offset={-70}
                           duration={600}>
-                        O nas</Link>
+                        O nas
+                    </Link>
                     <Link className="nav__scroll-element"to="section3"
                           spy={true}
                           smooth={true}
                           duration={600}>
-                        Fundacje i organizacje</Link>
+                        Fundacje i organizacje
+                        </Link>
                     <Link className="nav__scroll-element"to="section4"
                           spy={true}
                           smooth={true}
                           duration={600}>
-                        Kontakt</Link>
+                        Kontakt
+                    </Link>
                 </div>
             </div>
             </div>
