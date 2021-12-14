@@ -53,9 +53,9 @@ const HomeWhomWeHelp = () => {
         <div className="container">
             <section className="help" id="section3">
                 <div className="help__container">
-                    <h1 className="help__header">
+                    <p className="help__title">
                         Komu pomagamy?
-                    </h1>
+                    </p>
                     <img src={Decoration} alt="" id="decoration" className="help__img"/>
                     <div className="help__buttons-container">
                         <p className="help__buttons-button" id='foundations' onClick={handleClick}>Fundacjom</p>

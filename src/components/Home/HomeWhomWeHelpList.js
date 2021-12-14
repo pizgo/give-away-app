@@ -15,9 +15,7 @@ const HomeWhomWeHelpList = (props) => {
         <div className="helpInfo__container">
             <div className="helpInfo__title">{props.chosenReceiverTitle}</div>
             <ul className="helpInfo__list">
-
-                {
-                    itemsToShow.map((el, key) =>
+                {itemsToShow.map((el, key) =>
                         <li key={key} className="helpInfo__list-row">
 
                             <div className="helpInfo__list-col1">
@@ -28,9 +26,7 @@ const HomeWhomWeHelpList = (props) => {
                             <div className="helpInfo__list-col2">
                                 <div className = "helpInfo__list-items">{el.item}</div>
                             </div>
-                        </li>
-                )
-                }
+                        </li>)}
             </ul>
         </div>
     </section>

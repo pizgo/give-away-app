@@ -6,14 +6,12 @@
   &__container {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
-
+    margin-bottom: 25px;
   }
 
   &__list {
     display: flex;
     list-style: none;
-
   }
 
   &__number {
@@ -22,7 +20,6 @@
     color: $black;
     text-align: center;
     padding: 5px 15px;
-    font-weight: lighter;
     cursor: pointer;
     margin-right: 5px;
 
