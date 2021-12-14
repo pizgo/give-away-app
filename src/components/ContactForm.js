@@ -116,18 +116,18 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                 </form>
             </div>
 
-            <div className="contact__footer">
-                {/*<div className='contact__footer-container'>*/}
-                    <div className="contact__footer-copy">
-                        Copyright by Coders Lab
-                    </div>
-                    <div className="contact__footer-sm">
-                        <img src={Facebook}  alt="" className="contact__footer-sm-icon"/>
-                        <img src={Instagram} alt="" className="contact__footer-sm-icon"/>
-                    </div>
-                {/*</div>*/}
+            {/*<div className="contact__footer">*/}
+            {/*    /!*<div className='contact__footer-container'>*!/*/}
+            {/*        <div className="contact__footer-copy">*/}
+            {/*            Copyright by Coders Lab*/}
+            {/*        </div>*/}
+            {/*        <div className="contact__footer-sm">*/}
+            {/*            <img src={Facebook}  alt="" className="contact__footer-sm-icon"/>*/}
+            {/*            <img src={Instagram} alt="" className="contact__footer-sm-icon"/>*/}
+            {/*        </div>*/}
+            {/*    /!*</div>*!/*/}
 
-            </div>
+            {/*</div>*/}
         </section>
     </div>
     )
