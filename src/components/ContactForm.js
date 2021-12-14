@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import validator from 'validator';
 import Decoration from "../assets/Decoration.svg";
-import Facebook from "../assets/Facebook.svg";
-import Instagram from "../assets/Instagram.svg";
 import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
 
 
@@ -27,7 +25,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
 
             let isAnyError = false;
 
-            if(inputs.name.length >= 0) {
+            if(inputs.name.length === 0) {
                 setNameError("Podane imię jest nieprawidłowe!");
                 isAnyError = true
             } else {
@@ -115,19 +113,6 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                     <button type="submit"  className="contact__form-btn">Wyślij</button>
                 </form>
             </div>
-
-            {/*<div className="contact__footer">*/}
-            {/*    /!*<div className='contact__footer-container'>*!/*/}
-            {/*        <div className="contact__footer-copy">*/}
-            {/*            Copyright by Coders Lab*/}
-            {/*        </div>*/}
-            {/*        <div className="contact__footer-sm">*/}
-            {/*            <img src={Facebook}  alt="" className="contact__footer-sm-icon"/>*/}
-            {/*            <img src={Instagram} alt="" className="contact__footer-sm-icon"/>*/}
-            {/*        </div>*/}
-            {/*    /!*</div>*!/*/}
-
-            {/*</div>*/}
         </section>
     </div>
     )

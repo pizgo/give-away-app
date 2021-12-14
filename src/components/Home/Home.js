@@ -5,6 +5,7 @@ import HomeHowItWorks from "./HomeHowItWorks";
 import HomeAbout from "./HomeAbout";
 import HomeWhomWeHelp from "./HomeWhomWeHelp";
 import ContactForm from "../ContactForm";
+import Footer from "../Footer";
 
 
 
@@ -12,13 +13,13 @@ import ContactForm from "../ContactForm";
 const Home = () => {
     return (
         <>
-
                 <HomeHeader/>
                 <HomeColumns/>
                 <HomeHowItWorks/>
                 <HomeAbout/>
                 <HomeWhomWeHelp/>
                 <ContactForm/>
+                <Footer/>
 
         </>
     )

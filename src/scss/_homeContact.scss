@@ -1,29 +1,20 @@
-@import "../settings/colors";
-@import "../settings/fonts";
+@import "settings/colors";
+@import "settings/fonts";
 
 .contact {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  border-top: $yellow 2px solid;
 
   &__backgroundImg {
-    width: 100%;
-    opacity: 0.4;
-    position: absolute;
-    z-index: -1;
+    display: none
   }
 
-
   &__container {
-    margin: 120px 40px 0px 0px;
+    margin: 25px 40px 40px 40px;
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
-    width: 30%;
+    align-items: center;
   }
 
   &__text {
@@ -34,28 +25,26 @@
 
   &__deco-img {
     margin-top: 25px;
-    width: 95%;
+    margin-bottom: 25px;
   }
 
   &__form {
-    position: absolute;
-    top: 275px;
-    left: 0px;
     display: flex;
     flex-direction: column;
-    margin: 0px 40px 25px 40px;
+    width: 100%;
 
     &-row1 {
       display: flex;
-      padding: 20px 0;
       justify-content: space-between;
 
       &-field {
         display: flex;
         flex-direction: column;
-        padding: 20px 20px 20px 0;
         width: 50%;
 
+        &:first-of-type {
+          padding-right: 20px;
+        }
       }
 
       &-label {
@@ -69,27 +58,23 @@
 
       &-input {
         font-family: $font-base;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: $black;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid $black;
         outline: none;
-
       }
     }
 
-
     &-row2 {
       display: flex;
-      padding: 20px 0;
-
+      padding-top: 20px;
 
       &-field {
         display: flex;
         flex-direction: column;
         width: 100%;
-
       }
 
       &-label {
@@ -103,13 +88,12 @@
 
       &-input {
         font-family: $font-base;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: $black;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid $black;
         outline: none;
-        padding: 10px 0;
         resize: none;
       }
     }
@@ -126,53 +110,28 @@
       text-align: center;
       align-self: flex-end;
       cursor: pointer;
-      margin-top: 40px;
-    }
-  }
+      margin-top: 20px;
 
-  &__footer {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 90%;
-    align-self: flex-end;
-    margin-right: 150px;
-
-
-    &-copy {
-      font-family: $font-base;
-      font-size: 1rem;
-      color: $black;
-      align-self: center;
-    }
-
-    &-sm {
-      display: flex;
-      align-self: flex-end;
-
-      &-icon {
-        height: 30px;
-        margin-left: 10px;
-
+      &:hover {
+        box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
       }
     }
   }
 
   &__boxSuccess {
-
     width: 65%;
   }
 
   &__success {
     color: green;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: bold;
     font-family: $font-base;
+    text-align: center;
+    margin-bottom: 25px;
     }
 
   &__error {
-
     color: red;
     font-size: 0.7rem;
     font-weight: bold;

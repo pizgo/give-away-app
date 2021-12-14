@@ -1,0 +1,30 @@
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/mixins";
+
+.footer {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 0px 40px 15px 40px;
+  }
+
+  &__copy {
+    font-family: $font-base;
+    font-size: 0.8rem;
+    color: $black;
+    align-self: center;
+  }
+
+  &__sm {
+    display: flex;
+    align-self: flex-end;
+
+    &-icon {
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+}
