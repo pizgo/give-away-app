@@ -24,6 +24,7 @@ const HomeHowItWorks = () => {
                                 <p className="steps__section2-step-action">
                                     Wybierz rzeczy
                                 </p>
+                                <span className='steps__section2-step-line'></span>
                                 <p className="steps__section2-step-desc">
                                     ubrania, zabawki, <br/>sprzęt i inne
                                 </p>
@@ -33,6 +34,7 @@ const HomeHowItWorks = () => {
                                 <p className="steps__section2-step-action">
                                     Spakuj je
                                 </p>
+                                <span className='steps__section2-step-line'></span>
                                 <p className="steps__section2-step-desc">
                                     skorzystaj z <br/>worków na śmieci
                                 </p>
@@ -42,6 +44,7 @@ const HomeHowItWorks = () => {
                                 <p className="steps__section2-step-action">
                                     Zdecyduj komu <br/>chcesz pomóc
                                 </p>
+                                <span className='steps__section2-step-line'></span>
                                 <p className="steps__section2-step-desc">
                                     wybierz zaufane <br/>miejsce
                                 </p>
@@ -51,6 +54,7 @@ const HomeHowItWorks = () => {
                                 <p className="steps__section2-step-action">
                                     Zamów kuriera
                                 </p>
+                                <span className='steps__section2-step-line'></span>
                                 <p className="steps__section2-step-desc">
                                     kurier przyjedzie <br/>w dogodnym terminie
                                 </p>
