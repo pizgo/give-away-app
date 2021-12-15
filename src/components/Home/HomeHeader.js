@@ -8,7 +8,7 @@ const HomeHeader = () => {
 
         <div className="container">
                 <section className="header">
-                            {/*<img src={HomeHeroImage} alt="" className="header__img"/>*/}
+                            <img src={HomeHeroImage} alt="" className="header__img"/>
 
                             <div className="header__content">
                                     <p className="header__hello">

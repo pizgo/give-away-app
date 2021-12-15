@@ -2,16 +2,60 @@
 @import "../settings/fonts";
 @import "../settings/mixins";
 
+
 .header {
 
+  @include tablet {
+    //width: 90%;
+    margin-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  @include desktop {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  &__img {
+    display: none;
+
+    @include tablet {
+      max-width: 60%;
+      display: inherit;
+    }
+
+    @include desktop {
+      display: inherit;
+      width: 70%;
+    }
+  }
+
   &__content {
-    margin-top: 20px;
+    margin: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-top: $yellow 2px solid;
     padding-top: 25px;
+
+    @include tablet {
+      margin-top: 40px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      border: none;
+      width: 50%
+    }
+
+    @include desktop {
+      margin: 100px 0 0 90px;
+      padding-top: 0;
+      border: none;
+    }
   }
 
   &__hello {
@@ -20,6 +64,18 @@
     color: $black;
     text-align: center;
     line-height: 1.9rem;
+
+    @include tablet {
+      min-width: 495px;
+      max-width: 700px;
+      font-size: 1.5rem;
+    }
+
+    @include desktop {
+      width: 700px;
+      font-size: 2.1rem;
+      line-height: normal;
+    }
   }
 
   &__decorationImg {
@@ -28,6 +84,10 @@
 
   &__buttons {
 
+    @include desktop {
+      display: flex;
+      margin-top: 65px;
+    }
     &-btn {
       width: 250px;
       height: 90px;
@@ -39,11 +99,21 @@
       border: 0.75px solid $black;
       text-align: center;
       padding-top: 20px;
-      margin-top: 25px;
+      margin: 20px;
 
       &:hover {
         box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
       }
+
+      @include tablet {
+        margin-right: 20px;
+      }
+      @include desktop {
+        margin: 20px 30px 0 0;
+        font-size: 1.7rem;
+        padding: 10px 0px;
+      }
+
     }
   }
 }
