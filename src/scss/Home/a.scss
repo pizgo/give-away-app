@@ -1,162 +1,43 @@
 
-.header {
-  width: 90%;
+.columns {
+  margin-top: 134px;
+  background-color: gold;
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  justify-content: space-between;
+  padding: 46px 80px 86px;
 
-  &__img {
-    width: 70%;
-    height: auto;
-    position: absolute;
-    left: -355px;
-    top: -145px;
-  }
-
-  &__content {
-    margin-top: 135px;
+  &__column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    width: 25%;
 
-  &__hello {
-    width: 700px;
-    font-family: $font-base;
-    font-size: 2.1rem;
-    color: $black;
-    text-align: center;
-  }
+    &-number {
+      font-size: 5rem;
+      font-family: $font-base;
+      font-weight: lighter;
+      margin-bottom: 10px;
+      color: $gold
+    }
 
-  &__decorationImg {
-    margin-top: 25px;
-  }
+    &-what {
+      font-size: 1rem;
+      font-family: $font-base;
+      font-weight: lighter;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      color: $black;
+      text-align: center;
 
-  &__buttons {
-    display: flex;
-    margin-top: 65px;
+    }
 
-    &-1 {
-      margin-right: 40px;
+    &-description {
+      font-size: 0.9rem;
+      font-family: $font-alt;
+      font-weight: lighter;
+      text-align: justify;
+      color: $black;
     }
   }
 }
-
-//test
-//@include mobile {
-//  .header {
-//
-//    &__img {
-//      display: none;
-//    }
-//
-//    &__content {
-//      margin: 20px 0px;
-//      display: flex;
-//      flex-direction: column;
-//      justify-content: center;
-//      align-items: center;
-//      border-top: $yellow 2px solid;
-//      padding-top: 25px;
-//    }
-//
-//    &__hello {
-//      font-family: $font-base;
-//      font-size: 1.2rem;
-//      color: $black;
-//      text-align: center;
-//      line-height: 1.9rem;
-//    }
-//
-//    &__decorationImg {
-//      margin-top: 25px;
-//    }
-//
-//    &__buttons {
-//
-//      &-btn {
-//        width: 250px;
-//        height: 90px;
-//        font-family: $font-base;
-//        font-size: 1.2rem;
-//        font-weight: lighter;
-//        color: $black;
-//        text-transform: uppercase;
-//        border: 0.75px solid $black;
-//        text-align: center;
-//        padding-top: 20px;
-//        margin: 20px 0px;
-//
-//
-//        &:hover {
-//          box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
-//        }
-//      }
-//  }
-//
-//  }
-//}
-//
-//@include tablet {
-//  .header {
-//    //width: 90%;
-//    margin-right: 40px;
-//    display: flex;
-//    justify-content: flex-end;
-//    position: relative;
-//
-//    &__img {
-//      max-width: 70%;
-//      display: inherit;
-//    }
-//
-//    &__content {
-//      margin-top: 40px;
-//      margin-bottom: 0px;
-//      padding-top: 0px;
-//      display: flex;
-//      flex-direction: column;
-//      justify-content: center;
-//      align-items: center;
-//      border: none;
-//      width: 50%
-//    }
-//
-//    &__hello {
-//      width: 700px;
-//      font-family: $font-base;
-//      font-size: 1.5rem;
-//      color: $black;
-//      text-align: center;
-//    }
-//
-//
-//    &__buttons {
-//      display: flex;
-//      flex-direction: column;
-//
-//      &-btn {
-//        width: 250px;
-//        height: 90px;
-//        font-family: $font-base;
-//        font-size: 1.2rem;
-//        font-weight: lighter;
-//        color: $black;
-//        text-transform: uppercase;
-//        border: 0.75px solid $black;
-//        text-align: center;
-//        padding-top: 20px;
-//        margin: 20px 0px;
-//
-//
-//        &:hover {
-//          box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
-//        }
-//        @include tablet {
-//          margin-right: 20px;
-//        }
-//      }
-//    }
-//  }
-//}
