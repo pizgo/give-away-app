@@ -52,15 +52,15 @@ const HomeWhomWeHelp = () => {
     return (
         <div className="container">
             <section className="help" id="section3">
-                <div className="help__container">
-                    <p className="help__title">
+                <div className="help__box1">
+                    <p className="help__box1-title">
                         Komu pomagamy?
                     </p>
-                    <img src={Decoration} alt="" id="decoration" className="help__img"/>
-                    <div className="help__buttons-container">
-                        <p className="help__buttons-button" id='foundations' onClick={handleClick}>Fundacjom</p>
-                        <p className="help__buttons-button" id='organizations' onClick={handleClick}>Organizacjom <br/>pozarządowym</p>
-                        <p className="help__buttons-button" id='local' onClick={handleClick}>Lokalnym <br/>zbiórkom</p>
+                    <img src={Decoration} alt="" id="decoration" className="help__box1-img"/>
+                    <div className="help__box1-buttons">
+                        <p className="help__box1-btn" id='foundations' onClick={handleClick}>Fundacjom</p>
+                        <p className="help__box1-btn" id='organizations' onClick={handleClick}>Organizacjom <br/>pozarządowym</p>
+                        <p className="help__box1-btn" id='local' onClick={handleClick}>Lokalnym <br/>zbiórkom</p>
                     </div>
                 </div>
                 <HomeWhomWeHelpList currentItems={currentItems} chosenReceiverTitle={chosenReceiver.title} />

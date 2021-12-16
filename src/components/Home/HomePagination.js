@@ -9,18 +9,16 @@ const HomePagination = ({ itemsPerPage, totalItems, paginate }) => {
 
     return (
         <div className='container'>
-            <section className='pagination'>
-                <nav className='pagination__container'>
-                    <ul className='pagination__list'>
+                <nav className='help__box3'>
+                    <ul className='help__box3-list'>
                         {pageNumbers.map(number => (
-                            <li className='pagination__number'  key={number} style={{display: (pageNumbers.length==1) ? 'none' : 'block'}}
+                            <li className='help__box3-pagNumber'  key={number} style={{display: (pageNumbers.length==1) ? 'none' : 'block'}}
                                 onClick={() => paginate(number)}>
                                     {number}
                             </li>
                         ))}
                     </ul>
                 </nav>
-            </section>
         </div>
     );
 };

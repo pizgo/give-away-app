@@ -1,62 +1,50 @@
-.about {
-  display: flex;
-  margin-top: 25px;
-  height: 885px;
+rwd
+.help {
 
-  &__box1 {
-    width: 50%;
+  &__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    background-color: #F0F1F1;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 90px;
 
-
-    &-text {
-      width: 100%;
-      margin-top: 150px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      line-height: 50px;
-    }
-
-    &-img {
-      margin-right: 140px;
-      margin-top: 30px;
-
-    }
   }
 
   &__title {
     font-family: $font-base;
     font-size: 2.1rem;
-    color: $black;
-    margin-bottom: 40px;
+    font-weight: lighter;
   }
 
-  &__decorationImg {
+  &__img {
+    margin-top: 25px;
+    margin-bottom: 60px;
 
   }
 
-  &__desc {
-    font-family: $font-base;
-    font-size: 1.6rem;
-    color: $black;
-    text-align: center;
-    margin-top: 55px;
-    width: 60%;
-  }
+  &__buttons {
+
+    &-container {
+      display: flex;
+      //margin-left: 90px;
+    }
+
+    &-button {
+
+      font-family: $font-base;
+      font-size: 1.3rem;
+      font-weight: lighter;
+      color: $black;
+      cursor: pointer;
+      padding: 9px 80px;
+      text-align: center;
+      align-self: center;
 
 
-  &__box2 {
-    width: 50%;
+      &:hover {
+        border: 1px solid $black;
+      }
 
-    &-pic {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
     }
   }
 }

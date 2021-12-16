@@ -11,25 +11,25 @@ const HomeWhomWeHelpList = (props) => {
     return (
 
 <div className="container">
-    <section className= "helpInfo">
-        <div className="helpInfo__container">
-            <div className="helpInfo__title">{props.chosenReceiverTitle}</div>
-            <ul className="helpInfo__list">
-                {itemsToShow.map((el, key) =>
-                        <li key={key} className="helpInfo__list-row">
 
-                            <div className="helpInfo__list-col1">
-                                <div className = "helpInfo__list-name">{el.name}</div>
-                                <div className = "helpInfo__list-desc">{el.desc}</div>
+        <div className="help__box2">
+            <div className="help__box2-title">{props.chosenReceiverTitle}</div>
+            <ul className="help__box2-list">
+                {itemsToShow.map((el, key) =>
+                        <li key={key} className="help__box2-listRow">
+
+                            <div className="help__box2-listCol1">
+                                <div className = "help__box2-name">{el.name}</div>
+                                <div className = "help__box2-desc">{el.desc}</div>
                             </div>
 
-                            <div className="helpInfo__list-col2">
-                                <div className = "helpInfo__list-items">{el.item}</div>
+                            <div className="help__box2-listCol2">
+                                <div className = "help__box2-items">{el.item}</div>
                             </div>
                         </li>)}
             </ul>
         </div>
-    </section>
+
 </div>
     )
 }

@@ -2,31 +2,35 @@
 @import "../settings/fonts";
 @import "../settings/mixins";
 
-.pagination {
+.help {
 
-  &__container {
+  &__box3 {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-  }
 
-  &__list {
-    display: flex;
-    list-style: none;
-  }
-
-  &__number {
-    font-family: $font-base;
-    font-size: 1rem;
-    color: $black;
-    text-align: center;
-    padding: 5px 15px;
-    cursor: pointer;
-    margin-right: 5px;
-
-    &:hover {
-      border: 1px solid #707070;
+    @include desktop {
+      margin-bottom: 60px;
     }
-  }
 
+    &-list {
+      display: flex;
+      list-style: none;
+    }
+
+    &-pagNumber {
+      font-family: $font-base;
+      font-size: 1rem;
+      color: $black;
+      text-align: center;
+      padding: 5px 15px;
+      cursor: pointer;
+      margin-right: 5px;
+
+      &:hover {
+        border: 1px solid #707070;
+      }
+    }
+
+  }
 }
