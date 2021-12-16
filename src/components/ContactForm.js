@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import validator from 'validator';
 import Decoration from "../assets/Decoration.svg";
 import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
+import Footer from "./Home/Footer";
 
 
     const ContactForm = () => {
@@ -113,6 +114,7 @@ import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
                     <button type="submit"  className="contact__form-btn">Wyślij</button>
                 </form>
             </div>
+            <Footer/>
         </section>
     </div>
     )

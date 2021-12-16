@@ -1,0 +1,47 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+@import "../settings/mixins";
+
+.footer {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin: 0px 40px 15px 40px;
+
+    @include tablet {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    @include desktop {
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+      width: 50%
+    }
+  }
+
+  &__copy {
+    font-family: $font-base;
+    font-size: 0.8rem;
+    color: $grey;
+    align-self: center;
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+  &__sm {
+    display: flex;
+    align-self: flex-end;
+
+    &-icon {
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+}

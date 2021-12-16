@@ -5,9 +5,6 @@ import HomeHowItWorks from "./HomeHowItWorks";
 import HomeAbout from "./HomeAbout";
 import HomeWhomWeHelp from "./HomeWhomWeHelp";
 import ContactForm from "../ContactForm";
-import Footer from "../Footer";
-
-
 
 
 const Home = () => {
@@ -19,7 +16,6 @@ const Home = () => {
                 <HomeAbout/>
                 <HomeWhomWeHelp/>
                 <ContactForm/>
-                <Footer/>
 
         </>
     )

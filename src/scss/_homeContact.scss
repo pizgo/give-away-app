@@ -1,26 +1,73 @@
 @import "settings/colors";
 @import "settings/fonts";
+@import "settings/mixins";
 
 .contact {
   display: flex;
   flex-direction: column;
   border-top: $yellow 2px solid;
 
+  @include tablet {
+    position: relative;
+    justify-content: space-between;
+    border-top: none;
+  }
+
+  @include desktop {
+    position: relative;
+    justify-content: space-between;
+    border-top: none;
+  }
+
   &__backgroundImg {
-    display: none
+    display: none;
+
+    @include tablet {
+      display: block;
+      width: 100%;
+      opacity: 0.4;
+    }
+
+    @include desktop {
+      display: block;
+      width: 100%;
+      opacity: 0.4;
+
+    }
   }
 
   &__container {
-    margin: 25px 40px 40px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 25px 40px 40px 40px;
+
+    @include tablet {
+      align-self: flex-end;
+      position: absolute;
+      margin: 0;
+      top: 55px;
+      right: 25px;
+    }
+
+    @include desktop {
+      align-self: flex-end;
+      position: absolute;
+      margin: 0;
+      top: 140px;
+      right: 130px;
+      width: 450px;
+    }
   }
 
   &__text {
     font-family: $font-base;
     font-size: 1.2rem;
     color: $black;
+
+    @include desktop {
+      font-size: 2.1rem;
+    }
   }
 
   &__deco-img {
@@ -37,13 +84,31 @@
       display: flex;
       justify-content: space-between;
 
+      @include desktop {
+        padding: 20px 0;
+        justify-content: space-between;
+      }
+
       &-field {
         display: flex;
         flex-direction: column;
         width: 50%;
 
+        @include desktop {
+          width: auto;
+        }
+
         &:first-of-type {
           padding-right: 20px;
+
+          @include desktop {
+            padding-right: 30px;
+          }
+        }
+        &:last-of-type {
+          @include desktop {
+            padding-left: 30px;
+          }
         }
       }
 
@@ -64,6 +129,10 @@
         border: none;
         border-bottom: 1px solid $black;
         outline: none;
+
+        @include desktop {
+          font-size: 0.9rem;
+        }
       }
     }
 
@@ -112,6 +181,10 @@
       cursor: pointer;
       margin-top: 20px;
 
+      @include desktop {
+        width: 150px;
+      }
+
       &:hover {
         box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
       }
@@ -129,6 +202,14 @@
     font-family: $font-base;
     text-align: center;
     margin-bottom: 25px;
+
+    @include tablet {
+      font-size: 0.9rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
     }
 
   &__error {
