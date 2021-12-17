@@ -11,6 +11,12 @@
 
     @include tablet {
       justify-content: flex-end;
+      margin-right: 30px;
+    }
+
+    @include desktop {
+      justify-content: flex-end;
+      margin-right: 60px;
     }
   }
 
@@ -26,12 +32,17 @@
       padding: 9px 10px;
 
       @include tablet {
-        margin-left: 25px;
+        padding: 9px 20px;
+      }
+
+      @include desktop {
+        padding: 9px 20px;
       }
 
       &:hover {
         border: 1px solid #FAD648;
       }
+
     }
   }
 
@@ -39,7 +50,13 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablet {
+      justify-content: flex-end;
+    }
 
+    @include desktop {
+      justify-content: flex-end;
+    }
 
     &-element {
       font-family: $font-base;
@@ -51,11 +68,16 @@
       text-align: center;
       align-self: center;
 
+      @include tablet {
+        width: auto;
+        padding: 9px 20px;
+      }
 
-      //&-p {
-      //  text-align: left;
-      //}
-
+      @include desktop {
+        width: auto;
+        padding: 9px 20px;
+        font-size: 1rem;
+      }
       &:hover {
         border: 1px solid $black;
       }
