@@ -3,7 +3,6 @@
 @import "../settings/mixins";
 
 .gaHeader {
-
   margin-top: 20px;
   position: relative;
 
@@ -11,8 +10,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    border: none
   }
+
+  @include desktop {
+    justify-content: flex-end;
+    margin-bottom: 100px;
+  }
+
 
   &__img {
     display: none;
@@ -20,13 +24,16 @@
     @include tablet {
       display: inherit;
       max-width: 60%;
+      position: absolute;
+      z-index: -1;
+
     }
 
     @include desktop {
       display: inherit;
-      max-width: 60%;
+      max-width: 50%;
       position: absolute;
-      top: -135px;
+      top: -220px;
       left: 0;
       z-index: -1;
     }
@@ -47,6 +54,11 @@
       margin-right: 50px;
       margin-top: 50px;
       padding-top: 0;
+    }
+
+    @include desktop {
+      border: none;
+      margin-top: 100px;
     }
   }
 
@@ -75,8 +87,8 @@
   &__step {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
-    width: 100%;
+    align-items: center;
+    width: 70%;
 
 
     &__box {
@@ -85,7 +97,7 @@
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
 
     &-number {
