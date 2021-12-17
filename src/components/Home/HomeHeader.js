@@ -5,11 +5,9 @@ import Decoration from "../../assets/Decoration.svg";
 const HomeHeader = () => {
 
     return (
-
         <div className="container">
                 <section className="header">
                             <img src={HomeHeroImage} alt="" className="header__img"/>
-
                             <div className="header__content">
                                     <p className="header__hello">
                                         Zacznij pomagać!<br/>
