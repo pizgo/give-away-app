@@ -1,6 +1,9 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { AuthErrorCodes } from "firebase/auth"
+
 
 
 const Login = () => {
@@ -19,12 +22,39 @@ const Login = () => {
         }));
     }
 
+    function signInUser(email, password) {
+        console.log(`trying to signIn user ${email} with password ${password}`)
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                console.log("Succesfully signedIn user ")
+                console.log(user)
+                // ...
+            })
+            .catch((error) => {
+                console.log("Error during signing user:")
+                console.log("Error code: " + error.code)
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                if (error.code == AuthErrorCodes.INVALID_PASSWORD){
+                    setPasswordError("Nieudane logowanie. Podano złe hasło.")
+                }
+
+            });
+    }
+
     const handleSubmit = e => {
         e.preventDefault();
+
+        let isDataProper = true;
 
         if (!validator.isEmail(inputs.email)) {
             setEmailError("Podany email jest nieprawidłowy!");
             console.log(emailError);
+            isDataProper = false
         } else {
             setEmailError();
 
@@ -33,8 +63,13 @@ const Login = () => {
 
         if (inputs.password.length <= 5) {
             setPasswordError("Podane hasło jest za krótkie!");
+            isDataProper = false
         } else {
             setPasswordError();
+        }
+
+        if(isDataProper){
+            signInUser(inputs.email, inputs.password)
         }
     }
 

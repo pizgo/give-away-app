@@ -1,6 +1,8 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 
 const Login = () => {
@@ -19,28 +21,57 @@ const Login = () => {
         }));
     }
 
+    function signUpNewUser(email, password) {
+        console.log(`trying to signingUp new user with email ${email} and password ${password}`)
+
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                console.log(`Signed up! Signed In user ${user}`)
+                // ...
+            })
+            .catch((error) => {
+                console.log("Error during signup " + error)
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+    }
+
     const handleSubmit = e => {
         e.preventDefault();
+
+        let isDataProper = true
 
         if (!validator.isEmail(inputs.email)) {
             setEmailError("Podany email jest nieprawidłowy!");
             console.log(emailError);
+            isDataProper = false
         } else {
             setEmailError();
-
         }
 
         if (inputs.password.length <= 5) {
             setPasswordError("Podane hasło jest za krótkie!");
+            isDataProper = false
         } else {
             setPasswordError();
         }
 
-        if (inputs.password.length <= 5) {
+        if (inputs.passwordRepeat != inputs.password) {
             setPasswordRepeatError("Hasła muszą być takie same!");
+            isDataProper = false
         } else {
             setPasswordRepeatError();
         }
+
+        if (isDataProper){
+            signUpNewUser(inputs.email, inputs.password)
+        }
+
+
     }
 
 

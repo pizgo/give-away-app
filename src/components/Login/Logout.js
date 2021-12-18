@@ -1,9 +1,22 @@
-import React , {useState} from "react";
+import React , {useEffect} from "react";
 import Decoration from "../../assets/Decoration.svg";
-
-
+import { getAuth, signOut } from "firebase/auth";
 
 const Logout = () => {
+
+    signOutUser()   //TODO: I guess this functionality should be called from Navbar and the navigation to this component should happen after successfull logout.
+
+    function signOutUser(){
+        console.log("Logout. Try to sign out. ")
+        const auth = getAuth();
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            console.log("Logout. Sign out succesfull.")
+        }).catch((error) => {
+            // An error happened.
+            console.log("Logout. Sign out unsucessfull due to:" + error )
+        });
+    }
 
     return (
 
