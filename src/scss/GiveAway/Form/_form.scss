@@ -2,85 +2,67 @@
 @import "../../settings/fonts";
 
 .background {
-  background-image: url("../../../assets/BackgroundForm.jpg");
+  background-image: none;
 }
 .form {
 
-  &__img {
-
-      max-width: 100%;
-      position: absolute;
-      top: 910px;
-      left: 0px;
-      z-index: -1;
-  }
-
-
   &__header {
     background-color: $yellow;
-    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+    padding: 40px;
 
     &-main {
-      font-size: 1.8rem;
-      margin-left: 140px;
+      font-size: 1.2rem;
       margin-bottom: 5px;
-
     }
 
     &-text {
-      font-size: 1.2rem;
-      margin-left: 140px;
+      font-size: 1rem;
+      text-align: justify;
     }
   }
 
   &__container {
-    margin-left: 140px;
-    margin-top: 36px;
-    height: 750px;
-
+    padding: 40px;
 
   }
 
   &__stepNumber {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: lighter;
-    margin-bottom: 50px;
-
+    margin-bottom: 20px;
   }
 
   &__text {
-
-    margin-top: 70px;
+    //margin-top: 70px;
 
     &-header {
-      font-size: 1.8rem;
-      margin-bottom: 40px;
-
+      font-size: 1.2rem;
+      margin-bottom: 20px;
     }
 
     &-basic {
-      font-size: 1.2rem;
+      font-size: 1rem;
 
     }
 
     &-basicBold {
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: bold;
 
     }
   }
 
   &__buttons {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   &__buttons-btn {
     font-family: $font-base;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $black;
     background-color: transparent;
     border: 1px solid $black;
@@ -89,12 +71,107 @@
     text-align: center;
     align-self: flex-end;
     cursor: pointer;
-
   }
-
 }
 
 .btn__prev {
   margin-right: 50px;
 }
 
+
+//.background {
+//  background-image: url("../../../assets/BackgroundForm.jpg");
+//}
+//.form {
+//
+//  &__img {
+//
+//      max-width: 100%;
+//      position: absolute;
+//      top: 910px;
+//      left: 0px;
+//      z-index: -1;
+//  }
+//
+//
+//  &__header {
+//    background-color: $yellow;
+//    height: 180px;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//
+//
+//    &-main {
+//      font-size: 1.8rem;
+//      margin-left: 140px;
+//      margin-bottom: 5px;
+//
+//    }
+//
+//    &-text {
+//      font-size: 1.2rem;
+//      margin-left: 140px;
+//    }
+//  }
+//
+//  &__container {
+//    margin-left: 140px;
+//    margin-top: 36px;
+//    height: 750px;
+//
+//
+//  }
+//
+//  &__stepNumber {
+//    font-size: 1rem;
+//    font-weight: lighter;
+//    margin-bottom: 50px;
+//
+//  }
+//
+//  &__text {
+//
+//    margin-top: 70px;
+//
+//    &-header {
+//      font-size: 1.8rem;
+//      margin-bottom: 40px;
+//
+//    }
+//
+//    &-basic {
+//      font-size: 1.2rem;
+//
+//    }
+//
+//    &-basicBold {
+//      font-size: 1.3rem;
+//      font-weight: bold;
+//
+//    }
+//  }
+//
+//  &__buttons {
+//    margin-top: 50px;
+//  }
+//
+//  &__buttons-btn {
+//    font-family: $font-base;
+//    font-size: 1.2rem;
+//    color: $black;
+//    background-color: transparent;
+//    border: 1px solid $black;
+//    padding: 14px 35px;
+//
+//    text-align: center;
+//    align-self: flex-end;
+//    cursor: pointer;
+//
+//  }
+//
+//}
+//
+//.btn__prev {
+//  margin-right: 50px;
+//}

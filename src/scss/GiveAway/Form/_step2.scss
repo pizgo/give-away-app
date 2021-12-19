@@ -1,9 +1,6 @@
 @import "../../settings/colors";
 @import "../../settings/fonts";
 
-
-
-
 .select1 {
 
   &__container {
@@ -59,6 +56,61 @@
   }
 }
 
+
+//.select1 {
+//
+//  &__container {
+//    display: flex;
+//    align-items: center;
+//  }
+//
+//  &__label {
+//    margin-right: 15px;
+//  }
+//
+//  &__box {
+//    position: relative;
+//  }
+//
+//  &__select {
+//    font-size: 1.2em;
+//    color: $black;
+//    font-family: $font-base;
+//    padding: 8px 80px 8px 18px;
+//    background-color: #eeedeb;
+//    cursor: pointer;
+//    outline: none;
+//  }
+//
+//  &__arrow {
+//    position: absolute;
+//    top: 1px;
+//    right: 1px;
+//    display: block;
+//    background-color: #eeedeb;
+//    height: 47px;
+//    width: 50px;
+//    pointer-events: none;
+//
+//    &::after {
+//      content: "";
+//      position: absolute;
+//      top: 20%;
+//      background: url("../../../assets/Icon-Arrow-Down.svg");
+//      width: 50px;
+//      height: 23px;
+//    }
+//  }
+//
+//  &__error {
+//    color: red;
+//    font-size: 0.9rem;
+//    font-weight: bold;
+//    font-family: $font-base;
+//    margin-top: 10px;
+//    text-align: left;
+//  }
+//}
 
 
 

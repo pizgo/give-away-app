@@ -11,7 +11,7 @@ const GiveAwayHeader = () => {
                 <img src={FormHeroImage} alt="" className="gaHeader__img"/>
                 <div className="gaHeader__content">
                     <p className="gaHeader__text1">
-                        Oddaj rzeczy, ktorych już nie chcesz
+                        Oddaj rzeczy, ktorych już nie chcesz<br/>
                         POTRZEBUJĄCYM</p>
                     <img src={Decoration} alt="" id="decoration" className="gaHeader-decorationImg"/>
                     <p className="gaHeader__text2">
@@ -34,13 +34,13 @@ const GiveAwayHeader = () => {
                             <p className="gaHeader__step-text">Zamów kuriera</p>
                         </div>
                     </div>
-                    {/*<div className="gaHeader__square">*/}
-                    {/*    <div className="gaHeader__square-item"></div>*/}
-                    {/*    <div className="gaHeader__square-item"></div>*/}
-                    {/*    <div className="gaHeader__square-item"></div>*/}
-                    {/*    <div className="gaHeader__square-item"></div>*/}
+                    <div className="gaHeader__square">
+                        <div className="gaHeader__square-item"></div>
+                        <div className="gaHeader__square-item"></div>
+                        <div className="gaHeader__square-item"></div>
+                        <div className="gaHeader__square-item"></div>
 
-                    {/*</div>*/}
+                    </div>
 
                 </div>
             </section>

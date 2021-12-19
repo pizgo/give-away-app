@@ -60,7 +60,6 @@ const Login = () => {
 
         }
 
-
         if (inputs.password.length <= 5) {
             setPasswordError("Podane hasło jest za krótkie!");
             isDataProper = false
@@ -99,7 +98,9 @@ const Login = () => {
                             <a href="/Register">
                                 <button className="login__buttons-btn">Załóż konto</button>
                             </a>
-                            <button type="submit" className="login__buttons-btn">Zaloguj się</button>
+                            <a href="/oddaj-rzeczy">
+                                  <button type="submit" className="login__buttons-btn">Zaloguj się</button>
+                            </a>
                         </div>
                     </form>
 

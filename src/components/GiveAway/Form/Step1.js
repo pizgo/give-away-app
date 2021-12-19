@@ -31,7 +31,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
         <div className="container">
 
             <div className="form__header">
-                {/*<img src={BackgroundForm} alt="" className="form__img"/>*/}
+
                 <h3 className="form__header-main">Ważne!</h3>
                 <p className="form__header-text">Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu
                     będziemy wiedzieli, komu najlepiej je przekazać.</p>

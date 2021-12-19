@@ -70,8 +70,6 @@ const Login = () => {
         if (isDataProper){
             signUpNewUser(inputs.email, inputs.password)
         }
-
-
     }
 
 
@@ -80,7 +78,7 @@ const Login = () => {
         <div className="container">
             <section className="registration">
                 <div className="registration__container">
-                    <p className="registration__text">Zaloguj się</p>
+                    <p className="registration__text">Zarejestruj się</p>
                     <img src={Decoration} alt="" id="decoration" className="login__img"/>
 
                     <form onSubmit={handleSubmit} className="registration__form">
@@ -105,7 +103,9 @@ const Login = () => {
                             <a href="/Login">
                                 <button className="registration__buttons-btn">Zaloguj się</button>
                             </a>
-                            <button type="submit" className="registration__buttons-btn">Załóż konto</button>
+                            <a href="/oddaj-rzeczy">
+                                <button type="submit" className="registration__buttons-btn">Załóż konto</button>
+                            </a>
                         </div>
                     </form>
 

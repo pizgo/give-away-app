@@ -31,7 +31,6 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
             <div className="container">
 
                 <div className="form__header">
-                    <img src={BackgroundForm} alt="" className="form__img"/>
                     <h3 className="form__header-main">Ważne!</h3>
                     <p className="form__header-text">Wszystkie rzeczy w 60litrowe worki. Dokładną instrukcję jak poprawnie
                         spakować rzeczy znajdzies TUTAJ.</p>
