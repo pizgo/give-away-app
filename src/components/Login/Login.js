@@ -31,7 +31,7 @@ const Login = () => {
                 const user = userCredential.user;
                 console.log("Succesfully signedIn user ")
                 console.log(user)
-                // ...
+
             })
             .catch((error) => {
                 console.log("Error during signing user:")
@@ -41,6 +41,8 @@ const Login = () => {
 
                 if (error.code == AuthErrorCodes.INVALID_PASSWORD){
                     setPasswordError("Nieudane logowanie. Podano złe hasło.")
+                } else if (error.code == AuthErrorCodes.USER_DELETED){
+                    setEmailError("Nieudane logowanie. Nie znaleziono takie użytkownika")
                 }
 
             });
