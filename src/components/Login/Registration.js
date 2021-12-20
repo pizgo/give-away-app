@@ -1,19 +1,21 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {useAuth} from "../../contexts/AuthContext";
 
 
+const Registration = () => {
 
-const Login = () => {
+    const [inputs, setInputs] = useState({email: "", password: "", passwordRepeat: ""});
+    const [emailError, setEmailError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const [passwordRepeatError, setPasswordRepeatError] = useState("");
+    const {signup} = useAuth()
 
-    const [ inputs, setInputs] = useState ( {email: "", password: "", passwordRepeat: ""});
-    const [ emailError, setEmailError ] = useState("");
-    const [ passwordError, setPasswordError ] = useState("");
-    const [ passwordRepeatError, setPasswordRepeatError ] = useState("");
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
 
         setInputs((prevInputsState) => ({
             ...prevInputsState,
@@ -24,7 +26,11 @@ const Login = () => {
     function signUpNewUser(email, password) {
         console.log(`trying to signingUp new user with email ${email} and password ${password}`)
 
+
+        /*
         const auth = getAuth();
+
+
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
@@ -37,10 +43,11 @@ const Login = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // ..
-            });
+            });*/
     }
 
-    const handleSubmit = e => {
+
+    async function handleSubmit(e){
         e.preventDefault();
 
         let isDataProper = true
@@ -68,7 +75,17 @@ const Login = () => {
         }
 
         if (isDataProper){
-            signUpNewUser(inputs.email, inputs.password)
+            // signUpNewUser(inputs.email, inputs.password)
+            try {
+                console.log(signup)
+                await signup(inputs.email, inputs.password)
+                console.log(`Signed up! Signed In user ${inputs.email}`)
+
+            } catch (e) {
+                console.log("Error during signup " + e)
+                const errorCode = e.code;
+                const errorMessage = e.message;
+            }
         }
     }
 
@@ -116,4 +133,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Registration;

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import HomeWhomWeHelpList from "./HomeWhomWeHelpList";
 import HomePagination from "./HomePagination";
-import db from "../firebase/firebase";
+import { db } from "../../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 
