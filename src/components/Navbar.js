@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-
 const Navbar = () => {
 
     const [ user, setUser] = useState(null);
