@@ -18,18 +18,17 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
     return (
         <div className='container'>
             <div className='summary__container'>
-                <img src={BackgroundForm} alt="" className="summary__img"/>
                 <h3 className="form__text-header">Podsumowanie Twojej darowizny</h3>
                 <div className="summary__box1">
                     <p className='form__text-basicBold'>Oddajesz:</p>
                     <div className='summary__box1-element'>
                         <img src={Icon1} alt="" className="summary__box1-img"/>
-                        <p className='form__text-basic'> {dataStep2} worki, {dataStep1}, {dataStep3CheckPresentation.join(",")}
+                        <p className='summary__text'> {dataStep2} worki, {dataStep1}, {dataStep3CheckPresentation.join(",")}
                             {dataStep3.text}</p>
                     </div>
                     <div className='summary__box1-element'>
                         <img src={Icon4} alt="" className="summary__box1-img"/>
-                        <p className='form__text-basic'>dla lokalizacji: {dataStep3.select}</p>
+                        <p className='summary__text'>dla lokalizacji: {dataStep3.select}</p>
                     </div>
                 </div>
 

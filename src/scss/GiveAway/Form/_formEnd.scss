@@ -4,17 +4,8 @@
 .end {
 
   &__container {
-    margin-left: 140px;
-    height: 900px;
-    margin-top: 200px;
-  }
-
-  &__background {
-    max-width: 100%;
-    position: absolute;
-    top: 750px;
-    left: 0px;
-    z-index: -1;
+    padding: 20px 40px;
+    border-top: $yellow 2px solid;
   }
 
   &__box {
@@ -24,21 +15,17 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    position: absolute;
-    top: 970px;
-    left: 250px;
-    z-index: -1;
+
   }
 
   &__text {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     padding: 20px;
     text-align: center;
-
-
   }
 
   &__img {
-
+    display: none;
   }
+
 }

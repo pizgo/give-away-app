@@ -54,7 +54,6 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                 <div className="container">
 
                     <div className="form__header">
-                        <img src={BackgroundForm} alt="" className="form__img"/>
                         <h3 className="form__header-main">Ważne!</h3>
                         <p className="form__header-text">Jeśli wiesz, komu chcesz pomóc, możesz wpisać nazwę organizacji w wyszukiwarce. Możesz też filtrować organizacje po
                             ich lokalizacji lub celu ich pomocy.</p>

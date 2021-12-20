@@ -41,8 +41,7 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
                     {/*<h3 className="form__text-header">Podaj liczbę 60l worków, w które spakowałaś rzeczy:</h3>*/}
                     <div className="form__box">
                         <div className="select1__container">
-                            <label className="form__text-basic select1__label">
-                                Liczba 60l worków:</label>
+                            <h3 className="form__text-header">Liczba 60l worków:</h3>
                                 <div className="select1__box">
                                     <select className="select1__select" onChange={validateAndHandleChangeStep} defaultValue={dataStep2}>
                                                  <option value="0">—wybierz—</option>

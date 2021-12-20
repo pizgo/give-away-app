@@ -16,7 +16,6 @@ const FormEnd = ({currentStep}) => {
         <>
             <div className='container'>
                 <div className='end__container'>
-                    <img src={BackgroundForm} alt="" className="end__background"/>
                     <div className='end__box'>
                         <p className='end__text'>Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje
                             o odbiorze</p>

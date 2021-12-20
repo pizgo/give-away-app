@@ -15,7 +15,6 @@
 
   &__box {
     position: relative;
-    width: 240px;
     margin-right: 15px;
   }
 
@@ -33,19 +32,18 @@
 .checkbox {
 
   &__header {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
   &__container {
-    padding: 10px 0;
     display: flex;
+    flex-direction: column;
   }
 
   &__label {
-
-    margin-right: 25px;
     cursor: pointer;
+    padding-bottom: 10px;
   }
 
   &__name {
@@ -55,7 +53,7 @@
     padding: 10px 15px;
     user-select: none;
     overflow: hidden;
-    font-size: 1.2em;
+    font-size: 1em;
     border: 1px solid $black;
     }
   }
@@ -79,10 +77,99 @@ input[type="checkbox"]:checked ~ span {
   }
 
   &__field {
-    width: 570px;
+    outline: none;
+    width: 70vw;
+    font-size: 0.8rem;
+    padding: 0 10px;
     height: 40px;
     background-color: transparent;
     border: 1px solid $black;
 
   }
 }
+
+//.select2 {
+//  &__container {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: flex-start;
+//
+//    &-error {
+//      display: flex;
+//      align-items: center;
+//    }
+//  }
+//
+//  &__box {
+//    position: relative;
+//    width: 240px;
+//    margin-right: 15px;
+//  }
+//
+//  &__error {
+//    color: red;
+//    font-size: 0.9rem;
+//    font-weight: bold;
+//    font-family: $font-base;
+//    margin-top: 10px;
+//    text-align: left;
+//  }
+//
+//}
+//
+//.checkbox {
+//
+//  &__header {
+//    margin-top: 40px;
+//    margin-bottom: 20px;
+//  }
+//
+//  &__container {
+//    padding: 10px 0;
+//    display: flex;
+//  }
+//
+//  &__label {
+//
+//    margin-right: 25px;
+//    cursor: pointer;
+//  }
+//
+//  &__name {
+//    position: relative;
+//    display: inline-block;
+//    background-color: transparent;
+//    padding: 10px 15px;
+//    user-select: none;
+//    overflow: hidden;
+//    font-size: 1.2em;
+//    border: 1px solid $black;
+//    }
+//  }
+//
+//input[type="checkbox"] {
+//  display: none;
+//}
+//
+//input[type="checkbox"]:checked ~ span {
+//  background: $yellow;
+//}
+//
+//.textarea {
+//
+//  &__container {
+//    margin-top: 20px;
+//  }
+//
+//  &__header {
+//    margin-bottom: 20px;
+//  }
+//
+//  &__field {
+//    width: 570px;
+//    height: 40px;
+//    background-color: transparent;
+//    border: 1px solid $black;
+//
+//  }
+//}

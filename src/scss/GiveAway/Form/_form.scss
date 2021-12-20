@@ -71,6 +71,10 @@
     text-align: center;
     align-self: flex-end;
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
+    }
   }
 }
 

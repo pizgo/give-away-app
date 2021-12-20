@@ -4,23 +4,13 @@
 .summary {
 
   &__container {
-    margin-left: 140px;
-    height: 900px;
-    margin-top: 200px;
-
+    border-top: $yellow 2px solid;
+    padding: 20px 60px 20px 40px;
   }
 
-  &__img {
-    max-width: 100%;
-    position: absolute;
-    top: 750px;
-    left: 0px;
-    z-index: -1;
-
-  }
 
   &__text {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   &__box1 {
@@ -29,14 +19,13 @@
       display: flex;
       align-items: center;
       margin-top: 15px;
-      max-width: 50%;
-      line-height: 30px;
+      line-height: 25px;
 
     }
 
     &-img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       margin-right: 10px;
 
     }
@@ -44,11 +33,10 @@
 
   &__box2 {
     margin-top: 20px;
+    width: 70vw;
     display: flex;
-    max-width: 50%;
+    flex-direction: column;
     justify-content: space-between;
-
-
 
     &-box {
 
@@ -57,18 +45,91 @@
     &-element {
       display: flex;
       justify-content: space-between;
-      padding: 10px 5px;
+      padding: 10px 0;
       align-items: center;
     }
 
     &-elementTitle {
       margin-bottom: 15px;
+      margin-top: 15px;
     }
 
     &-elementName {
       margin-right: 60px;
       line-height: 25px;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 }
+
+//.summary {
+//
+//  &__container {
+//    margin-left: 140px;
+//    height: 900px;
+//    margin-top: 200px;
+//
+//  }
+//
+//  &__img {
+//    max-width: 100%;
+//    position: absolute;
+//    top: 750px;
+//    left: 0px;
+//    z-index: -1;
+//
+//  }
+//
+//  &__text {
+//    font-size: 1.1rem;
+//  }
+//
+//  &__box1 {
+//
+//    &-element {
+//      display: flex;
+//      align-items: center;
+//      margin-top: 15px;
+//      max-width: 50%;
+//      line-height: 30px;
+//
+//    }
+//
+//    &-img {
+//      width: 50px;
+//      height: 50px;
+//      margin-right: 10px;
+//
+//    }
+//  }
+//
+//  &__box2 {
+//    margin-top: 20px;
+//    display: flex;
+//    max-width: 50%;
+//    justify-content: space-between;
+//
+//
+//
+//    &-box {
+//
+//    }
+//
+//    &-element {
+//      display: flex;
+//      justify-content: space-between;
+//      padding: 10px 5px;
+//      align-items: center;
+//    }
+//
+//    &-elementTitle {
+//      margin-bottom: 15px;
+//    }
+//
+//    &-elementName {
+//      margin-right: 60px;
+//      line-height: 25px;
+//      font-size: 1.1rem;
+//    }
+//  }
+//}

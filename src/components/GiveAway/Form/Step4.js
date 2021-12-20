@@ -74,8 +74,6 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
         handleChangeStep4(e)
     }
 
-
-
     if (currentStep !==4) {
         return null
     }
@@ -84,7 +82,6 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
         <div className='container'>
 
             <div className="form__header">
-                <img src={BackgroundForm} alt="" className="form__img"/>
                 <h3 className="form__header-main">Ważne!</h3>
                 <p className="form__header-text">Podaj adres oraz termin odbioru rzeczy</p>
             </div>
