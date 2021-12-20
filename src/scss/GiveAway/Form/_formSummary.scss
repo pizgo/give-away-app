@@ -5,7 +5,8 @@
 
   &__container {
     border-top: $yellow 2px solid;
-    padding: 20px 60px 20px 40px;
+    padding: 45px 60px 20px 40px;
+    background-color: #eeedeb;
   }
 
 
@@ -27,7 +28,6 @@
       width: 40px;
       height: 40px;
       margin-right: 10px;
-
     }
   }
 
@@ -38,9 +38,10 @@
     flex-direction: column;
     justify-content: space-between;
 
-    &-box {
-
+    @include tablet {
+      width: 50vw;
     }
+
 
     &-element {
       display: flex;
@@ -50,8 +51,8 @@
     }
 
     &-elementTitle {
-      margin-bottom: 15px;
-      margin-top: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
     }
 
     &-elementName {

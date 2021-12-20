@@ -1,5 +1,6 @@
 @import "../../settings/colors";
 @import "../../settings/fonts";
+@import "../../settings/mixins";
 
 .background {
   background-image: none;
@@ -27,6 +28,7 @@
 
   &__container {
     padding: 40px;
+    background-color: #eeedeb;
 
   }
 
@@ -45,19 +47,24 @@
     }
 
     &-basic {
-      font-size: 1rem;
-
+      font-size: 0.9rem;
     }
 
     &-basicBold {
       font-size: 1rem;
       font-weight: bold;
-
     }
   }
 
   &__buttons {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__buttons-btn {
@@ -67,10 +74,11 @@
     background-color: transparent;
     border: 1px solid $black;
     padding: 14px 35px;
-
     text-align: center;
     align-self: flex-end;
     cursor: pointer;
+
+
 
     &:hover {
       box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
@@ -79,7 +87,10 @@
 }
 
 .btn__prev {
-  margin-right: 50px;
+
+  @include tablet {
+    margin-right: 25px;
+  }
 }
 
 

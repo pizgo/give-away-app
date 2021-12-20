@@ -13,7 +13,7 @@
   @include tablet {
     justify-content: flex-end;
     align-items: flex-start;
-    margin-bottom: 0;
+    margin-bottom: 40px;
   }
 
   @include desktop {
@@ -59,12 +59,12 @@
 
     @include tablet {
       border: none;
+      width: 50%;
       align-items: center;
       margin-right: 40px;
       margin-top: 50px;
-      margin-left: 0;
       padding-top: 0;
-      width: 50%;
+      width: 45%;
     }
 
     @include desktop {
@@ -84,7 +84,7 @@
     margin-bottom: 25px;
 
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 

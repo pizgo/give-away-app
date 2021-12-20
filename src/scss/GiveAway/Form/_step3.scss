@@ -1,5 +1,6 @@
 @import "../../settings/colors";
 @import "../../settings/fonts";
+@import "../../settings/mixins";
 
 .select2 {
   &__container {
@@ -39,11 +40,19 @@
   &__container {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__label {
     cursor: pointer;
     padding-bottom: 10px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
   }
 
   &__name {
