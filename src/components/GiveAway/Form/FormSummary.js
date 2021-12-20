@@ -17,6 +17,7 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
 
     return (
         <div className='container'>
+
             <div className='summary__container'>
                 <h3 className="form__text-header">Podsumowanie Twojej darowizny</h3>
                 <div className="summary__box1">

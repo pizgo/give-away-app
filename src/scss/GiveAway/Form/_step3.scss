@@ -44,6 +44,10 @@
     @include tablet {
       flex-direction: row;
     }
+
+    @include desktop {
+      flex-direction: row;
+    }
   }
 
   &__label {
@@ -52,6 +56,10 @@
 
     @include tablet {
       margin-right: 20px;
+    }
+
+    @include desktop {
+      margin-right: 25px;
     }
   }
 
@@ -64,6 +72,10 @@
     overflow: hidden;
     font-size: 1em;
     border: 1px solid $black;
+
+    @include desktop {
+      font-size: 1.2rem;
+    }
     }
   }
 
@@ -93,6 +105,10 @@ input[type="checkbox"]:checked ~ span {
     height: 40px;
     background-color: transparent;
     border: 1px solid $black;
+
+    @include desktop {
+      width: 40vw;
+    }
 
   }
 }

@@ -9,18 +9,20 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  border-top: $yellow 2px solid;
 
   @include tablet {
     justify-content: flex-end;
     align-items: flex-start;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   @include desktop {
     justify-content: flex-end;
     align-items: flex-start;
     margin-bottom: 0;
-    height: 580px;
+    height: 600px;
+    border-top: none;
 
   }
 
@@ -44,7 +46,6 @@
       z-index: -1;
       top: 0;
       left: 0;
-
     }
   }
 
@@ -53,8 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    border-top: $yellow 2px solid;
+    padding: 20px 20px 0 20px;
     width: 100%;
 
     @include tablet {
@@ -68,7 +68,7 @@
     }
 
     @include desktop {
-      width: auto;
+      width: 50vw;
       border: none;
       padding-top: 0;
       margin-top: 100px;
@@ -78,24 +78,33 @@
 
   &__text1 {
     font-family: $font-base;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: $black;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     @include tablet {
       font-size: 1.2rem;
+    }
+
+    @include desktop {
+      font-size: 1.8rem;
     }
   }
 
   &__text2 {
     font-family: $font-base;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $black;
     text-align: center;
     font-weight: lighter;
     margin-top: 20px;
     margin-bottom: 30px;
+
+    @include desktop {
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+    }
   }
 
   &__step {
@@ -103,9 +112,10 @@
     flex-direction: column;
     align-items: center;
 
-
-
-
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     &__box {
       display: flex;
@@ -114,19 +124,40 @@
       align-items: center;
       width: 100%;
       margin-bottom: 10px;
+
+      @include desktop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-bottom: 0;
+      }
     }
 
     &-number {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-family: $font-base;
       font-weight: lighter;
+
+      @include desktop {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
     }
 
     &-text {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-family: $font-base;
       font-weight: lighter;
       margin-left: 50px;
+
+      @include desktop {
+        margin-left: 0;
+        font-size: 1.2rem;
+        text-align: center;
+      }
     }
 
   }

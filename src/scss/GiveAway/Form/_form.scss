@@ -2,27 +2,41 @@
 @import "../../settings/fonts";
 @import "../../settings/mixins";
 
-.background {
-  background-image: none;
-}
 .form {
 
   &__header {
     background-color: $yellow;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 40px;
+
+    @include desktop {
+      padding: 80px;
+      height: 180px;
+    }
 
     &-main {
       font-size: 1.2rem;
       margin-bottom: 5px;
+
+      @include desktop {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+      }
     }
 
     &-text {
-      font-size: 1rem;
-      text-align: justify;
+      font-size: 0.9rem;
+      text-align: left;
+
+      @include tablet {
+        font-size: 1rem;
+      }
+
+      @include desktop {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -30,29 +44,52 @@
     padding: 40px;
     background-color: #eeedeb;
 
+    @include desktop {
+      background-image: url("../../../assets/BackgroundForm.jpg");
+      background-size: cover;
+      height: 800px;
+      padding: 80px;
+    }
   }
 
   &__stepNumber {
     font-size: 0.9rem;
     font-weight: lighter;
     margin-bottom: 20px;
+
+    @include desktop {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
   }
 
   &__text {
-    //margin-top: 70px;
 
     &-header {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-bottom: 20px;
+
+      @include desktop {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+      }
     }
 
     &-basic {
       font-size: 0.9rem;
+
+      @include desktop {
+        font-size: 1.2rem;
+      }
     }
 
     &-basicBold {
       font-size: 1rem;
       font-weight: bold;
+
+      @include desktop {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -60,36 +97,57 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    align-items: flex-start;
 
     @include tablet {
+      display: flex;
       flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
     }
   }
 
   &__buttons-btn {
+    width: 140px;
     font-family: $font-base;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: $black;
     background-color: transparent;
     border: 1px solid $black;
-    padding: 14px 35px;
+    padding: 15px 25px;
     text-align: center;
-    align-self: flex-end;
     cursor: pointer;
-
-
 
     &:hover {
       box-shadow: 9px 7px 31px -19px rgba(38, 39, 44, 1);
+    }
+
+    @include desktop {
+      width: 200px;
+      font-size: 1.2rem;
+      padding: 15px 35px;
     }
   }
 }
 
 .btn__prev {
+  margin-bottom: 20px;
 
   @include tablet {
     margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    margin-right: 50px;
+    margin-bottom: 0;
   }
 }
 

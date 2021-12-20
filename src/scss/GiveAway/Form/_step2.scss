@@ -19,20 +19,18 @@
   }
 
   &__select {
-    font-size: 1em;
+    font-size: 0.9em;
     color: $black;
     font-family: $font-base;
     padding: 8px 60px 8px 18px;
     background-color: #eeedeb;
     cursor: pointer;
     outline: none;
-    //font-size: 1.2em;
-    //    color: $black;
-    //    font-family: $font-base;
-    //    padding: 8px 80px 8px 18px;
-    //    background-color: #eeedeb;
-    //    cursor: pointer;
-    //    outline: none;
+
+    @include desktop {
+      font-size: 1.2rem;
+      padding: 8px 80px 8px 18px;
+    }
   }
 
   &__arrow {
@@ -43,9 +41,12 @@
     background-color: #eeedeb;
     height: 40px;
     width: 50px;
-    //height: 47px;
-    //width: 50px;
     pointer-events: none;
+
+    @include desktop {
+      height: 47px;
+      width: 50px;
+    }
 
     &::after {
       content: "";
