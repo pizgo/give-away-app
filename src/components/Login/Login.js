@@ -4,8 +4,6 @@ import validator from 'validator';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { AuthErrorCodes } from "firebase/auth"
 
-
-
 const Login = () => {
 
     const [ inputs, setInputs] = useState ( {email: "", password: ""});

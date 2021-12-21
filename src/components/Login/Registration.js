@@ -11,7 +11,6 @@ const Registration = () => {
     const [passwordRepeatError, setPasswordRepeatError] = useState("");
     const {signup} = useAuth()
 
-
     const handleChange = (e) => {
         const {name, value} = e.target;
 
