@@ -1,14 +1,16 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { AuthErrorCodes } from "firebase/auth"
+import { useAuth } from "../../contexts/AuthContext";
 
 const Login = () => {
 
     const [ inputs, setInputs] = useState ( {email: "", password: ""});
     const [ emailError, setEmailError ] = useState("");
     const [ passwordError, setPasswordError ] = useState("");
+    const {login} = useAuth()
+
 
     const handleChange = (e) => {
         console.log("handlechange");
@@ -22,28 +24,21 @@ const Login = () => {
 
     function signInUser(email, password) {
         console.log(`trying to signIn user ${email} with password ${password}`)
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                console.log("Succesfully signedIn user ")
-                console.log(user)
+        login(email, password)
+                .then(
+                  (userCredential) => {
+                        console.log(`Succesfully signedIn user ${userCredential} `)
+                    })
+                .catch((error) =>{
+                    console.log("Error during signing user:")
+                    console.log("Error code: " + error.code)
 
+                    if (error.code == AuthErrorCodes.INVALID_PASSWORD){
+                        setPasswordError("Nieudane logowanie. Podano złe hasło.")
+                    } else if (error.code == AuthErrorCodes.USER_DELETED){
+                        setEmailError("Nieudane logowanie. Nie znaleziono takie użytkownika")
+                    }
             })
-            .catch((error) => {
-                console.log("Error during signing user:")
-                console.log("Error code: " + error.code)
-                const errorCode = error.code;
-                const errorMessage = error.message;
-
-                if (error.code == AuthErrorCodes.INVALID_PASSWORD){
-                    setPasswordError("Nieudane logowanie. Podano złe hasło.")
-                } else if (error.code == AuthErrorCodes.USER_DELETED){
-                    setEmailError("Nieudane logowanie. Nie znaleziono takie użytkownika")
-                }
-
-            });
     }
 
     const handleSubmit = e => {
@@ -71,7 +66,6 @@ const Login = () => {
             signInUser(inputs.email, inputs.password)
         }
     }
-
 
     return (
 
@@ -103,8 +97,6 @@ const Login = () => {
                             </a>
                         </div>
                     </form>
-
-
                 </div>
             </section>
         </div>
