@@ -92,7 +92,7 @@ const Login = () => {
                             <a href="/Register">
                                 <button className="login__buttons-btn">Załóż konto</button>
                             </a>
-                            <a href="/oddaj-rzeczy">
+                            <a href="/oddajrzeczy">
                                   <button type="submit" className="login__buttons-btn">Zaloguj się</button>
                             </a>
                         </div>

@@ -96,7 +96,7 @@ const Registration = () => {
                             <a href="/Login">
                                 <button className="registration__buttons-btn">Zaloguj się</button>
                             </a>
-                            <a href="/oddaj-rzeczy">
+                            <a href="/oddajrzeczy">
                                 <button type="submit" className="registration__buttons-btn">Załóż konto</button>
                             </a>
                         </div>

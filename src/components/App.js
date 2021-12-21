@@ -24,10 +24,9 @@ const App = () => {
                         <Route exact path="/wylogowano">
                             <Logout/>
                         </Route>
-                        <Route exact path="/oddaj-rzeczy">
+                        <Route exact path="/oddajrzeczy">
                             <GiveAway/>
                         </Route>
-
                         <Route exact path="/">
                             <Home/>
                         </Route>

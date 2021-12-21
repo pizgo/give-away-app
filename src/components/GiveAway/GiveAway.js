@@ -6,11 +6,9 @@ import ContactForm from "../ContactForm";
 const GiveAway = () => {
     return (
         <>
-
             <GiveAwayHeader/>
             <GiveAwayForm/>
             <ContactForm/>
-
         </>
     )
 }

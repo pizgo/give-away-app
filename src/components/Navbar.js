@@ -18,7 +18,7 @@ const Navbar = () => {
 
                     <div className="nav__main_loggedIn" style={{display: currentUser != null ? 'block' : 'none' }}>
                         <div className="nav__main-element">Cześć {currentUser != null ? currentUser.email : ''}</div>
-                        <NavLink className="nav__main-element" to="/oddaj_rzeczy">Oddaj rzeczy</NavLink>
+                        <NavLink className="nav__main-element" to="/oddajrzeczy">Oddaj rzeczy</NavLink>
                         <NavLink className="nav__main-element" to="/wylogowano">Wyloguj</NavLink>
                     </div>
 

@@ -4,6 +4,7 @@ import Icon1 from "../../assets/Icon1.svg";
 import Icon2 from "../../assets/Icon2.svg";
 import Icon3 from "../../assets/Icon3.svg";
 import Icon4 from "../../assets/Icon4.svg";
+import {NavLink} from "react-router-dom";
 
 const HomeHowItWorks = () => {
 
@@ -63,11 +64,11 @@ const HomeHowItWorks = () => {
                 </div>
 
                 <div className="steps__section3">
-                    <a href="/oddaj-rzeczy">
+                    <NavLink to="/oddajrzeczy">
                         <p id="button" className="steps__section3-btn">
-                                Oddaj <br/>
-                                rzeczy</p>
-                    </a>
+                            Oddaj <br/>
+                            rzeczy</p>
+                    </NavLink>
                 </div>
             </section>
         </div>

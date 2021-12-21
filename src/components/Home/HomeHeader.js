@@ -1,6 +1,7 @@
 import React from "react";
 import HomeHeroImage from "../../assets/HomeHeroImage.jpg";
 import Decoration from "../../assets/Decoration.svg";
+import { NavLink } from "react-router-dom";
 
 const HomeHeader = () => {
 
@@ -14,11 +15,11 @@ const HomeHeader = () => {
                                         Oddaj niechciane rzeczy w zaufane ręce</p>
                                     <img src={Decoration} alt="" id="decoration" className="header__decorationImg"/>
                                     <div className="header__buttons">
-                                            <a href="/logowanie">
+                                            <NavLink to="/oddajrzeczy">
                                                 <p id="button" className="header__buttons-btn">
                                                     Oddaj <br/>
                                                     rzeczy</p>
-                                            </a>
+                                            </NavLink>
                                             <a href="/OrganizeCollection">
                                                 <p id="button" className="header__buttons-btn">
                                                     Zorganizuj <br/>zbiórkę</p>
