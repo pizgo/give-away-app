@@ -1,9 +1,7 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
-// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import {useAuth} from "../../contexts/AuthContext";
-
+import { useAuth } from "../../contexts/AuthContext";
 
 const Registration = () => {
 
@@ -23,29 +21,19 @@ const Registration = () => {
         }));
     }
 
-    function signUpNewUser(email, password) {
+    async function signUpNewUser(email, password) {
         console.log(`trying to signingUp new user with email ${email} and password ${password}`)
+        try {
+            console.log(signup)
+            await signup(inputs.email, inputs.password)
+            console.log(`Signed up! Signed In user ${inputs.email}`)
 
-
-        /*
-        const auth = getAuth();
-
-
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                console.log(`Signed up! Signed In user ${user}`)
-                // ...
-            })
-            .catch((error) => {
-                console.log("Error during signup " + error)
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-            });*/
+        } catch (e) {
+            const errorCode = e.code;
+            const errorMessage = e.message;
+            console.log(`Error during signup, code ${errorCode} message ${errorMessage}` )
+        }
     }
-
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -75,20 +63,9 @@ const Registration = () => {
         }
 
         if (isDataProper){
-            // signUpNewUser(inputs.email, inputs.password)
-            try {
-                console.log(signup)
-                await signup(inputs.email, inputs.password)
-                console.log(`Signed up! Signed In user ${inputs.email}`)
-
-            } catch (e) {
-                console.log("Error during signup " + e)
-                const errorCode = e.code;
-                const errorMessage = e.message;
-            }
+            signUpNewUser(inputs.email, inputs.password)
         }
     }
-
 
     return (
 
