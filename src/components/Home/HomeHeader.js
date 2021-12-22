@@ -20,10 +20,7 @@ const HomeHeader = () => {
                                                     Oddaj <br/>
                                                     rzeczy</p>
                                             </NavLink>
-                                            <a href="/OrganizeCollection">
-                                                <p id="button" className="header__buttons-btn">
-                                                    Zorganizuj <br/>zbiórkę</p>
-                                            </a>
+
                                     </div>
                              </div>
                 </section>
