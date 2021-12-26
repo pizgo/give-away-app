@@ -2,7 +2,7 @@ import React , {useState, useEffect} from "react";
 
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Navbar = () => {
     const { currentUser } = useAuth()
