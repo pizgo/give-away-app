@@ -2,6 +2,37 @@
 @import "./settings/fonts";
 @import "./settings/mixins";
 
+.desktopNavigation {
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.mobileNavigation {
+  position: relative;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none
+  }
+
+  &__menu {
+    color: $black;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    coursor: pointer;
+  }
+}
 
 .nav {
   &__container {
@@ -84,6 +115,8 @@
     }
 
   }
+
+
 }
 
 //rwd
