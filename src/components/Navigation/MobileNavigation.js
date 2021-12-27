@@ -9,6 +9,7 @@ const MobileNavigation = () => {
 
     const handleMenu = () => {
         setIsClicked(!isClicked);
+        console.log('dupa')
     }
 
     const menuIcon = <FiMenu className="mobileNavigation__menu" size='25px'
@@ -17,12 +18,16 @@ const MobileNavigation = () => {
     const closeIcon = <GrClose className="mobileNavigation__menu" size='25px'
                              onClick={handleMenu}/>
 
+    const closeMobileMenu = () => setIsClicked(false);
+
     return (
         <nav className='mobileNavigation'>
             {isClicked ? closeIcon : menuIcon }
-            {isClicked &&<NavLinks/>}
+            {isClicked && <NavLinks
+                isMobile={true}
+                closeMobileMenu={closeMobileMenu}
+                />}
         </nav>
-        
     );
 }
 
