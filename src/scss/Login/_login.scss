@@ -1,5 +1,6 @@
 @import "../settings/colors";
 @import "../settings/fonts";
+@import "../settings/mixins";
 
 .login {
 
@@ -7,55 +8,67 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 125px;
-
   }
 
   &__text {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-family: $font-base;
     color: $black;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    margin-top: 80px;
 
-  }
+    @include tablet {
+      font-size: 1.5rem;
+    }
 
-  &__img {
-
+    @include desktop {
+      font-size: 2.2rem;
+      margin-top: 125px;
+      margin-bottom: 35px;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-top: 67px;
+    margin-top: 25px;
     max-width: 385px;
-    background-color: $white;
     position: relative;
+    background-color: $white;
+
+    @include tablet {
+      margin-top: 50px;
+    }
+
+    @include desktop {
+      margin-top: 70px;
+    }
 
     &-container {
-      width: 380px;
-      height: 235px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
 
-          &:first-child {
-            padding-top: 40px;
-          }
-
-          &:nth-child(1) {
-            padding-bottom: 40px;
-
-           }
     }
 
 
     &-field {
       display: flex;
       flex-direction: column;
-      margin-left: 67px;
-      width: 250px;
+      padding: 40px 60px;
+
+      @include desktop {
+        width: 350px;
+      }
+
+      &:first-of-type {
+        padding-bottom: 20px;
+      }
+
+      &:last-of-type {
+        padding-top: 20px;
+    }
 
     }
 
@@ -63,32 +76,35 @@
       font-size: 0.8rem;
       font-family: $font-base;
       color: $black;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
 
+      @include desktop {
+        font-size: 0.9rem;
+      }
 
     }
 
     &-input {
       font-family: $font-base;
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: $black;
       background-color: transparent;
       border: none;
       border-bottom: 1px solid $black;
       outline: none;
-
-
-
     }
   }
 
   &__buttons {
-    width: 550px;
     display:  flex;
     justify-content: space-between;
     position: absolute;
     top: 230px;
-    left: -75px;
+    left: -15px;
+
+    @include desktop {
+      left: 20px;
+    }
 
     &-btn {
       font-family: $font-base;
@@ -101,7 +117,7 @@
       text-align: center;
       align-self: flex-end;
       cursor: pointer;
-      margin-top: 40px;
+      margin-top: 25px;
       font-weight: lighter;
 
       &:hover {
@@ -123,3 +139,122 @@
 
 }
 
+
+//
+//&__container {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  margin-top: 125px;
+//
+//}
+//
+//&__text {
+//  font-size: 2.2rem;
+//  font-family: $font-base;
+//  color: $black;
+//  margin-bottom: 35px;
+//
+//}
+//
+//&__img {
+//
+//}
+//
+//&__form {
+//  display: flex;
+//  flex-direction: column;
+//  width: 50%;
+//  margin-top: 67px;
+//  max-width: 385px;
+//  background-color: $white;
+//  position: relative;
+//
+//  &-container {
+//    width: 380px;
+//    height: 235px;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//    align-items: flex-start;
+//
+//    &:first-child {
+//      padding-top: 40px;
+//    }
+//
+//    &:nth-child(1) {
+//      padding-bottom: 40px;
+//
+//    }
+//  }
+//
+//
+//  &-field {
+//    display: flex;
+//    flex-direction: column;
+//    margin-left: 67px;
+//    width: 250px;
+//
+//  }
+//
+//  &-label {
+//    font-size: 0.8rem;
+//    font-family: $font-base;
+//    color: $black;
+//    margin-bottom: 5px;
+//
+//
+//  }
+//
+//  &-input {
+//    font-family: $font-base;
+//    font-size: 1rem;
+//    color: $black;
+//    background-color: transparent;
+//    border: none;
+//    border-bottom: 1px solid $black;
+//    outline: none;
+//
+//
+//
+//  }
+//}
+//
+//&__buttons {
+//  width: 550px;
+//  display:  flex;
+//  justify-content: space-between;
+//  position: absolute;
+//  top: 230px;
+//  left: -75px;
+//
+//  &-btn {
+//    font-family: $font-base;
+//    font-size: 1rem;
+//    color: $black;
+//    background-color: transparent;
+//    border: none;
+//    padding: 13px;
+//    width: 150px;
+//    text-align: center;
+//    align-self: flex-end;
+//    cursor: pointer;
+//    margin-top: 40px;
+//    font-weight: lighter;
+//
+//    &:hover {
+//      border: 1px solid #707070;
+//    }
+//
+//  }
+//}
+//
+//&__error {
+//
+//  color: red;
+//  font-size: 0.7rem;
+//  font-weight: bold;
+//  font-family: $font-base;
+//  margin-top: 10px;
+//  text-align: left;
+//}

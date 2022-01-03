@@ -1,260 +1,118 @@
-//form
 
-background {
-  background-image: url("../../../assets/BackgroundForm.jpg");
+&__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 125px;
+
 }
-.form {
 
-  &__img {
+&__text {
+  font-size: 2.2rem;
+  font-family: $font-base;
+  color: $black;
+  margin-bottom: 35px;
 
-    max-width: 100%;
-    position: absolute;
-    top: 910px;
-    left: 0px;
-    z-index: -1;
-  }
+}
 
+&__img {
 
-  &__header {
-    background-color: $yellow;
-    height: 180px;
+}
+
+&__form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 67px;
+  max-width: 385px;
+  background-color: $white;
+  position: relative;
+
+  &-container {
+    width: 380px;
+    height: 235px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
 
-
-    &-main {
-      font-size: 1.8rem;
-      margin-left: 140px;
-      margin-bottom: 5px;
-
+    &:first-child {
+      padding-top: 40px;
     }
 
-    &-text {
-      font-size: 1.2rem;
-      margin-left: 140px;
-    }
-  }
-
-  &__container {
-    margin-left: 140px;
-    margin-top: 36px;
-    height: 750px;
-
-
-  }
-
-  &__stepNumber {
-    font-size: 1rem;
-    font-weight: lighter;
-    margin-bottom: 50px;
-
-  }
-
-  &__text {
-
-    margin-top: 70px;
-
-    &-header {
-      font-size: 1.8rem;
-      margin-bottom: 40px;
-
-    }
-
-    &-basic {
-      font-size: 1.2rem;
-
-    }
-
-    &-basicBold {
-      font-size: 1.3rem;
-      font-weight: bold;
+    &:nth-child(1) {
+      padding-bottom: 40px;
 
     }
   }
 
-  &__buttons {
-    margin-top: 50px;
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+    margin-left: 67px;
+    width: 250px;
+
   }
 
-  &__buttons-btn {
+  &-label {
+    font-size: 0.8rem;
     font-family: $font-base;
-    font-size: 1.2rem;
+    color: $black;
+    margin-bottom: 5px;
+
+
+  }
+
+  &-input {
+    font-family: $font-base;
+    font-size: 1rem;
     color: $black;
     background-color: transparent;
-    border: 1px solid $black;
-    padding: 14px 35px;
+    border: none;
+    border-bottom: 1px solid $black;
+    outline: none;
 
+
+
+  }
+}
+
+&__buttons {
+  width: 550px;
+  display:  flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 230px;
+  left: -75px;
+
+  &-btn {
+    font-family: $font-base;
+    font-size: 1rem;
+    color: $black;
+    background-color: transparent;
+    border: none;
+    padding: 13px;
+    width: 150px;
     text-align: center;
     align-self: flex-end;
     cursor: pointer;
+    margin-top: 40px;
+    font-weight: lighter;
+
+    &:hover {
+      border: 1px solid #707070;
+    }
 
   }
-
 }
 
-.btn__prev {
-  margin-right: 50px;
-}
+&__error {
 
-
-
-
-
-//.select2 {
-//  &__container {
-//    display: flex;
-//    flex-direction: column;
-//    align-items: flex-start;
-//
-//    &-error {
-//      display: flex;
-//      align-items: center;
-//    }
-//  }
-//
-//  &__box {
-//    position: relative;
-//    width: 240px;
-//    margin-right: 15px;
-//  }
-//
-//  &__error {
-//    color: red;
-//    font-size: 0.9rem;
-//    font-weight: bold;
-//    font-family: $font-base;
-//    margin-top: 10px;
-//    text-align: left;
-//  }
-//
-//}
-//
-//.checkbox {
-//
-//  &__header {
-//    margin-top: 40px;
-//    margin-bottom: 20px;
-//  }
-//
-//  &__container {
-//    padding: 10px 0;
-//    display: flex;
-//  }
-//
-//  &__label {
-//
-//    margin-right: 25px;
-//    cursor: pointer;
-//  }
-//
-//  &__name {
-//    position: relative;
-//    display: inline-block;
-//    background-color: transparent;
-//    padding: 10px 15px;
-//    user-select: none;
-//    overflow: hidden;
-//    font-size: 1.2em;
-//    border: 1px solid $black;
-//    }
-//  }
-//
-//input[type="checkbox"] {
-//  display: none;
-//}
-//
-//input[type="checkbox"]:checked ~ span {
-//  background: $yellow;
-//}
-//
-//.textarea {
-//
-//  &__container {
-//    margin-top: 20px;
-//  }
-//
-//  &__header {
-//    margin-bottom: 20px;
-//  }
-//
-//  &__field {
-//    width: 570px;
-//    height: 40px;
-//    background-color: transparent;
-//    border: 1px solid $black;
-//
-//  }
-//}
-
-.summary {
-
-  &__container {
-    margin-left: 140px;
-    height: 900px;
-    margin-top: 200px;
-
-  }
-
-  &__img {
-    max-width: 100%;
-    position: absolute;
-    top: 750px;
-    left: 0px;
-    z-index: -1;
-
-  }
-
-  &__text {
-    font-size: 1.1rem;
-  }
-
-  &__box1 {
-
-    &-element {
-      display: flex;
-      align-items: center;
-      margin-top: 15px;
-      max-width: 50%;
-      line-height: 30px;
-
-    }
-
-    &-img {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-
-    }
-  }
-
-  &__box2 {
-    margin-top: 20px;
-    display: flex;
-    max-width: 50%;
-    justify-content: space-between;
-
-
-
-    &-box {
-
-    }
-
-    &-element {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 5px;
-      align-items: center;
-    }
-
-    &-elementTitle {
-      margin-bottom: 15px;
-    }
-
-    &-elementName {
-      margin-right: 60px;
-      line-height: 25px;
-      font-size: 1.1rem;
-    }
-  }
+  color: red;
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: $font-base;
+  margin-top: 10px;
+  text-align: left;
 }
