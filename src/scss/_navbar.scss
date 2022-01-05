@@ -32,6 +32,7 @@
     top: 5%;
     coursor: pointer;
     z-index: 1;
+    margin-bottom: 50px;
   }
 }
 
@@ -54,7 +55,7 @@
 
   &__main {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-bottom: 25px;
 
     &-element {
@@ -65,10 +66,12 @@
 
       @include tablet {
         padding: 9px 20px;
+        justify-content: flex-end;
       }
 
       @include desktop {
         padding: 9px 20px;
+        justify-content: flex-end;
       }
 
       &:hover {
