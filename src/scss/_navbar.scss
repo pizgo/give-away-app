@@ -14,6 +14,7 @@
   }
 }
 
+
 .mobileNavigation {
   position: relative;
 
@@ -31,32 +32,62 @@
     right: 5%;
     top: 5%;
     coursor: pointer;
-    z-index: 1;
+    z-index: 2;
     margin-bottom: 50px;
   }
 }
 
 .nav {
   &__container {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 20px 20px 0px 20px;
+    width: 100vw;
+    height: 300px;
+    border-right: 1px solid $yellow;
+    border-bottom: 1px solid $yellow;
+    transition: .3s all ease-in-out;
 
     @include tablet {
       justify-content: flex-end;
-      margin-right: 30px;
+      position: unset;
+      margin: 20px 30px 0px 20px;
+      border: none;
+      width: auto;
     }
 
     @include desktop {
       justify-content: flex-end;
-      margin-right: 60px;
+      position: unset;
+      margin: 20px 60px 0px 20px;
+      border: none;
+      width: auto;
     }
   }
 
   &__main {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+
     margin-bottom: 25px;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+
+    &-loggedOut {
+      display: flex;
+      flex-direction: column;
+    }
 
     &-element {
       font-family: $font-base;
@@ -77,44 +108,47 @@
       &:hover {
         border: 1px solid #FAD648;
       }
-
     }
   }
 
   &__scroll {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
+
 
     @include tablet {
       justify-content: flex-end;
+      flex-direction: row;
     }
 
     @include desktop {
       justify-content: flex-end;
+      flex-direction: row;
     }
 
     &-element {
       font-family: $font-base;
-      width: 20%;
       font-size: 0.8rem;
       color: $black;
       cursor: pointer;
       padding: 9px 10px;
-      text-align: center;
-      align-self: center;
+
 
       @include tablet {
-        width: auto;
         padding: 9px 20px;
+        text-align: center;
+        align-self: center;
       }
 
       @include desktop {
-        width: auto;
+        text-align: center;
         padding: 9px 20px;
         font-size: 1rem;
+        align-self: center;
       }
       &:hover {
-        border: 1px solid $black;
+        background-color: $yellow;
       }
     }
 

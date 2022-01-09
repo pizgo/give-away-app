@@ -21,13 +21,13 @@ const MobileNavigation = () => {
     const closeMobileMenu = () => setIsClicked(false);
 
     return (
-        <nav className='mobileNavigation'>
-            {isClicked ? closeIcon : menuIcon }
-            {isClicked && <NavLinks
-                isMobile={true}
-                closeMobileMenu={closeMobileMenu}
-                />}
-        </nav>
+            <nav className='mobileNavigation'>
+                {isClicked ? closeIcon : menuIcon }
+                {isClicked && <NavLinks
+                    isMobile={true}
+                    closeMobileMenu={closeMobileMenu}
+                    />}
+            </nav>
     );
 }
 

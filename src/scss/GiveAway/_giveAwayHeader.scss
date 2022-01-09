@@ -9,7 +9,7 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  border-top: $yellow 2px solid;
+  //border-top: $yellow 2px solid;
 
   @include tablet {
     justify-content: flex-end;
@@ -81,6 +81,7 @@
     font-size: 1.1rem;
     color: $black;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 20px;
 
     @include tablet {
