@@ -9,7 +9,6 @@ const MobileNavigation = () => {
 
     const handleMenu = () => {
         setIsClicked(!isClicked);
-        console.log('dupa')
     }
 
     const menuIcon = <FiMenu className="mobileNavigation__menu" size='25px'

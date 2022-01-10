@@ -89,14 +89,15 @@ const Login = () => {
                             </div>
                        </div>
                         <div className="login__buttons">
-                            <a href="/Register">
-                                <button className="login__buttons-btn">Załóż konto</button>
-                            </a>
                             <a href="/oddajrzeczy">
                                   <button type="submit" className="login__buttons-btn">Zaloguj się</button>
                             </a>
+                            <a href="/rejestracja">
+                                <p className="login__buttons-btn">Załóż konto</p>
+                            </a>
                         </div>
                     </form>
+
                 </div>
             </section>
         </div>
