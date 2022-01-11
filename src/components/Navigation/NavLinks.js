@@ -12,20 +12,34 @@ const NavLinks = ({isMobile, closeMobileMenu}) => {
         <header className="nav">
             <div className="container">
                 <div className="nav__container">
-                    <div className="nav__main-loggedOut" style={{display: currentUser != null ? 'none' : 'block' }}>
-                        <NavLink className="nav__main-element" to="/logowanie" onClick={isMobile && closeMobileMenu}>
-                            Zaloguj</NavLink>
-                        <NavLink className="nav__main-element" to="/rejestracja" onClick={isMobile && closeMobileMenu}>
-                            Zarejestruj się</NavLink>
+                    {/*<div className="nav__main-loggedOut" style={{display: currentUser != null ? 'none' : 'block' }}>*/}
+                    {/*    <NavLink className="nav__main-element" to="/logowanie" onClick={isMobile && closeMobileMenu}>*/}
+                    {/*        Zaloguj</NavLink>*/}
+                    {/*    <NavLink className="nav__main-element" to="/rejestracja" onClick={isMobile && closeMobileMenu}>*/}
+                    {/*        Zarejestruj się</NavLink>*/}
+                    {/*</div>*/}
+                    {/*<div className="nav__main-loggedIn" style={{display: currentUser != null ? 'block' : 'none' }}>*/}
+                    {/*    <div className="nav__main-element-user">Cześć {currentUser != null ? currentUser.email : ''}</div>*/}
+                    {/*    <NavLink className="nav__main-element" to="/oddajrzeczy"*/}
+                    {/*             onClick={isMobile && closeMobileMenu}>*/}
+                    {/*        Oddaj rzeczy</NavLink>*/}
+                    {/*    <NavLink className="nav__main-element" to="/wylogowano"onClick={isMobile && closeMobileMenu}>*/}
+                    {/*        Wyloguj</NavLink>*/}
+                    {/*</div>*/}
+                    <div className="nav__main ">
+                        <div className="nav__main_loggedOut" style={{display: currentUser != null ? 'none' : 'block' }}>
+                            <NavLink className="nav__main-element" to="/logowanie">Zaloguj</NavLink>
+                            <NavLink className="nav__main-element" to="/rejestracja">Zarejestruj się</NavLink>
+                        </div>
+
+                        <div className="nav__main_loggedIn" style={{display: currentUser != null ? 'block' : 'none' }}>
+                            <div className="nav__main-element">Cześć {currentUser != null ? currentUser.email : ''}</div>
+                            <NavLink className="nav__main-element" to="/oddajrzeczy">Oddaj rzeczy</NavLink>
+                            <NavLink className="nav__main-element" to="/wylogowano">Wyloguj</NavLink>
+                        </div>
+
                     </div>
-                    <div className="nav__main-loggedIn" style={{display: currentUser != null ? 'block' : 'none' }}>
-                        <div className="nav__main-element-user">Cześć {currentUser != null ? currentUser.email : ''}</div>
-                        <NavLink className="nav__main-element" to="/oddajrzeczy"
-                                 onClick={isMobile && closeMobileMenu}>
-                            Oddaj rzeczy</NavLink>
-                        <NavLink className="nav__main-element" to="/wylogowano"onClick={isMobile && closeMobileMenu}>
-                            Wyloguj</NavLink>
-                    </div>
+
 
                     <div className="nav__scroll">
                         <NavLink className="nav__scroll-element" to="/"
