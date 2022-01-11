@@ -1,87 +1,104 @@
-@import "./settings/colors";
-@import "./settings/fonts";
-@import "./settings/mixins";
-
-
-.nav {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 20px 0px 20px;
-
-    @include tablet {
-      justify-content: flex-end;
-      margin-right: 30px;
-    }
-
-    @include desktop {
-      justify-content: flex-end;
-      margin-right: 60px;
-    }
-  }
-
-  &__main {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 25px;
-
-    &-element {
-      font-family: $font-base;
-      font-size: 0.8rem;
-      color: $black;
-      padding: 9px 10px;
-
-      @include tablet {
-        padding: 9px 20px;
-      }
-
-      @include desktop {
-        padding: 9px 20px;
-      }
-
-      &:hover {
-        border: 1px solid #FAD648;
-      }
-
-    }
-  }
-
-  &__scroll {
-    display: flex;
-    justify-content: space-between;
-
-    @include tablet {
-      justify-content: flex-end;
-    }
-
-    @include desktop {
-      justify-content: flex-end;
-    }
-
-    &-element {
-      font-family: $font-base;
-      width: 20%;
-      font-size: 0.8rem;
-      color: $black;
-      cursor: pointer;
-      padding: 9px 10px;
-      text-align: center;
-      align-self: center;
-
-      @include tablet {
-        width: auto;
-        padding: 9px 20px;
-      }
-
-      @include desktop {
-        width: auto;
-        padding: 9px 20px;
-        font-size: 1rem;
-      }
-      &:hover {
-        border: 1px solid $black;
-      }
-    }
-
-  }
-}
+////old version of navstyle (main shift to right)
+//
+//@import "./settings/colors";
+//@import "./settings/fonts";
+//@import "./settings/mixins";
+//
+//
+//.nav {
+//  &__container {
+//    display: flex;
+//    flex-direction: column;
+//    margin: 20px 20px 0px 20px;
+//
+//    @include tablet {
+//      justify-content: flex-end;
+//      margin-right: 30px;
+//    }
+//
+//    @include desktop {
+//      justify-content: flex-end;
+//      margin-right: 60px;
+//    }
+//  }
+//
+//  &__main {
+//    display: flex;
+//    justify-content: flex-end;
+//    margin-bottom: 25px;
+//
+//    &-element {
+//      font-family: $font-base;
+//      font-size: 0.8rem;
+//      color: $black;
+//      padding: 9px 10px;
+//
+//      @include tablet {
+//        padding: 9px 20px;
+//      }
+//
+//      @include desktop {
+//        padding: 9px 20px;
+//      }
+//
+//      &:hover {
+//        border: 1px solid #FAD648;
+//      }
+//
+//    }
+//  }
+//
+//  &__scroll {
+//    display: flex;
+//    justify-content: space-between;
+//
+//    @include tablet {
+//      justify-content: flex-end;
+//    }
+//
+//    @include desktop {
+//      justify-content: flex-end;
+//    }
+//
+//    &-element {
+//      font-family: $font-base;
+//      width: 20%;
+//      font-size: 0.8rem;
+//      color: $black;
+//      cursor: pointer;
+//      padding: 9px 10px;
+//      text-align: center;
+//      align-self: center;
+//
+//      @include tablet {
+//        width: auto;
+//        padding: 9px 20px;
+//      }
+//
+//      @include desktop {
+//        width: auto;
+//        padding: 9px 20px;
+//        font-size: 1rem;
+//      }
+//      &:hover {
+//        border: 1px solid $black;
+//      }
+//    }
+//
+//  }
+//}
+//
+//
+//// <div className="nav__main ">
+////                        <div className="nav__main_loggedOut" style={{display: currentUser != null ? 'none' : 'block' }}>
+////                            <NavLink className="nav__main-element" to="/logowanie">Zaloguj</NavLink>
+////                            <NavLink className="nav__main-element" to="/rejestracja">Zarejestruj się</NavLink>
+////                        </div>
+////
+////                        <div className="nav__main_loggedIn" style={{display: currentUser != null ? 'block' : 'none' }}>
+////                            <div className="nav__main-element">Cześć {currentUser != null ? currentUser.email : ''}</div>
+////                            <NavLink className="nav__main-element" to="/oddajrzeczy">Oddaj rzeczy</NavLink>
+////                            <NavLink className="nav__main-element" to="/wylogowano">Wyloguj</NavLink>
+////                        </div>
+////
+////                    </div>
