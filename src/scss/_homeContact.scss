@@ -119,6 +119,7 @@
         font-weight: bold;
         margin-bottom: 20px;
         text-align: left;
+        position: relative;
       }
 
       &-input {
@@ -138,7 +139,7 @@
 
     &-row2 {
       display: flex;
-      padding-top: 20px;
+      padding-top: 70px;
 
       &-field {
         display: flex;
@@ -179,7 +180,7 @@
       text-align: center;
       align-self: flex-end;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 60px;
 
       @include desktop {
         width: 150px;
@@ -219,6 +220,8 @@
     font-family: $font-base;
     margin-top: 10px;
     text-align: left;
+    position: absolute;
+    top: 55px;
   }
 }
 

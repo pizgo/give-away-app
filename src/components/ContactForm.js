@@ -88,27 +88,33 @@ import Footer from "./Home/Footer";
                 <form onSubmit={handleSubmit} className="contact__form">
                     <div className="contact__form-row1">
                         <div className="contact__form-row1-field">
-                            <label className="contact__form-row1-label">Wpisz swoje imię</label>
+                            <label className="contact__form-row1-label">
+                                Wpisz swoje imię
+                                <p className="contact__error">{nameError}</p>
+                            </label>
                             <input onChange={handleChange}  type="text" name="name" value={inputs.name}
                                         placeholder="Krzysztof"
                                         className="contact__form-row1-input" />
-                                <p className="contact__error">{nameError}</p>
-
                         </div>
                         <div className="contact__form-row1-field">
-                            <label className="contact__form-row1-label">Wpisz swój email</label>
+                            <label className="contact__form-row1-label">
+                                Wpisz swój email
+                                <p className="contact__error">{emailError}</p>
+                            </label>
                             <input onChange={handleChange} type="email" name="email" value={inputs.email}
                                        placeholder="abc@xyz.pl" className="contact__form-row1-input" />
-                                <p className="contact__error">{emailError}</p>
                         </div>
                     </div>
                     <div className="contact__form-row2">
                         <div className="contact__form-row2-field">
-                            <label className="contact__form-row2-label">Wpisz swoją wiadomość</label>
+                            <label className="contact__form-row2-label">
+                                Wpisz swoją wiadomość
+                                <p className="contact__error">{messageError}</p>
+                            </label>
                             <textarea onChange={handleChange} name="message" value={inputs.message} placeholder="Lorem ipsum dolor sit amet, consectetur
                             adipisicing elit. Aspernatur consectetur cum expedita id impedit inventore laud consectetur cum expedita id impedit inventore laud"
                                    className="contact__form-row2-input" rows='4'/>
-                            <p className="contact__error">{messageError}</p>
+
                         </div>
                     </div>
                     <button type="submit"  className="contact__form-btn">Wyślij</button>

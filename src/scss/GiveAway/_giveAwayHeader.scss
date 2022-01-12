@@ -54,7 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px 0 20px;
+    padding: 25px 20px 0 20px;
     width: 100%;
 
     @include tablet {
@@ -83,6 +83,7 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
+    line-height: 35px;
 
     @include tablet {
       font-size: 1.2rem;
