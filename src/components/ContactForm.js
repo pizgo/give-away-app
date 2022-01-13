@@ -109,12 +109,11 @@ import Footer from "./Home/Footer";
                         <div className="contact__form-row2-field">
                             <label className="contact__form-row2-label">
                                 Wpisz swoją wiadomość
-                                <p className="contact__error">{messageError}</p>
+                                <p className="contact__error-row2">{messageError}</p>
                             </label>
                             <textarea onChange={handleChange} name="message" value={inputs.message} placeholder="Lorem ipsum dolor sit amet, consectetur
                             adipisicing elit. Aspernatur consectetur cum expedita id impedit inventore laud consectetur cum expedita id impedit inventore laud"
                                    className="contact__form-row2-input" rows='4'/>
-
                         </div>
                     </div>
                     <button type="submit"  className="contact__form-btn">Wyślij</button>
