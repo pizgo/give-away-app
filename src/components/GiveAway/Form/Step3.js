@@ -81,7 +81,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
 
                             </div>
                             <p className="form__text-basicBold checkbox__header">Komu chcesz pomóc?</p>
-                        <div className="checkbox__container">
+                             <div className="checkbox__container">
                                 <label className="checkbox__label">
                                 <input onChange={validateAndHandleChangeStepCheck}
                                        type="checkbox"
@@ -107,7 +107,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                 </label>
                         </div>
 
-                        <div className="checkbox__container">
+                            <div className="checkbox__container">
                             <label className="checkbox__label">
                             <input onChange={validateAndHandleChangeStepCheck}
                                    type="checkbox"
@@ -124,8 +124,8 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                    <span className="checkbox__name">osobom starszym</span>
                             </label>
                         </div>
-                        <p className='select2__error'>{checkError}</p>
-                        <div className="textarea__container">
+                            <p className='checkbox__error'>{checkError}</p>
+                            <div className="textarea__container">
                             <p className="form__text-basicBold textarea__header">Wpisz nazwę konkretnej organizacji (opcjonalnie):</p>
                             <input className="textarea__field" onChange={validateAndHandleChangeStep}
                                    type="textarea" name="text"
