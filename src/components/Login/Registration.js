@@ -77,24 +77,32 @@ const Registration = () => {
                     <form onSubmit={handleSubmit} className="registration__form">
                         <div className="registration__form-container">
                             <div className="registration__form-field">
-                                <label className="registration__form-label">Email</label>
+                                <label className="registration__form-label">
+                                    Email
+                                    <p className="registration__error">{emailError}</p>
+                                </label>
                                 <input onChange={handleChange} value={inputs.email} type="email" name="email" className="registration__form-input" />
-                                <p className="registration__error">{emailError}</p>
                             </div>
                             <div className="registration__form-field">
-                                <label className="registration__form-label">Hasło</label>
+                                <label className="registration__form-label">
+                                    Hasło
+                                    <p className="registration__error">{passwordError}</p>
+                                </label>
                                 <input onChange={handleChange} value={inputs.password} type="password"  name="password" className="registration__form-input" />
-                                <p className="registration__error">{passwordError}</p>
+
                             </div>
                             <div className="registration__form-field">
-                                <label className="registration__form-label">Powtórz hasło</label>
+                                <label className="registration__form-label">
+                                    Powtórz hasło
+                                    <p className="registration__error">{passwordRepeatError}</p>
+                                </label>
                                 <input onChange={handleChange} value={inputs.passwordRepeat} type="passwordRepeat"  name="passwordRepeat" className="registration__form-input" />
-                                <p className="registration__error">{passwordRepeatError}</p>
+
                             </div>
                         </div>
                         <div className="registration__buttons">
-                            <a href="/Login">
-                                <button className="registration__buttons-btn">Zaloguj się</button>
+                            <a href="/logowanie">
+                                <p className="registration__buttons-btn">Zaloguj się</p>
                             </a>
                             <a href="/oddajrzeczy">
                                 <button type="submit" className="registration__buttons-btn">Załóż konto</button>

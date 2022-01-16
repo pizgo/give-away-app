@@ -1,5 +1,6 @@
 @import "../settings/colors";
 @import "../settings/fonts";
+@import "../settings/mixins";
 
 .registration {
 
@@ -7,85 +8,138 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 125px;
-
+    margin-top: 20px;
   }
 
   &__text {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-family: $font-base;
     color: $black;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    margin-top: 50px;
 
-  }
-
-  &__img {
-
+    @include desktop {
+      font-size: 2.2rem;
+      margin-top: 90px;
+      margin-bottom: 35px;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-top: 67px;
-    max-width: 385px;
+    align-items: center;
+    margin-top: 35px;
+    width: 100vw;
+    height: 300px;
     background-color: $white;
-    position: relative;
+
+    @include tablet {
+      margin-top: 50px;
+      max-width: 385px;
+      height: 340px;
+    }
+
+    @include desktop {
+      margin-top: 70px;
+      max-width: 385px;
+      height: 340px;
+    }
 
     &-container {
-      width: 380px;
-      height: 328px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: flex-start;
+      margin: 40px;
 
-      &:first-child {
-        padding-top: 40px;
+      @include tablet {
+        margin: 0;
       }
 
-      &:nth-child(1) {
-        padding-bottom: 40px;
-
+      @include desktop {
+        margin: 0;
       }
     }
-
 
     &-field {
       display: flex;
       flex-direction: column;
-      margin-left: 67px;
-      width: 250px;
+      padding: 20px 0px;
 
+      @include tablet {
+        padding: 25px 60px;
+      }
+
+      @include desktop {
+        padding: 25px 60px;
+      }
+
+      &:first-of-type {
+
+        padding-top: 0;
+
+        @include tablet {
+          padding-top: 45px;
+        }
+
+        @include desktop {
+          padding-top: 35px;
+        }
+      }
+
+      &:last-of-type {
+
+        @include tablet {
+
+      }
+        @include desktop {
+          padding-top: 30px;
+        }
+
+
+      }
     }
 
     &-label {
       font-size: 0.8rem;
       font-family: $font-base;
+      font-weight: bold;
       color: $black;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      position: relative;
+
+      @include desktop {
+        font-size: 0.9rem;
+      }
 
     }
 
     &-input {
       font-family: $font-base;
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: $black;
       background-color: transparent;
       border: none;
       border-bottom: 1px solid $black;
       outline: none;
-
+      width: 260px;
     }
   }
 
   &__buttons {
-    width: 550px;
     display:  flex;
     justify-content: space-between;
-    position: absolute;
-    top: 320px;
-    left: -75px;
+    width: 70vw;
+
+    @include tablet {
+      width: 45vw;
+      margin-top: 65px;
+    }
+
+    @include desktop {
+      width: 35vw;
+      margin-top: 65px;
+    }
 
     &-btn {
       font-family: $font-base;
@@ -98,8 +152,6 @@
       text-align: center;
       align-self: flex-end;
       cursor: pointer;
-      margin-top: 40px;
-      font-weight: lighter;
 
       &:hover {
         border: 1px solid #707070;
@@ -116,7 +168,9 @@
     font-family: $font-base;
     margin-top: 10px;
     text-align: left;
-  }
+    position: absolute;
+    top: 40px;
 
+  }
 }
 

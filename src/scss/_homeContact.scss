@@ -72,13 +72,14 @@
 
   &__deco-img {
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 80px;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 30px;
 
     &-row1 {
       display: flex;
@@ -119,6 +120,7 @@
         font-weight: bold;
         margin-bottom: 20px;
         text-align: left;
+        position: relative;
       }
 
       &-input {
@@ -138,7 +140,7 @@
 
     &-row2 {
       display: flex;
-      padding-top: 20px;
+      padding-top: 70px;
 
       &-field {
         display: flex;
@@ -153,6 +155,7 @@
         font-weight: bold;
         margin-bottom: 20px;
         text-align: left;
+        position: relative;
       }
 
       &-input {
@@ -179,7 +182,7 @@
       text-align: center;
       align-self: flex-end;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 60px;
 
       @include desktop {
         width: 150px;
@@ -193,6 +196,7 @@
 
   &__boxSuccess {
     width: 65%;
+    position: relative;
   }
 
   &__success {
@@ -201,7 +205,8 @@
     font-weight: bold;
     font-family: $font-base;
     text-align: center;
-    margin-bottom: 25px;
+    position: absolute;
+    top: -50px;
 
     @include tablet {
       font-size: 0.9rem;
@@ -219,7 +224,22 @@
     font-family: $font-base;
     margin-top: 10px;
     text-align: left;
+    position: absolute;
+    top: 55px;
   }
+
+  &__error-row2 {
+    color: red;
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: $font-base;
+    margin-top: 10px;
+    text-align: left;
+    position: absolute;
+    top: 105px;
+  }
+
+
 }
 
 //rwd

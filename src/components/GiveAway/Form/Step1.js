@@ -81,9 +81,9 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                     value="inne"/>
                                 inne
                             </label>
+                        <p className='radio__error'>{radioError}</p>
                     </div>
 
-                    <p className='radio__error'>{radioError}</p>
                     <div className="form__buttons">
                         <button type="button" className="form__buttons-btn btn__next" onClick={validateAndNextStep1}>Dalej</button>
                     </div>

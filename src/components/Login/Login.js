@@ -78,25 +78,32 @@ const Login = () => {
                     <form onSubmit={handleSubmit} className="login__form">
                        <div className="login__form-container">
                            <div className="login__form-field">
-                                <label className="login__form-label">Email</label>
+                                <label className="login__form-label">
+                                    Email
+                                    <p className="login__error">{emailError}</p>
+                                </label>
                                 <input onChange={handleChange} value={inputs.email} type="email" name="email" className="login__form-input" />
-                               <p className="login__error">{emailError}</p>
+
                            </div>
                             <div className="login__form-field">
-                                <label className="login__form-label">Hasło</label>
+                                <label className="login__form-label">
+                                    Hasło
+                                    <p className="login__error">{passwordError}</p>
+                                </label>
                                 <input onChange={handleChange} value={inputs.password} type="password"  name="password" className="login__form-input" />
-                                <p className="login__error">{passwordError}</p>
+
                             </div>
                        </div>
                         <div className="login__buttons">
-                            <a href="/Register">
-                                <button className="login__buttons-btn">Załóż konto</button>
-                            </a>
                             <a href="/oddajrzeczy">
                                   <button type="submit" className="login__buttons-btn">Zaloguj się</button>
                             </a>
+                            <a href="/rejestracja">
+                                <p className="login__buttons-btn">Załóż konto</p>
+                            </a>
                         </div>
                     </form>
+
                 </div>
             </section>
         </div>
