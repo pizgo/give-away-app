@@ -37,6 +37,7 @@ const GiveAwayForm = () => {
         select: "—wybierz—",
         text: ""
     })
+    //TODO: refator, extrat to one global variable: step3InitialValue
     const [dataStep3Check, setDataStep3Check] = useState({
         kids: false,
         singleMoms: false,
@@ -44,6 +45,7 @@ const GiveAwayForm = () => {
         disabled: false,
         elderly: false
     });
+    //TODO: refator, extrat to one global variable: step4InitialValue
     const [ dataStep4, setDataStep4 ] = useState ({
         street: "",
         city: "",
@@ -121,6 +123,7 @@ const GiveAwayForm = () => {
             select: "-wybierz-",
             text: ""
         });
+        //TODO: refator, extrat to one global variable: step3InitialValue
         setDataStep3Check({
             kids: false,
             singleMoms: false,
@@ -128,6 +131,8 @@ const GiveAwayForm = () => {
             disabled: false,
             elderly: false
         });
+        //TODO: refator, extrat to one global variable: step4InitialValue
+
         setDataStep4({
             street: "",
             city: "",
@@ -185,7 +190,6 @@ const GiveAwayForm = () => {
                     dataStep4={dataStep4}
                     FormSummaryStep3CheckPresentation={FormSummaryStep3CheckPresentation}
                     prevStep={prevStep}
-                    nextStep={nextStep}
                     handleSubmit={handleSubmit}
                 />
                 <FormEnd
