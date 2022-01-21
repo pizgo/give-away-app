@@ -1,16 +1,11 @@
 import React from 'react';
 import Decoration from "../../../assets/Decoration.svg";
-import BackgroundForm from "../../../assets/BackgroundForm.jpg";
-
-
 
 const FormEnd = ({currentStep}) => {
 
     if (currentStep !== 6) {
         return null
     }
-
-
 
     return (
         <>
@@ -26,5 +21,4 @@ const FormEnd = ({currentStep}) => {
         </>
     )
 }
-
 export default FormEnd;

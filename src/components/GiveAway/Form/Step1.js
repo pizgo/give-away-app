@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import BackgroundForm from "../../../assets/BackgroundForm.jpg";
-
+import Strings from "../../StringResources";
 
 
 
@@ -45,9 +44,9 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 <input
                                     onChange={validateAndHandleChangeStep1}
                                     type="radio"
-                                    checked={dataStep1 === "ubrania, które nadają się do ponownego użycia" }
-                                    value="ubrania, które nadają się do ponownego użycia"/>
-                                ubrania, które nadają się do ponownego użycia
+                                    checked={dataStep1 === Strings.Step1.choiceClothesForReuse }
+                                    value={Strings.Step1.choiceClothesForReuse}/>
+                                {Strings.Step1.choiceClothesForReuse}
                             </label>
                             <label className="form__text-basic radio__label">
                                 <input

@@ -64,8 +64,6 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
                     </div>
                 </div>
             </div>
-
-
         )
 }
 

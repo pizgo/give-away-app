@@ -1,19 +1,15 @@
 import React from 'react';
 import Icon1 from "../../../assets/Icon1.svg";
 import Icon4 from "../../../assets/Icon4.svg";
-import BackgroundForm from "../../../assets/BackgroundForm.jpg";
-
-
 
 const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Check,
-                         dataStep4, FormSummaryStep3CheckPresentation, nextStep, prevStep, handleSubmit}) => {
+                         dataStep4, FormSummaryStep3CheckPresentation, prevStep, handleSubmit}) => {
 
-    if (currentStep !==5) {
-        return null
-    }
+    const LAST_STEP = 5;
+    
+    if (currentStep !== LAST_STEP) {return null}
 
     let dataStep3CheckPresentation = FormSummaryStep3CheckPresentation(dataStep3Check);
-
 
     return (
         <div className='container'>
@@ -77,10 +73,6 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
                 </div>
             </div>
         </div>
-
-
-
-
     )
 }
 
