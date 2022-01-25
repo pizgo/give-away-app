@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import validator from 'validator';
-import Decoration from "../assets/Decoration.svg";
-import BackgroundContactForm from "../assets/BackgroundContactForm.jpg";
-import Footer from "./Home/Footer";
+import Decoration from '../assets/Decoration.svg';
+import BackgroundContactForm from '../assets/BackgroundContactForm.jpg';
+import Footer from './Home/Footer';
+import Strings from './StringResources'
 
 
     const ContactForm = () => {
@@ -27,21 +28,21 @@ import Footer from "./Home/Footer";
             let isAnyError = false;
 
             if(inputs.name.length === 0) {
-                setNameError("Podane imię jest nieprawidłowe!");
+                setNameError(Strings.Errors.nameError);
                 isAnyError = true
             } else {
                 setNameError();
             }
 
             if (!validator.isEmail(inputs.email)){
-                setEmailError("Podamy email jest nieprawidłowy!");
+                setEmailError(Strings.Errors.emailError);
                 isAnyError = true
             } else {
                 setEmailError();
             }
 
             if (inputs.message.length < 120) {
-                setMessageError('Wiadomość musi mieć conajmniej 120 znaków!');
+                setMessageError(Strings.Errors.messageError);
                 isAnyError = true
             } else {
                 setMessageError();
