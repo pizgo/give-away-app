@@ -36,8 +36,6 @@ const Strings = {
         nameError: 'Pamiętaj o podaniu swojego imienia',
         messageError: 'Wiadomość musi mieć conajmniej 120 znaków'
 
-
-
     },
 
     SelectOpening: '—wybierz—',
