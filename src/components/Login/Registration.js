@@ -1,7 +1,8 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from '../../contexts/AuthContext';
+import Strings from '../StringResources'
 
 const Registration = () => {
 
@@ -40,7 +41,7 @@ const Registration = () => {
         let isDataProper = true
 
         if (!validator.isEmail(inputs.email)) {
-            setEmailError("Podany email jest nieprawidłowy!");
+            setEmailError(Strings.Errors.emailError);
             console.log(emailError);
             isDataProper = false
         } else {
@@ -48,14 +49,14 @@ const Registration = () => {
         }
 
         if (inputs.password.length <= 5) {
-            setPasswordError("Podane hasło jest za krótkie!");
+            setPasswordError(Strings.Errors.passwordError);
             isDataProper = false
         } else {
             setPasswordError();
         }
 
         if (inputs.passwordRepeat != inputs.password) {
-            setPasswordRepeatError("Hasła muszą być takie same!");
+            setPasswordRepeatError(Strings.Errors.repeatPasswordError);
             isDataProper = false
         } else {
             setPasswordRepeatError();

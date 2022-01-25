@@ -29,7 +29,13 @@ const Strings = {
         choiceError: 'Pamiętaj, żeby zaznaczyć swój wybór',
         emptyFieldError: 'Pole nie może być puste',
         phoneError: 'Podaj poprawny numer telefonu',
-        zipError: 'Podaj poprawny kod pocztowy'
+        zipError: 'Podaj poprawny kod pocztowy',
+        emailError: 'Podany email jest nieprawidłowy',
+        passwordError: 'Podane hasło jest za krótkie',
+        repeatPasswordError: 'Hasła nie są takie same',
+        nameError: 'Pamiętaj o podaniu swojego imienia',
+        messageError: 'Wiadomość musi mieć conajmniej 120 znaków'
+
 
 
     },

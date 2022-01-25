@@ -2,7 +2,8 @@ import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
 import { AuthErrorCodes } from "firebase/auth"
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from '../../contexts/AuthContext';
+import Strings from '../StringResources'
 
 const Login = () => {
 
@@ -47,8 +48,7 @@ const Login = () => {
         let isDataProper = true;
 
         if (!validator.isEmail(inputs.email)) {
-            setEmailError("Podany email jest nieprawidłowy!");
-            console.log(emailError);
+            setEmailError(Strings.Errors.emailError);
             isDataProper = false
         } else {
             setEmailError();
@@ -56,7 +56,7 @@ const Login = () => {
         }
 
         if (inputs.password.length <= 5) {
-            setPasswordError("Podane hasło jest za krótkie!");
+            setPasswordError(Strings.Errors.passwordError);
             isDataProper = false
         } else {
             setPasswordError();
