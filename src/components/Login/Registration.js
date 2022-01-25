@@ -100,6 +100,7 @@ const Registration = () => {
                                 </label>
                                 <input onChange={handleChange} value={inputs.passwordRepeat} type="password"  name="passwordRepeat" className="registration__form-input" />
 
+                                
                             </div>
                         </div>
                         <div className="registration__buttons">
