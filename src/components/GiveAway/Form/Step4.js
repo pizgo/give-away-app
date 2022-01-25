@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BackgroundForm from "../../../assets/BackgroundForm.jpg";
+import Strings from "../../StringResources";
 
 
 const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) => {
@@ -17,30 +17,30 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
 
         let isAnyError = false;
         if (dataStep4.street === '') {
-            setStreetError("Pole nie może być puste");
+            setStreetError(Strings.Errors.emptyFieldError);
             isAnyError = true;
         }
         if (dataStep4.city === '') {
-            setCityError("Pole nie może być puste");
+            setCityError(Strings.Errors.emptyFieldError);
             isAnyError = true;
         }
-        if (dataStep4.zipcode === '') {
-            setZipError("Pole nie może być puste");
+        if (!(/^\(?([0-9]{2})\)?[-]?([0-9]{3})$/.test(dataStep4.zipcode))) {
+            setZipError(Strings.Errors.zipError);
             isAnyError = true;
         }
         if (dataStep4.phone === '') {
-            setPhoneError("Pole nie może być puste");
+            setPhoneError(Strings.Errors.emptyFieldError);
             isAnyError = true;
-        } if ((dataStep4.phone.length !== 9) || (!/^\d+$/.test(dataStep4.phone))) {
-            setPhoneError("Podaj poprawny numer telefonu");
+        } if (!(/^\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/.test(dataStep4.phone))) {
+            setPhoneError(Strings.Errors.phoneError);
             isAnyError = true;
         }
         if (dataStep4.date === '') {
-            setDateError("Pole nie może być puste");
+            setDateError(Strings.Errors.emptyFieldError);
             isAnyError = true;
         }
         if (dataStep4.time === '') {
-            setTimeError("Pole nie może być puste");
+            setTimeError(Strings.Errors.emptyFieldError);
             isAnyError = true;
         }
         if (!isAnyError) {

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BackgroundForm from "../../../assets/BackgroundForm.jpg";
+import Strings from "../../StringResources";
 
 
 const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handleChangeStep3Check, nextStep, prevStep}) => {
@@ -20,12 +20,12 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
         e.preventDefault();
 
         let isAnyError = false;
-        if (dataStep3.select === '—wybierz—') {
-            setSelect2Error('Pamiętaj, żeby zaznaczyć swój wybór');
+        if (dataStep3.select === Strings.SelectOpening) {
+            setSelect2Error(Strings.Errors.choiceError);
             isAnyError = true;
         }
         if (areDictElementsAllFalse(dataStep3Check)) {
-            setCheckError('Pamiętaj, żeby zaznaczyć swój wybór')
+            setCheckError(Strings.Errors.choiceError)
             isAnyError = true;
         }
         if (!isAnyError) {
@@ -67,7 +67,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                 <div className='select2__container-error'>
                                     <div className="select2__box">
                                         <select className="select1__select" onChange={validateAndHandleChangeStep} name="select" value={dataStep3.select}>
-                                            <option value="0">—wybierz—</option>
+                                            <option value={Strings.SelectOpening}>—wybierz—</option>
                                             <option value="Poznań">Poznań</option>
                                             <option value="Warszawa">Warszawa</option>
                                             <option value="Kraków">Kraków</option>
@@ -87,7 +87,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                        type="checkbox"
                                        name="kids"
                                        checked={dataStep3Check.kids}/>
-                                       <span className="checkbox__name">dzieciom</span>
+                                       <span className="checkbox__name">{Strings.Step3.choiceKids}</span>
                                 </label>
 
                                 <label className="checkbox__label">
@@ -95,7 +95,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                        type="checkbox"
                                        name="singleMoms"
                                        checked={dataStep3Check.singleMoms}/>
-                                       <span className="checkbox__name">samotnym matkom</span>
+                                       <span className="checkbox__name">{Strings.Step3.choiceSingleMoms}</span>
                                 </label>
 
                                 <label className="checkbox__label">
@@ -103,7 +103,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                        type="checkbox"
                                        name="homeless"
                                        checked={dataStep3Check.homeless}/>
-                                       <span className="checkbox__name">bezdomnym</span>
+                                       <span className="checkbox__name">{Strings.Step3.choiceHomeless}</span>
                                 </label>
                         </div>
 
@@ -113,7 +113,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                    type="checkbox"
                                    name="disabled"
                                    checked={dataStep3Check.disabled}/>
-                                   <span className="checkbox__name">niepełnosprawnym</span>
+                                   <span className="checkbox__name">{Strings.Step3.choiceDisabled}</span>
                             </label>
 
                             <label className="checkbox__label">
@@ -121,7 +121,7 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
                                    type="checkbox"
                                    name="elderly"
                                    checked={dataStep3Check.elderly}/>
-                                   <span className="checkbox__name">osobom starszym</span>
+                                   <span className="checkbox__name">{Strings.Step3.choiceElderly}</span>
                             </label>
                         </div>
                             <p className='checkbox__error'>{checkError}</p>

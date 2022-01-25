@@ -10,7 +10,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
     const validateAndNextStep1 = e => {
         e.preventDefault();
         if (dataStep1 === '') {
-            setRadioError("Pamiętaj, żeby zaznaczyć swój wybór");
+            setRadioError(Strings.Errors.choiceError);
         } else {
             setRadioError();
             nextStep();
@@ -52,33 +52,33 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
                                 <input
                                     onChange={validateAndHandleChangeStep1}
                                     type="radio"
-                                    checked={dataStep1 === "ubrania do wyrzucenia"}
-                                    value="ubrania do wyrzucenia"/>
-                                ubrania do wyrzucenia
+                                    checked={dataStep1 === Strings.Step1.choiceClothesForDiscard}
+                                    value={Strings.Step1.choiceClothesForDiscard}/>
+                                {Strings.Step1.choiceClothesForDiscard}
                             </label>
                             <label className="form__text-basic radio__label">
                                 <input
                                     onChange={validateAndHandleChangeStep1}
                                     type="radio"
-                                    checked={dataStep1 === "zabawki"}
-                                    value="zabawki"/>
-                                zabawki
+                                    checked={dataStep1 === Strings.Step1.choiceToys}
+                                    value={Strings.Step1.choiceToys}/>
+                                {Strings.Step1.choiceToys}
                             </label>
                             <label className="form__text-basic radio__label">
                                 <input
                                     onChange={validateAndHandleChangeStep1}
                                     type="radio"
-                                    checked={dataStep1 === "książki"}
-                                    value="książki"/>
-                                książki
+                                    checked={dataStep1 === Strings.Step1.choiceBooks}
+                                    value={Strings.Step1.choiceBooks}/>
+                                {Strings.Step1.choiceBooks}
                             </label>
                             <label className="form__text-basic radio__label" >
                                 <input
                                     onChange={validateAndHandleChangeStep1}
                                     type="radio"
-                                    checked={dataStep1 === "inne"}
-                                    value="inne"/>
-                                inne
+                                    checked={dataStep1 === Strings.Step1.choiceOther}
+                                    value={Strings.Step1.choiceOther}/>
+                                {Strings.Step1.choiceOther}
                             </label>
                         <p className='radio__error'>{radioError}</p>
                     </div>

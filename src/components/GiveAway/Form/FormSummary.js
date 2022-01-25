@@ -20,7 +20,7 @@ const FormSummary = ({currentStep, dataStep1, dataStep2, dataStep3, dataStep3Che
                     <p className='form__text-basicBold'>Oddajesz:</p>
                     <div className='summary__box1-element'>
                         <img src={Icon1} alt="" className="summary__box1-img"/>
-                        <p className='summary__text'> {dataStep2} worki, {dataStep1}, {dataStep3CheckPresentation.join(",")}
+                        <p className='summary__text'> {dataStep2} worki, {dataStep1}, {dataStep3CheckPresentation.join(", ")}
                             {dataStep3.text}</p>
                     </div>
                     <div className='summary__box1-element'>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../firebase/firebase.js";
+import Strings from "../../StringResources";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
@@ -12,19 +13,19 @@ import FormEnd from "./FormEnd";
 const FormSummaryStep3CheckPresentation = (dataStep3Check) => {
     let result = [];
     if (dataStep3Check.kids) {
-        result.push("dzieciom")
+        result.push(Strings.Step3.choiceKids)
     }
     if (dataStep3Check.singleMoms) {
-        result.push("samotnym matkom")
+        result.push(Strings.Step3.choiceSingleMoms)
     }
     if (dataStep3Check.homeless) {
-        result.push("bezdomnym")
+        result.push(Strings.Step3.choiceHomeless)
     }
     if (dataStep3Check.disabled) {
-        result.push("niepełnosprawnym")
+        result.push(Strings.Step3.choiceDisabled)
     }
     if (dataStep3Check.elderly) {
-        result.push("osobom starszym")
+        result.push(Strings.Step3.choiceElderly)
     }
     return result;
 };
@@ -32,9 +33,9 @@ const FormSummaryStep3CheckPresentation = (dataStep3Check) => {
 const GiveAwayForm = () => {
 
     const [ dataStep1, setDataStep1 ] = useState ('');
-    const [ dataStep2, setDataStep2 ] = useState ('—wybierz—')
+    const [ dataStep2, setDataStep2 ] = useState (Strings.SelectOpening)
     const [ dataStep3, setDataStep3 ] = useState({
-        select: "—wybierz—",
+        select: Strings.SelectOpening,
         text: ""
     })
     //TODO: refator, extrat to one global variable: step3InitialValue
@@ -118,10 +119,10 @@ const GiveAwayForm = () => {
         });
 
         setDataStep1('');
-        setDataStep2('—wybierz—');
+        setDataStep2(Strings.SelectOpening);
         setDataStep3({
-            select: "-wybierz-",
-            text: ""
+            select: Strings.SelectOpening,
+            text: ''
         });
         //TODO: refator, extrat to one global variable: step3InitialValue
         setDataStep3Check({
@@ -134,13 +135,13 @@ const GiveAwayForm = () => {
         //TODO: refator, extrat to one global variable: step4InitialValue
 
         setDataStep4({
-            street: "",
-            city: "",
-            zipcode: "",
-            phone: "",
-            date: "",
-            hour: "",
-            misc: ""
+            street: '',
+            city: '',
+            zipcode: '',
+            phone: '',
+            date: '',
+            hour: '',
+            misc: ''
         });
     }
 
