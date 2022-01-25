@@ -1,8 +1,9 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
+import {NavLink} from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import Strings from '../StringResources'
+import Strings from '../StringResources';
 
 const Registration = () => {
 
@@ -102,12 +103,12 @@ const Registration = () => {
                             </div>
                         </div>
                         <div className="registration__buttons">
-                            <a href="/logowanie">
+                            <NavLink to="/logowanie">
                                 <p className="registration__buttons-btn">Zaloguj się</p>
-                            </a>
-                            <a href="/oddajrzeczy">
+                            </NavLink>
+                            <NavLink to="/oddajrzeczy">
                                 <button type="submit" className="registration__buttons-btn">Załóż konto</button>
-                            </a>
+                            </NavLink>
                         </div>
                     </form>
 
