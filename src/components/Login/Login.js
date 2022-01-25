@@ -1,7 +1,8 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
-import { AuthErrorCodes } from "firebase/auth"
+import { AuthErrorCodes } from 'firebase/auth';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import Strings from '../StringResources'
 
@@ -52,7 +53,6 @@ const Login = () => {
             isDataProper = false
         } else {
             setEmailError();
-
         }
 
         if (inputs.password.length <= 5) {
@@ -95,12 +95,12 @@ const Login = () => {
                             </div>
                        </div>
                         <div className="login__buttons">
-                            <a href="/oddajrzeczy">
+                            <NavLink to="/oddajrzeczy">
                                   <button type="submit" className="login__buttons-btn">Zaloguj się</button>
-                            </a>
-                            <a href="/rejestracja">
+                            </NavLink>
+                            <NavLink to="/rejestracja">
                                 <p className="login__buttons-btn">Załóż konto</p>
-                            </a>
+                            </NavLink>
                         </div>
                     </form>
 

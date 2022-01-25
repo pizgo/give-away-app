@@ -97,7 +97,7 @@ const Registration = () => {
                                     Powtórz hasło
                                     <p className="registration__error">{passwordRepeatError}</p>
                                 </label>
-                                <input onChange={handleChange} value={inputs.passwordRepeat} type="passwordRepeat"  name="passwordRepeat" className="registration__form-input" />
+                                <input onChange={handleChange} value={inputs.passwordRepeat} type="password"  name="passwordRepeat" className="registration__form-input" />
 
                             </div>
                         </div>
