@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BackgroundForm from "../../../assets/BackgroundForm.jpg";
+import Strings from "../../StringResources";
 
 
 
@@ -9,8 +9,8 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
 
     const validateAndNextStep = e => {
         e.preventDefault();
-        if (dataStep2 === '—wybierz—') {
-            setSelect1Error('Pamiętaj, żeby zaznaczyć swój wybór');
+        if (dataStep2 === Strings.SelectOpening) {
+            setSelect1Error(Strings.Errors.choiceError);
         } else {
             setSelect1Error();
             nextStep();
@@ -44,7 +44,7 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
                             <h3 className="form__text-header">Liczba 60l worków:</h3>
                                 <div className="select1__box">
                                     <select className="select1__select" onChange={validateAndHandleChangeStep} defaultValue={dataStep2}>
-                                                 <option value="0">—wybierz—</option>
+                                                 <option value={Strings.SelectOpening}>{Strings.SelectOpening}</option>
                                                  <option value="1">1</option>
                                                  <option value="2">2</option>
                                                  <option value="3">3</option>
