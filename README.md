@@ -3,14 +3,14 @@
 
 ### GiveAway app
 
-The project enables user to donate clothes/toys/etc. to organizations that support various groups of people in need.
+The GiveAway app enables user to donate clothes/toys/etc. to organizations that support various groups of people in need.</br>
 The app consist of two main view. The first one describes how the whole idea works, the second one contain a form that can be used to submit items for donation.
 
-The app is available on https://giveaway-da482.web.app
-The project was created as a part of CodersLab FrontendDeveloper course.
+The app is available on https://giveaway-da482.web.app.</br>
+The app design and UX was provided by CodersLab. 
 
 #### Current features:
-1. Creating user's account, loging in, sending form as a logged user
+1. Create user's account, log in, send form as a logged user;
 2. Saving submitted forms in Firestore
 
 #### Next features:
