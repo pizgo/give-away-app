@@ -56,7 +56,7 @@ const Registration = () => {
             setPasswordError();
         }
 
-        if (inputs.passwordRepeat != inputs.password) {
+        if (inputs.passwordRepeat !== inputs.password) {
             setPasswordRepeatError(Strings.Errors.repeatPasswordError);
             isDataProper = false
         } else {
@@ -99,8 +99,6 @@ const Registration = () => {
                                     <p className="registration__error">{passwordRepeatError}</p>
                                 </label>
                                 <input onChange={handleChange} value={inputs.passwordRepeat} type="password"  name="passwordRepeat" className="registration__form-input" />
-
-                                
                             </div>
                         </div>
                         <div className="registration__buttons">
@@ -112,8 +110,6 @@ const Registration = () => {
                             </NavLink>
                         </div>
                     </form>
-
-
                 </div>
             </section>
         </div>
