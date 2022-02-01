@@ -1,6 +1,3 @@
-
-
-
 ### GiveAway app
 
 The GiveAway app enables user to donate clothes/toys/etc. to organizations that support various groups of people in need.</br>
