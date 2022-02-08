@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
 import { AuthErrorCodes } from 'firebase/auth';
-import { NavLink } from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import Strings from '../StringResources'
 
@@ -12,7 +12,7 @@ const Login = () => {
     const [ emailError, setEmailError ] = useState("");
     const [ passwordError, setPasswordError ] = useState("");
     const {login} = useAuth()
-
+    const history = useHistory();
 
     const handleChange = (e) => {
         console.log("handlechange");
@@ -29,7 +29,8 @@ const Login = () => {
         login(email, password)
                 .then(
                   (userCredential) => {
-                        console.log(`Succesfully signedIn user ${userCredential} `)
+                      console.log(`Succesfully signedIn user ${userCredential} `)
+                      history.push("/oddajrzeczy")
                     })
                 .catch((error) =>{
                     console.log("Error during signing user:")
@@ -95,12 +96,12 @@ const Login = () => {
                             </div>
                        </div>
                         <div className="login__buttons">
-                            <NavLink to="/oddajrzeczy">
+                            <a href="/oddajrzeczy">
                                   <button type="submit" className="login__buttons-btn">Zaloguj się</button>
-                            </NavLink>
-                            <NavLink to="/rejestracja">
+                            </a>
+                            <a href="/rejestracja">
                                 <p className="login__buttons-btn">Załóż konto</p>
-                            </NavLink>
+                            </a>
                         </div>
                     </form>
 

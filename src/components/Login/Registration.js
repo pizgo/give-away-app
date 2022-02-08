@@ -1,7 +1,7 @@
 import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
-import {NavLink} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import Strings from '../StringResources';
 
@@ -12,6 +12,8 @@ const Registration = () => {
     const [passwordError, setPasswordError] = useState("");
     const [passwordRepeatError, setPasswordRepeatError] = useState("");
     const {signup} = useAuth()
+    const history = useHistory();
+
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -27,6 +29,7 @@ const Registration = () => {
         try {
             console.log(signup)
             await signup(inputs.email, inputs.password)
+            history.push("/oddajrzeczy")
             console.log(`Signed up! Signed In user ${inputs.email}`)
 
         } catch (e) {
@@ -102,12 +105,12 @@ const Registration = () => {
                             </div>
                         </div>
                         <div className="registration__buttons">
-                            <NavLink to="/logowanie">
+                            <a href="/logowanie">
                                 <p className="registration__buttons-btn">Zaloguj się</p>
-                            </NavLink>
-                            <NavLink to="/oddajrzeczy">
+                            </a>
+                            <a href="/oddajrzeczy">
                                 <button type="submit" className="registration__buttons-btn">Załóż konto</button>
-                            </NavLink>
+                            </a>
                         </div>
                     </form>
                 </div>
