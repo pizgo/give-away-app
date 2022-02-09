@@ -28,9 +28,10 @@ const Registration = () => {
         console.log(`trying to signingUp new user with email ${email} and password ${password}`)
         try {
             console.log(signup)
-            await signup(inputs.email, inputs.password)
+            await signup(email, password)
             history.push("/oddajrzeczy")
-            console.log(`Signed up! Signed In user ${inputs.email}`)
+            console.log(`Signed up! Signed In user ${email}`)
+
 
         } catch (e) {
             const errorCode = e.code;

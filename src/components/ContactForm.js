@@ -28,7 +28,7 @@ import Strings from './StringResources'
             let isAnyError = false;
 
             if(inputs.name.length === 0) {
-                setNameError(Strings.Errors.nameError);
+                setNameError(Strings.Errors.contactNameError);
                 isAnyError = true
             } else {
                 setNameError();
@@ -42,7 +42,7 @@ import Strings from './StringResources'
             }
 
             if (inputs.message.length < 120) {
-                setMessageError(Strings.Errors.messageError);
+                setMessageError(Strings.Errors.contactMessageError);
                 isAnyError = true
             } else {
                 setMessageError();
