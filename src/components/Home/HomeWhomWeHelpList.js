@@ -2,10 +2,6 @@ import React from "react";
 
 const HomeWhomWeHelpList = (props) => {
 
-    console.log("running list component")
-    console.log(props)
-
-
     let itemsToShow = props.currentItems
 
     return (

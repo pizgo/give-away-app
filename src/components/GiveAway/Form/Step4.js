@@ -17,30 +17,27 @@ const Step4 = ({currentStep, dataStep4, nextStep, prevStep, handleChangeStep4}) 
 
         let isAnyError = false;
         if (dataStep4.street === '') {
-            setStreetError(Strings.Errors.emptyFieldError);
+            setStreetError(Strings.Errors.formEmptyFieldError);
             isAnyError = true;
         }
         if (dataStep4.city === '') {
-            setCityError(Strings.Errors.emptyFieldError);
+            setCityError(Strings.Errors.formEmptyFieldError);
             isAnyError = true;
         }
         if (!(/^\(?([0-9]{2})\)?[-]?([0-9]{3})$/.test(dataStep4.zipcode))) {
-            setZipError(Strings.Errors.zipError);
+            setZipError(Strings.Errors.formZipError);
             isAnyError = true;
         }
-        if (dataStep4.phone === '') {
-            setPhoneError(Strings.Errors.emptyFieldError);
-            isAnyError = true;
-        } if (!(/^\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/.test(dataStep4.phone))) {
-            setPhoneError(Strings.Errors.phoneError);
+        if (!(/^\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/.test(dataStep4.phone))) {
+            setPhoneError(Strings.Errors.formPhoneError);
             isAnyError = true;
         }
         if (dataStep4.date === '') {
-            setDateError(Strings.Errors.emptyFieldError);
+            setDateError(Strings.Errors.formEmptyFieldError);
             isAnyError = true;
         }
         if (dataStep4.time === '') {
-            setTimeError(Strings.Errors.emptyFieldError);
+            setTimeError(Strings.Errors.formEmptyFieldError);
             isAnyError = true;
         }
         if (!isAnyError) {

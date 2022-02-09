@@ -12,7 +12,10 @@ const Login = () => {
     const [ emailError, setEmailError ] = useState("");
     const [ passwordError, setPasswordError ] = useState("");
     const {login} = useAuth()
+<<<<<<< Updated upstream
     const history = useHistory();
+=======
+>>>>>>> Stashed changes
 
     const handleChange = (e) => {
         console.log("handlechange");
@@ -37,9 +40,9 @@ const Login = () => {
                     console.log("Error code: " + error.code)
 
                     if (error.code == AuthErrorCodes.INVALID_PASSWORD){
-                        setPasswordError("Nieudane logowanie. Podano złe hasło.")
+                        setPasswordError(Strings.Errors.loginPasswordError)
                     } else if (error.code == AuthErrorCodes.USER_DELETED){
-                        setEmailError("Nieudane logowanie. Nie znaleziono takie użytkownika")
+                        setEmailError(Strings.Errors.loginUserError)
                     }
             })
     }

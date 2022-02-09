@@ -10,7 +10,7 @@ const Step2 = ({currentStep, dataStep2, handleChangeStep2, nextStep, prevStep}) 
     const validateAndNextStep = e => {
         e.preventDefault();
         if (dataStep2 === Strings.SelectOpening) {
-            setSelect1Error(Strings.Errors.choiceError);
+            setSelect1Error(Strings.Errors.formChoiceError);
         } else {
             setSelect1Error();
             nextStep();

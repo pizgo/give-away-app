@@ -21,11 +21,11 @@ const Step3 = ({currentStep, dataStep3, dataStep3Check, handleChangeStep3, handl
 
         let isAnyError = false;
         if (dataStep3.select === Strings.SelectOpening) {
-            setSelect2Error(Strings.Errors.choiceError);
+            setSelect2Error(Strings.Errors.formChoiceError);
             isAnyError = true;
         }
         if (areDictElementsAllFalse(dataStep3Check)) {
-            setCheckError(Strings.Errors.choiceError)
+            setCheckError(Strings.Errors.formChoiceError)
             isAnyError = true;
         }
         if (!isAnyError) {

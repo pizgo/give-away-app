@@ -10,7 +10,7 @@ const Step1 = ( {currentStep, dataStep1, handleChangeStep1, nextStep}) => {
     const validateAndNextStep1 = e => {
         e.preventDefault();
         if (dataStep1 === '') {
-            setRadioError(Strings.Errors.choiceError);
+            setRadioError(Strings.Errors.formChoiceError);
         } else {
             setRadioError();
             nextStep();
