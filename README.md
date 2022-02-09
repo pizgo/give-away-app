@@ -11,9 +11,9 @@ The app design and UX was provided by CodersLab.
 2. providing an extended, fully validated 4-step form, which use, among others, checkboxes, radio buttons, select
 3. saving submitted forms in Firestore
 
-#### Next features:
+#### What still needs to be done:
+improvement of displaying on mobile devices;
 admin panel (editing users, preview of user's forms and donations)
-
 
 #### Libraries, frameworks and tools:
 
