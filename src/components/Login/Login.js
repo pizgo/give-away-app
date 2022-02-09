@@ -12,10 +12,8 @@ const Login = () => {
     const [ emailError, setEmailError ] = useState("");
     const [ passwordError, setPasswordError ] = useState("");
     const {login} = useAuth()
-<<<<<<< Updated upstream
     const history = useHistory();
-=======
->>>>>>> Stashed changes
+
 
     const handleChange = (e) => {
         console.log("handlechange");
