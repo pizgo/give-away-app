@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import Decoration from "../../assets/Decoration.svg";
 import validator from 'validator';
 import { AuthErrorCodes } from 'firebase/auth';
-import { useHistory} from 'react-router-dom';
+import { NavLink, useHistory} from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import Strings from '../StringResources'
 
@@ -97,12 +97,12 @@ const Login = () => {
                             </div>
                        </div>
                         <div className="login__buttons">
-                            <a href="/oddajrzeczy">
+                            <div>
                                   <button type="submit" className="login__buttons-btn">Zaloguj się</button>
-                            </a>
-                            <a href="/rejestracja">
+                            </div>
+                            <NavLink to="/rejestracja">
                                 <p className="login__buttons-btn">Załóż konto</p>
-                            </a>
+                            </NavLink>
                         </div>
                     </form>
 
