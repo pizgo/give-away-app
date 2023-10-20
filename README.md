@@ -4,7 +4,7 @@ The GiveAway app enables user to donate clothes/toys/etc. to organizations that 
 The app consist of two main view. The first one describes how the whole idea works, the second one contain an extended, 4-steps form (e.g. chechboxs, dropdowns, radio buttons, text areas) that can be used to submit items for donation.
 
 The app is available on https://giveaway-da482.web.app.</br>
-The app design and UX was provided by CodersLab. 
+ 
 
 #### Current features:
 1. creating user's account, logging in, sending form as a logged user;
@@ -27,4 +27,6 @@ admin panel (editing users, preview of user's forms and donations)
 7. Firebase (Firestore, Authentication, Hosting)
 8. validator
 
+#### Acknowledgements
+The app design and UX was provided by CodersLab.
 
